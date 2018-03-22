@@ -6,6 +6,13 @@
 //  Copyright © 2018年 HongpengYu. All rights reserved.
 //
 
+
+/**
+ 使用tableView 实现登陆页面，旨在实现高内举,数据驱动UI
+ 
+ 
+ */
+
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
