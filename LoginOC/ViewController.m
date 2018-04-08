@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LoginController.h"
+#import "LiveController.h"
 
 @interface ViewController ()
 
@@ -40,11 +41,26 @@
     [self.view addConstraints:@[bottom, left, right,width, height]];
     
     
-//    [self test];
+    [self test];
+    
     [self spaceTest];
     
     [self containerCenter];
+    
+    [self testAutoresizingMask];
 }
+
+
+- (void)testAutoresizingMask {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"testAutoresizingMask" forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor blueColor];
+//    button.frame = CGRectMake(30, 80, 100, 50);
+    
+    button.autoresizingMask = (UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin);
+    [self.view addSubview:button];
+}
+
 
 
 - (void)spaceTest {
@@ -153,6 +169,12 @@
     [view2.centerYAnchor constraintEqualToAnchor:containerGuide.centerYAnchor].active = YES;
 }
 
+
+- (void)tapAction {
+    LiveController *liveVC = [LiveController new];
+    [self.navigationController pushViewController:liveVC animated:true];
+}
+
 - (void)test {
     
     UILayoutGuide *view_Guide = self.view.layoutMarginsGuide;
@@ -167,6 +189,11 @@
     yellow_View.backgroundColor = [UIColor yellowColor];
     yellow_View.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:yellow_View];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+    [yellow_View addGestureRecognizer:tap];
+    
+    
     //左边距约束
     NSLayoutConstraint *yellowView_Leading = [yellow_View.leadingAnchor constraintEqualToAnchor:view_Guide.leadingAnchor];
     //顶部约束

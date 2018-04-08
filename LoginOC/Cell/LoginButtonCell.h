@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "LoginItem.h"
 
+// 为方便代码阅读增加协议
+@protocol LoginCellButtonActionable <NSObject>
+- (void)cellButtonAction:(UIButton *)sender;
+@end
+
 @interface LoginButtonCell : UITableViewCell <CellUpdatable>
 
 @end

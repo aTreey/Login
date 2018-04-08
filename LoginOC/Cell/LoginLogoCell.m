@@ -24,8 +24,9 @@
         UILayoutGuide *view_guide = [[UILayoutGuide alloc] init];
         
         [self.contentView addLayoutGuide:view_guide];
+        [self.logoImageView.topAnchor constraintEqualToAnchor:self.contentView.topAnchor].active = YES;
         [self.logoImageView.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor].active = YES;
-        [self.logoImageView.centerYAnchor constraintEqualToAnchor:self.contentView.centerYAnchor].active = YES;
+        [self.logoImageView.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor].active = YES;
     }
     return self;
 }

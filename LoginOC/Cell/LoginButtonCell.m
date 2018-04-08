@@ -8,6 +8,7 @@
 
 #import "LoginButtonCell.h"
 #import "LoginButtonCellModel.h"
+#import "UIView+Category.h"
 
 @interface LoginButtonCell ()
 @property (nonatomic, strong) UIButton *loginButton;
@@ -41,17 +42,13 @@
     [self.loginButton.heightAnchor constraintEqualToConstant:cellModel.height].active = YES;
 }
 
-- (void)loginButtonAction {
-    NSLog(@"loginButtonAction");
-}
-
 
 - (UIButton *)loginButton {
     if (!_loginButton) {
         _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _loginButton.layer.masksToBounds = true;
         _loginButton.translatesAutoresizingMaskIntoConstraints = NO;
-        [_loginButton addTarget:self action:@selector(loginButtonAction) forControlEvents:UIControlEventTouchUpInside];
+        [_loginButton addTarget:self.viewController action:@selector(cellButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _loginButton;
 }

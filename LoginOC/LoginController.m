@@ -13,15 +13,14 @@
 #import "LoginTitleCell.h"
 #import "AccountFieldCell.h"
 #import "LoginButtonCell.h"
+#import "LoginDetailCell.h"
 
 #import "AccoutCellModel.h"
 #import "LoginTitleCellModel.h"
 #import "LoginLogoCellModel.h"
 #import "LoginButtonCellModel.h"
 
-@interface LoginController () <UITableViewDataSource, UITableViewDelegate>
-
-
+@interface LoginController () <UITableViewDataSource, UITableViewDelegate, LoginCellButtonActionable>
 
 @end
 
@@ -43,7 +42,6 @@
     
     LoginLogoCellModel *logoModel = [[LoginLogoCellModel alloc] init];
     LoginTitleCellModel *titleModel = [[LoginTitleCellModel alloc] initWithTitle:@"乐班班"];
-    
     AccoutCellModel *accountModel = [[AccoutCellModel alloc] initWithTips:@"账号" placeholder:@"请输入您的账户"];
     AccoutCellModel *passwordModel = [[AccoutCellModel alloc] initWithTips:@"密码" placeholder:@"请输入您的密码"];
     LoginButtonCellModel *loginButtonModel = [[LoginButtonCellModel alloc] initWithTite:@"登录" titleColor:[UIColor whiteColor] backgroundColor:[UIColor redColor] cornerRadius:6.0 height: 48];
@@ -53,7 +51,11 @@
     LoginItem *item3 = [[LoginItem alloc] initWithCell:[AccountFieldCell class] cellModel:accountModel];
     LoginItem *item4 = [[LoginItem alloc] initWithCell:[AccountFieldCell class] cellModel:passwordModel];
     LoginItem *item5 = [[LoginItem alloc] initWithCell:[LoginButtonCell class] cellModel:loginButtonModel];
-    NSArray *itemArray = @[item1, item2, item3, item4, item5];
+    
+    LoginItem *item6 = [[LoginItem alloc] initWithCell:[LoginDetailCell class] cellModel:loginButtonModel];
+    
+    
+    NSArray *itemArray = @[item1, item2, item3, item4, item5, item6];
     self.group = @[itemArray];
 }
 
@@ -149,6 +151,8 @@
      UILayoutGuide 占位视图简化布局效果时的工作量，没有任何内容的UIView只定义一个矩形区域，在自动布局体系中起到占位作用。例如，若干个宽度不等的控件，要求横向排列它们，并且间距相等。此时必须使用占位视图作为间距，否则需要大量计算，十分麻烦
      
      view 有两个与内边距有关的属性，一个叫layoutMargins，一个叫layoutMarginsGuide。layoutMargins是内边距的大小。layoutMarginsGuide指的是内边界。默认的内边距大小是8个点。
+     
+     layoutMarginsGuide 布局子控件的时候有时候会有问题,没有居中显示，一般情况下使用UILayoutGuide来布局
      （1. ）使用场景：当作容器使用，需求是两个控件组合后居中显示
      =============当作容器使用========
      - (void)containerCenter {
@@ -298,20 +302,27 @@
     [self.view addConstraints:@[tableViewTop,tableViewLeft,tableViewBottom,tableViewRight]];
 }
 
-#pragma mark - lazy
 
+#pragma mark - cell 按钮点击
+- (void)cellButtonAction:(UIButton *)sender {
+    NSLog(@"cell-----click");
+}
+
+
+#pragma mark - lazy
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _tableView.rowHeight = UITableViewAutomaticDimension;
-//        _tableView.estimatedRowHeight = 150;
+        _tableView.estimatedRowHeight = 150;
         _tableView.dataSource = self;
-        _tableView.delegate = self;
-        _tableView.rowHeight = 90;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     }
     return _tableView;
 }
+
+
+
 
 @end
