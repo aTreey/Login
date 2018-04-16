@@ -44,15 +44,20 @@
     LoginTitleCellModel *titleModel = [[LoginTitleCellModel alloc] initWithTitle:@"乐班班"];
     AccoutCellModel *accountModel = [[AccoutCellModel alloc] initWithTips:@"账号" placeholder:@"请输入您的账户"];
     AccoutCellModel *passwordModel = [[AccoutCellModel alloc] initWithTips:@"密码" placeholder:@"请输入您的密码"];
-    LoginButtonCellModel *loginButtonModel = [[LoginButtonCellModel alloc] initWithTite:@"登录" titleColor:[UIColor whiteColor] backgroundColor:[UIColor redColor] cornerRadius:6.0 height: 48];
+    LoginButtonCellModel *loginButtonModel = [[LoginButtonCellModel alloc] initWithTite:@"登录" titleColor:[UIColor whiteColor] backgroundColor:[UIColor orangeColor] cornerRadius:6.0 height: 50];
     
-    LoginItem *item1 = [[LoginItem alloc] initWithCell:[LoginLogoCell class] cellModel:logoModel];
-    LoginItem *item2 = [[LoginItem alloc] initWithCell:[LoginTitleCell class] cellModel:titleModel];
-    LoginItem *item3 = [[LoginItem alloc] initWithCell:[AccountFieldCell class] cellModel:accountModel];
-    LoginItem *item4 = [[LoginItem alloc] initWithCell:[AccountFieldCell class] cellModel:passwordModel];
-    LoginItem *item5 = [[LoginItem alloc] initWithCell:[LoginButtonCell class] cellModel:loginButtonModel];
-    
-    LoginItem *item6 = [[LoginItem alloc] initWithCell:[LoginDetailCell class] cellModel:loginButtonModel];
+    LoginItem *item1 = [[LoginItem alloc] initWithCell:[LoginLogoCell class]
+                                             cellModel:logoModel];
+    LoginItem *item2 = [[LoginItem alloc] initWithCell:[LoginTitleCell class]
+                                             cellModel:titleModel];
+    LoginItem *item3 = [[LoginItem alloc] initWithCell:[AccountFieldCell class]
+                                             cellModel:accountModel];
+    LoginItem *item4 = [[LoginItem alloc] initWithCell:[AccountFieldCell class]
+                                             cellModel:passwordModel];
+    LoginItem *item5 = [[LoginItem alloc] initWithCell:[LoginButtonCell class]
+                                             cellModel:loginButtonModel];
+    LoginItem *item6 = [[LoginItem alloc] initWithCell:[LoginDetailCell class]
+                                             cellModel:loginButtonModel];
     
     
     NSArray *itemArray = @[item1, item2, item3, item4, item5, item6];

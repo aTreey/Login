@@ -10,7 +10,22 @@
 #import "LoginController.h"
 #import "LiveController.h"
 
+#import "LBDropMenuSegmentView.h"
+
+#import "GrowupResponse.h"
+
+
+#define kWidth [UIScreen mainScreen].bounds.size.width
+#define kHeight [UIScreen mainScreen].bounds.size.height
+
+
 @interface ViewController ()
+
+@property (nonatomic, strong) LBDropMenuSegmentView *menuScreeningView;
+@property (nonatomic, strong) NSMutableArray *data;
+
+
+
 
 @end
 
@@ -18,8 +33,94 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.data = [NSMutableArray array];
     // Do any additional setup after loading the view, typically from a nib.
     
+    
+//    [self test];
+    
+//    [self spaceTest];
+//
+//    [self containerCenter];
+//
+//    [self testAutoresizingMask];
+    
+//    [self suspendPlayVido];
+    
+    [self loginModule];
+    
+    [self dropMenuView];
+}
+
+
+- (void)test23 {
+    
+}
+
+
+- (void)dropMenuView {
+    // 一级数据
+    for (NSInteger i = 0; i < 10; i++) {
+        CourseJsonTreeDataResponse *data0 = [[CourseJsonTreeDataResponse alloc] init];
+        data0.name = [NSString stringWithFormat:@"一级**%ld", i];
+        data0.isSelect = NO;
+        CourseFilterResponse *model0 = [[CourseFilterResponse alloc] init];
+        model0.parentId = i + 0;
+        model0.level = i + 0;
+        model0.data = data0;
+        
+        
+        // 二级数组
+        NSMutableArray *temArray1 = [NSMutableArray array];
+        for (NSInteger j = 0; j < 10; j++) {
+            CourseJsonTreeDataResponse *data1 = [[CourseJsonTreeDataResponse alloc] init];
+            data1.name = [NSString stringWithFormat:@"二级**%ld", j];
+            data1.isSelect = NO;
+            CourseFilterResponse *model1 = [[CourseFilterResponse alloc] init];
+            model1.data = data1;
+            model1.parentId = j + 1;
+            model1.data = data1;
+            
+            // 三级数据
+            NSMutableArray *temArray2 = [NSMutableArray array];
+            for (NSInteger j = 0; j < 10; j++) {
+                CourseJsonTreeDataResponse *data2 = [[CourseJsonTreeDataResponse alloc] init];
+                data2.name = [NSString stringWithFormat:@"三级**%ld", j];
+                data2.isSelect = NO;
+                CourseFilterResponse *model2 = [[CourseFilterResponse alloc] init];
+                model2.data = data2;
+                model2.parentId = j + 1;
+                [temArray2 addObject:model2];
+            }
+            model1.childs = temArray2.copy;
+            [temArray1 addObject:model1];
+        }
+        model0.childs = temArray1.copy;
+         
+        [self.data addObject:model0];
+    }
+    
+
+    
+    NSLog(@"model0 = %@", self.data);
+    
+    
+    
+//    self.menuScreeningView = [[LBDropMenuSegmentView alloc] initWithFrame:CGRectMake(0, 64, kWidth, 36)];
+    NSArray *titles = @[@"全部分类", @"课程类型", @"排序"];
+    self.menuScreeningView = [[LBDropMenuSegmentView alloc] initWithFrame:CGRectMake(0, 64, kWidth, 36) titles:titles];
+    [self.view addSubview:self.menuScreeningView];
+    self.menuScreeningView.backgroundColor = [UIColor whiteColor];
+    self.menuScreeningView.threeListArray = self.data;
+    
+    self.menuScreeningView.selectBlock = ^(CourseJsonTreeDataResponse *data) {
+        NSLog(@"data = %@", data);
+    };
+}
+
+
+- (void)loginModule {
     UIButton *testButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:testButton];
     testButton.backgroundColor = [UIColor orangeColor];
@@ -37,17 +138,8 @@
     NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:testButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationLessThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:400];
     
     NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:testButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:60];
-
+    
     [self.view addConstraints:@[bottom, left, right,width, height]];
-    
-    
-    [self test];
-    
-    [self spaceTest];
-    
-    [self containerCenter];
-    
-    [self testAutoresizingMask];
 }
 
 
@@ -170,9 +262,23 @@
 }
 
 
+
+
+// 视屏播放
 - (void)tapAction {
     LiveController *liveVC = [LiveController new];
     [self.navigationController pushViewController:liveVC animated:true];
+}
+
+- (void)suspendPlayVido {
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor purpleColor];
+    view.frame = CGRectMake(10, 300, 100, 50);
+    view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin;
+    [self.view addSubview:view];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+    [view addGestureRecognizer:tap];
 }
 
 - (void)test {
@@ -189,10 +295,6 @@
     yellow_View.backgroundColor = [UIColor yellowColor];
     yellow_View.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:yellow_View];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
-    [yellow_View addGestureRecognizer:tap];
-    
     
     //左边距约束
     NSLayoutConstraint *yellowView_Leading = [yellow_View.leadingAnchor constraintEqualToAnchor:view_Guide.leadingAnchor];

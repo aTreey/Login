@@ -20,15 +20,12 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self.contentView addSubview:self.loginButton];
-        UILayoutGuide *view_guide = [[UILayoutGuide alloc] init];
+        UILayoutGuide *view_guide = self.contentView.layoutMarginsGuide;
         [self.contentView addLayoutGuide:view_guide];
-        [self.loginButton.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor].active = YES;
-        [self.loginButton.centerYAnchor constraintEqualToAnchor:self.contentView.centerYAnchor].active = YES;
-        [self.loginButton.leadingAnchor constraintEqualToAnchor:view_guide.leadingAnchor constant:15].active = YES;
-        [self.loginButton.trailingAnchor constraintEqualToAnchor:view_guide.trailingAnchor constant:-15].active = YES;
-        
-        [view_guide.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor].active = YES;
-        [view_guide.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor].active = YES;
+        [self.loginButton.topAnchor constraintGreaterThanOrEqualToAnchor:view_guide.topAnchor constant:30].active = YES;
+        [self.loginButton.leadingAnchor constraintEqualToAnchor:view_guide.leadingAnchor constant:7].active = YES;
+        [self.loginButton.trailingAnchor constraintEqualToAnchor:view_guide.trailingAnchor constant:-7].active = YES;
+        [self.loginButton.bottomAnchor constraintEqualToAnchor:view_guide.bottomAnchor constant:-30].active = YES;
     }
     return self;
 }

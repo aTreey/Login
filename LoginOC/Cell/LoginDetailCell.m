@@ -37,21 +37,23 @@
     UILayoutGuide *view_guide = [[UILayoutGuide alloc] init];
     [self.contentView addLayoutGuide:view_guide];
     
-    [self.forgetPwdButton.topAnchor constraintEqualToAnchor:view_guide.topAnchor].active = YES;
-    [self.forgetPwdButton.leftAnchor constraintEqualToAnchor:view_guide.leftAnchor].active = YES;
+    [self.forgetPwdButton.topAnchor constraintEqualToAnchor:view_guide.topAnchor constant:10].active = YES;
+    [self.forgetPwdButton.leftAnchor constraintEqualToAnchor:view_guide.leftAnchor constant:15].active = YES;
 
-    [self.registerButton.topAnchor constraintEqualToAnchor:view_guide.topAnchor].active = YES;
-    [self.registerButton.rightAnchor constraintEqualToAnchor:view_guide.rightAnchor].active = YES;
+    [self.registerButton.topAnchor constraintEqualToAnchor:self.forgetPwdButton.topAnchor].active = YES;
+    [self.registerButton.rightAnchor constraintEqualToAnchor:view_guide.rightAnchor constant:-15].active = YES;
 
     [self.detailLabel.leftAnchor constraintEqualToAnchor:self.forgetPwdButton.leftAnchor].active = YES;
     [self.detailLabel.topAnchor constraintEqualToAnchor:self.forgetPwdButton.bottomAnchor constant:20].active = YES;
+//    [self.detailLabel.bottomAnchor constraintGreaterThanOrEqualToAnchor:view_guide.bottomAnchor constant:-20].active = YES;
 
-    [view_guide.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:15].active = YES;
-    [view_guide.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-15].active = YES;
-    [view_guide.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor].active = YES;
-    [view_guide.centerYAnchor constraintEqualToAnchor:self.contentView.centerYAnchor].active = YES;
-    [view_guide.bottomAnchor constraintEqualToAnchor:self.detailLabel.bottomAnchor].active = YES;
-    
+    [view_guide.topAnchor constraintEqualToAnchor:self.contentView.topAnchor].active = YES;
+    [view_guide.leftAnchor constraintEqualToAnchor:self.contentView.leftAnchor].active = YES;
+    [view_guide.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor].active = YES;
+    [view_guide.rightAnchor constraintEqualToAnchor:self.contentView.rightAnchor].active = YES;
+    NSLayoutConstraint *heightConstraint = [view_guide.heightAnchor constraintEqualToConstant:100];
+    heightConstraint.priority = 999;
+    heightConstraint.active = YES;
 }
 
 - (void)updateWithCellModel:(id)cellModel {

@@ -20,44 +20,48 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self.contentView addSubview:self.titleLabel];
         
-        [self setupUI1];
-//        [self setupUI2];
+        [self layoutMarginsGuide_test];
+//        [self layoutGuide_test];
     }
     return self;
 }
 
-- (void)setupUI1 {
+
+//// 某些时候使用 view 的layoutMarginsGuide 更加的方便,因为有宽度和高度
+- (void)layoutMarginsGuide_test {
+    // 使用view 的layoutMarginsGuide 属性时 会有宽为8 像素的边距
     UILayoutGuide *view_guide = self.contentView.layoutMarginsGuide;
     [self.contentView addLayoutGuide:view_guide];
     self.titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    NSLayoutConstraint *heightConstraint = [view_guide.heightAnchor constraintEqualToConstant:60];
-    heightConstraint.priority = 999;
-    heightConstraint.active = YES;
-    
     [self.titleLabel.centerXAnchor constraintEqualToAnchor:view_guide.centerXAnchor].active = YES;
     [self.titleLabel.centerYAnchor constraintEqualToAnchor:view_guide.centerYAnchor].active = YES;
-    //    [self.titleLabel.heightAnchor constraintEqualToConstant:60].active = YES;
+    NSLayoutConstraint *heightConstraint = [view_guide.heightAnchor constraintEqualToConstant:100];
+    heightConstraint.priority = 999; // 设置优先级
+    heightConstraint.active = YES;
 }
 
-
-- (void)setupUI2 {
+///// UILayoutGuide 一般可以用作空间的容器或者是间距时的时候较为方便，
+- (void)layoutGuide_test {
     [self.contentView addSubview:self.titleLabel];
     self.titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
 
     UILayoutGuide *view_guide = [[UILayoutGuide alloc] init];
     [self.contentView addLayoutGuide:view_guide];
+//    1.
     [view_guide.topAnchor constraintEqualToAnchor:self.contentView.topAnchor].active = YES;
     [view_guide.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor].active = YES;
-    [view_guide.leftAnchor constraintEqualToAnchor:self.contentView.leftAnchor].active = YES;
-    [view_guide.rightAnchor constraintEqualToAnchor:self.contentView.rightAnchor].active = YES;
-//    [view_guide.heightAnchor constraintEqualToConstant:100].active = YES;
+    [view_guide.heightAnchor constraintEqualToAnchor:self.titleLabel.heightAnchor].active = YES;
+    // UIlabel、UITextView、有内建高度直接设置他的底部相等就可以将cell 撑高
+    [self.titleLabel.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor].active = YES;
+    [self.titleLabel.centerYAnchor constraintEqualToAnchor:self.contentView.centerYAnchor].active = YES;
     
-    [self.titleLabel.centerXAnchor constraintEqualToAnchor:view_guide.centerXAnchor].active = YES;
-    [self.titleLabel.centerYAnchor constraintEqualToAnchor:view_guide.centerYAnchor].active = YES;
-    [self.titleLabel.topAnchor constraintEqualToAnchor:view_guide.topAnchor].active = YES;
-    [self.titleLabel.bottomAnchor constraintEqualToAnchor:view_guide.bottomAnchor].active = YES;
-    [self.titleLabel.heightAnchor constraintEqualToConstant:100].active = YES;
+    // 2. 设置layouGuide 高度 （不能达到目的）
+//    [view_guide.topAnchor constraintEqualToAnchor:self.contentView.topAnchor].active = YES;
+//    [view_guide.leftAnchor constraintEqualToAnchor:self.contentView.leftAnchor].active = YES;
+//    [view_guide.rightAnchor constraintEqualToAnchor:self.contentView.rightAnchor].active = YES;
+//    [view_guide.heightAnchor constraintEqualToConstant:200].active = YES;
+//    [self.titleLabel.centerXAnchor constraintEqualToAnchor:view_guide.centerXAnchor].active = YES;
+//    [self.titleLabel.centerYAnchor constraintEqualToAnchor:view_guide.centerYAnchor].active = YES;
 }
 
 
