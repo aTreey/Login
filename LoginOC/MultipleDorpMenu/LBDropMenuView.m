@@ -272,12 +272,8 @@
     if (self.tableCount == 1) {
         CourseFilterResponse *model = self.dataArr[indexPath.row];
         [self saveSelects];
-        
-    
-        
-        NSArray *selectArray = tableView.indexPathForSelectedRow.row == 0 ? nil : [tableView indexPathsForSelectedRows];
         [self updateSelectedItem:model.data tableNumber:self.tableCount];
-//        [self dismiss];
+        [self dismiss];
         [_delegate dropMenuView:self didSelectItem:model.data];
     }
     else if (self.tableCount == 2){
