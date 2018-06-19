@@ -23,13 +23,20 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
     self.datas = @[
-                   [[MasonryTestController alloc] initWithTitle:@"基础" viewClass:MasonryTestView.class],
+                   [[MasonryTestController alloc] initWithTitle:@"尺寸/位置/约束冲突" viewClass:MasonryTestView.class],
                    [[MasonryTestController alloc] initWithTitle:@"scrollView" viewClass:MasonryScrollView.class],
-                   [[MasonryTestController alloc] initWithTitle:@"基础" viewClass:MasonryTestView.class],
-                   [[MasonryTestController alloc] initWithTitle:@"基础" viewClass:MasonryTestView.class],
-                   [[MasonryTestController alloc] initWithTitle:@"基础" viewClass:MasonryTestView.class],
-                   [[MasonryTestController alloc] initWithTitle:@"基础" viewClass:MasonryTestView.class],
-                   [[MasonryTestController alloc] initWithTitle:@"基础" viewClass:MasonryTestView.class]
+                   [[MasonryTestController alloc] initWithTitle:@"中心约束" viewClass:MasonryCenterView.class],
+                   [[MasonryTestController alloc] initWithTitle:@"更新约束" viewClass:MasonryUpdateView.class],
+                   [[MasonryTestController alloc] initWithTitle:@"移除约束" viewClass:MasonryRemakeView.class],
+                   [[MasonryTestController alloc] initWithTitle:@"多个控件边距" viewClass:MasonrymutltiEdgeView.class],
+                   [[MasonryTestController alloc] initWithTitle:@"固定宽高比" viewClass:MasonryAutoFitView.class],
+                   [[MasonryTestController alloc] initWithTitle:@"多行文本" viewClass:MasonryMultiLabelView.class],
+                   [[MasonryTestController alloc] initWithTitle:@"使用数组约束多个控件" viewClass:MasonryArrayView.class],
+                   [[MasonryTestController alloc] initWithTitle:@"多个控件线性布局约束" viewClass:MasonryCollectView.class],
+                   [[MasonryTestController alloc] initWithTitle:@"批量约束" viewClass:MasonryBatchView.class],
+                   [[MasonryTestController alloc] initWithTitle:@"动画" viewClass:MasonryAnimationView.class],
+                   
+                   [[MasonryTestController alloc] initWithTitle:@"iPhoneX" viewClass:MasonryiPhoneXView.class]
                    ];
     
     

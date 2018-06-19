@@ -26,9 +26,15 @@
 
 - (void)loadView {
     self.view = self.viewClass.new;
-    self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
+- (UIRectEdge)edgesForExtendedLayout {
+    return UIRectEdgeNone;
+}
 
 
 @end

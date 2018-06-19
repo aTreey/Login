@@ -15,3 +15,54 @@
 @interface MasonryScrollView : UIView
 
 @end
+
+@interface MasonrySizeView : UIView
+
+@end
+
+@interface MasonryCenterView : UIView
+
+@end
+
+@interface MasonryUpdateView : UIView
+
+@end
+
+@interface MasonryRemakeView : UIView
+
+@end
+
+@interface MasonrymutltiEdgeView : UIView
+
+@end
+
+@interface MasonryAutoFitView : UIView
+
+@end
+
+
+@interface MasonryMultiLabelView : UIView
+
+@end
+
+@interface MasonryArrayView : UIView
+
+@end
+
+@interface MasonryCollectView : UIView
+
+@end
+
+@interface MasonryBatchView : UIView
+
+@end
+
+@interface MasonryAnimationView : UIView
+
+@end
+
+@interface MasonryiPhoneXView : UIView
+
+@end
+
+
