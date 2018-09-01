@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N2k-cY-mEb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N2k-cY-mEb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,11 +57,58 @@
                     <connections>
                         <segue destination="9Yj-zv-3DR" kind="relationship" relationship="viewControllers" id="QhS-lI-Cui"/>
                         <segue destination="eTH-mr-7mQ" kind="relationship" relationship="viewControllers" id="rpf-c1-Je1"/>
+                        <segue destination="L2v-iu-dwW" kind="relationship" relationship="viewControllers" id="YiA-Z2-dsW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWa-jC-Pby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2118" y="-161"/>
+        </scene>
+        <!--Effective-OC 52个方法-->
+        <scene sceneID="gsu-27-gff">
+            <objects>
+                <tableViewController id="zvu-b4-FXc" customClass="EffectiveListController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oN7-RX-Mls">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pQG-ij-3uG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pQG-ij-3uG" id="dQL-6s-Lyo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zvu-b4-FXc" id="GQk-dA-6py"/>
+                            <outlet property="delegate" destination="zvu-b4-FXc" id="JXx-A0-5wp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Effective-OC 52个方法" id="51Q-um-3uW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2F-Aj-PtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551" y="941"/>
+        </scene>
+        <!--EffectiveOC-->
+        <scene sceneID="LSm-JD-98u">
+            <objects>
+                <navigationController id="L2v-iu-dwW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="EffectiveOC" id="UUr-ih-40y"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mcp-zl-QSh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zvu-b4-FXc" kind="relationship" relationship="rootViewController" id="lkM-jv-Ogv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oH2-bZ-AXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1306" y="942"/>
         </scene>
         <!--Masonry-->
         <scene sceneID="YYv-Ki-qlm">
