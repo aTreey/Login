@@ -1,4 +1,4 @@
-//
+ //
 //  MasonryTestView.m
 //  LoginOC
 //
@@ -387,7 +387,7 @@
     topView.layer.borderWidth = 3;
     
     UIView *topInnerView = [[UIView alloc] init];
-    topInnerView.backgroundColor = [UIColor blueColor];
+    topInnerView.backgroundColor = [UIColor orangeColor];
     
     UIView *bottomView = [[UIView alloc] init];
     bottomView.backgroundColor = [UIColor grayColor];
@@ -412,10 +412,10 @@
     [topView addSubview:topInnerView];
     [topInnerView makeConstraints:^(MASConstraintMaker *make) {
         // 设置自己的宽高比是3:1
-        make.width.equalTo( topInnerView.height).multipliedBy(3); // 乘因数
+        make.width.equalTo( topInnerView.mas_height).multipliedBy(3); // 乘因数
        
         // 设置宽高并且设置他们的优先级最低
-        make.width.height.lessThanOrEqualTo(topView);
+        make.left.right.equalTo(topView);
         make.width.height.equalTo(topView).priorityLow();
         
         // 设置位置

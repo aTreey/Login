@@ -10,6 +10,8 @@
 
 #import "EOCPerson+Methods.h"
 
+#import "EOCPerson_27.h"
+
 @interface EffectiveDetailController ()
 
 @end
@@ -37,6 +39,15 @@
     EOCPerson *friend_B = [EOCPerson new];
     [person addFriend:friend_A];
     [person addFriend:friend_B];
+    
+    EOCPerson_27 *person_27 = [[EOCPerson_27 alloc] initWithFirstName:@"Lee" lastName:@"xiaoLong"];
+    NSLog(@"person_27.firstName = %@, person_27.lastName = %@", person_27.firstName, person_27.lastName);
+    
+    // 第27 条通过匿名分类（类扩展）接口中声明为'只读'的属性扩展为‘可读写’，只能在内部设置，外界还是只读属性
+    // 
+//    person_27.firstName = @"zhang";   // 报错 ：Assignment to readonly property
+//    person_27.lastName  = @"ming";  // 报错 ：Assignment to readonly property
+    
 }
 
 

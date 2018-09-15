@@ -42,6 +42,12 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 //    [self anaylsisHTML];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSInteger random = (arc4random() % 101);
+    NSLog(@"=====%ld", random);
+    [self dispatch_semaphore_t:random];
+}
+
 
 - (void)testBlock {
     __block int value = 1024;
@@ -110,5 +116,32 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     }
 }
 
+#pragma mark - 信号量
+
+- (void)dispatch_semaphore_t:(NSInteger)number {
+    
+    NSLog(@"dispatch_semaphore_t测试");
+    dispatch_semaphore_t single = dispatch_semaphore_create(0);
+    NSLog(@"single1111 = %@", single);
+    if (number > 50) {
+        NSLog(@"single2222 = %@", single);
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            for (NSInteger i = 0; i <= 100; i++) {
+                NSLog(@"异步执行");
+            }
+            dispatch_semaphore_signal(single);
+            NSLog(@"single3333 = %@", single);
+        });
+    } else {
+        dispatch_semaphore_signal(single);
+        NSLog(@"single4444 = %@", single);
+    }
+    
+    dispatch_semaphore_wait(single, DISPATCH_TIME_FOREVER);
+    NSLog(@"2222222----222");
+//    dispatch_semaphore_signal(single);
+    NSLog(@"single5555 = %@", single);
+
+}
 
 @end
