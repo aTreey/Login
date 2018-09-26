@@ -13,7 +13,7 @@
 static const NSTimeInterval kAnimationDuration = 0.3;
 
 /// static 修饰意味着该变量仅在定义此变量的编译单元（实现文件.m）中可见，作用域就是当前.m文件
-/// 如果需要声明一个外部可见的常值变量，需要在头文件中声明并使用 extern 关键词修饰 "extern NSString *const EOCStringConstant;"
+/// 如果需要声明一个外部可见的常值变量，需要在头文件中声明并使用 extern 关键词修饰 "extern NSString *const EOCStringConstant;
 /// 常量解读是从右往左： const 修饰的是常量不希望别人修改， NSString * 指向NSString对象，
 
 NSString *const EOCStringConstant = @"VALUE";
