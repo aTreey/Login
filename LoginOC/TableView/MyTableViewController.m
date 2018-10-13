@@ -18,6 +18,7 @@
     [super viewDidLoad];
     
     _datas = @[@"TableHeaderScaleController",
+               @"SOAPController"
                ];
 }
 

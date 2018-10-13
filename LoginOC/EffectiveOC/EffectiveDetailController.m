@@ -7,6 +7,9 @@
 //
 
 #import "EffectiveDetailController.h"
+#import "EOCPerson_7.h"
+#import "EOCPerson8.h"
+
 
 #import "EOCPerson+Methods.h"
 
@@ -28,6 +31,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.cyanColor;
     
+    [self test_7];
+    [self test_8];
     [self categoryTest];
 }
 
@@ -50,6 +55,17 @@
     
 }
 
+
+- (void)test_7 {
+    EOCPerson_7 *person = [EOCPerson_7 new];
+    person.lastName = @"zhang";
+}
+
+- (void) test_8 {
+    EOCPerson8 *person = [EOCPerson8 new];
+    [person methond];
+    [person methond4];
+}
 
 
 @end

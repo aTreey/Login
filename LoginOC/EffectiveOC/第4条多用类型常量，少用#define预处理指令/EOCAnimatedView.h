@@ -47,5 +47,3 @@ extern NSTimeInterval const EOCAnimatedViewAnimationDuration1;
 
 @end
 
-
-

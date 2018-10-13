@@ -6,6 +6,8 @@ target 'LoginOC' do
   # use_frameworks!
 
 pod 'Masonry'
+pod 'AFNetworking'
+pod 'KissXML'
 
   # Pods for LoginOC
 
