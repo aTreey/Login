@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, TestState) {
+    TestStateNone,
+    TestStateOne,
+    TestStateTwo,
+};
+
 @interface SOAPController : UIViewController
 
+@property (assign) TestState state;
+@property (strong) NSDictionary *dict;
 @end

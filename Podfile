@@ -8,12 +8,13 @@ target 'LoginOC' do
 pod 'Masonry'
 pod 'AFNetworking'
 pod 'KissXML'
+pod 'SCRecorder'
 
   # Pods for LoginOC
 
   target 'LoginOCTests' do
     inherit! :search_paths
-    # Pods for testing
+    # Pods foter testing
   end
 
   target 'LoginOCUITests' do

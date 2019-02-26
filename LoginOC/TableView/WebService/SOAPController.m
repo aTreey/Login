@@ -9,6 +9,7 @@
 #import "SOAPController.h"
 #import <AFNetworking.h>
 #import "Soap.h"
+#import "LoginOC-swift.h"
 
 
 @interface SOAPController ()
@@ -24,10 +25,26 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//    [self soapTest];
+    
+    NSDictionary *obj = self.dict;
+    
+    if ([obj.allKeys containsObject:@"key"]) {
+//        NSInteger num = [obj[@"key"] integerValue];
+//        NSLog(@"num==%ld", num);
+    }
+    
+    NSLog(@"objc = %@----type==%@", obj, obj[@"key"]);
+    
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self afnetworkingSoap];
-    
-    [self soapTest];
+    OC_Swift_EnumController *testController = [OC_Swift_EnumController new];
+    testController.type = TestStateTwo;
+    [self.navigationController pushViewController:testController animated:true];
 }
 
 
