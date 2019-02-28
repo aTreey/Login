@@ -22,6 +22,7 @@
 
 // __strong 修饰符表示对对象的“强引用”
 - (void)setObject:(id __strong)obj {
+    
     obj_ = obj;
 }
 
@@ -125,6 +126,54 @@
 
 
 
+/**
+ __autoreleasing
+ */
+- (void)__autoreleasingCode {
+    
+    /** 1.
+     'NSAutoreleasePool' is unavailable: not available in automatic reference counting mode
+     在ARC 模式下不能使用NSAutoreleasePool
+     
+     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+     
+     id obj = [[NSObject alloc] init];
+     [obj autorelease];
+     [obj drain];
+     
+     */
+    
+    
+    /** 2. ARC 模式下正确使用*/
+    
+    @autoreleasepool {
+        id __autoreleasing obj = [[NSObject alloc] init];
+    }
+    
+    
+    @autoreleasepool {
+        // 获取非自己生成所持有的对象
+        id __strong obj = [NSMutableArray array];
+        
+        // 因为变量obj 为强引用
+        // 所以自己持有对象
+        // 编译器判断其方法后，自动注册到 @autoreleasepool 中
+    }
+    
+    // obj 超出其作用域，强引用失效
+    // 自动释放自己持有的对象
+    
+    
+    // @autoreleasepool 的结束，注册到其当中的所有对象自动释放
+    // 对象废弃
+    
+}
+
+// 不用 __autoreleasing 修饰符也能事对象注册到 @autoreleasepool 中
+// 由于return 使的对象超出作用域，所以强应用d对应的对象会被自动释放，但是该对象最为函数的返回值，编译器会自动将其注册到@autoreleasepool中
++ (id)array {
+    return [[NSMutableArray alloc] init];
+}
 
 
 @end

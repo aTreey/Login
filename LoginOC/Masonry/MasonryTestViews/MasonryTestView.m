@@ -93,6 +93,14 @@
     self = [super init];
     if (!self) { return nil; }
     
+//    [self verticlaScrollViewDemo];
+//    [self horizontalScrollView];
+    [self constraintsCollectionView];
+    
+    return self;
+}
+
+- (void)verticlaScrollViewDemo {
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.backgroundColor = [UIColor grayColor];
     [self addSubview:scrollView];
@@ -136,8 +144,214 @@
     [containerView makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(lastLabel.bottom);
     }];
+}
+
+- (void)horizontalScrollView {
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.backgroundColor = [UIColor grayColor];
+    [self addSubview:scrollView];
     
-    return self;
+    [scrollView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self).insets(UIEdgeInsetsMake(10, 5, 10, 5));
+    }];
+    
+    
+    // 需要创建一个容器，存放创建的子控件
+    UIView *containerView = [[UIView alloc] init];
+    [scrollView addSubview:containerView];
+    
+    [containerView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(scrollView);
+        make.height.equalTo(scrollView);
+    }];
+    
+    UILabel *lastLabel = nil;
+    for (NSInteger i = 0; i < 30; i++) {
+        UILabel *label = [[UILabel alloc] init];
+        label.text = [NSString stringWithFormat:@"第%ld个", i];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.backgroundColor = [self randomColor];
+        
+        [scrollView addSubview:label];
+        
+        [label makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(@0);
+            make.width.equalTo(self);
+            make.leading.equalTo(lastLabel ? lastLabel.trailing : @0);
+            make.bottom.equalTo(self);
+        }];
+        lastLabel = label;
+    }
+    
+    [containerView makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.equalTo(lastLabel.trailing);
+    }];
+}
+
+- (void)constraintsCollectionView {
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.backgroundColor = [UIColor grayColor];
+    [self addSubview:scrollView];
+    
+    [scrollView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
+    
+    
+    // 需要创建一个容器，存放创建的子控件
+    UIView *containerView = [[UIView alloc] init];
+    [scrollView addSubview:containerView];
+    
+    [containerView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(scrollView);
+        make.height.equalTo(scrollView);
+    }];
+    
+    
+//    UIView *label = [[UIView alloc] init];
+//    label.backgroundColor = [self randomColor];
+//
+//    [scrollView addSubview:label];
+//
+//    [label makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self);
+//        make.width.equalTo(self);
+//        make.leading.equalTo(scrollView);
+//        make.height.equalTo(self);
+//    }];
+//
+//
+//    UIView *label1 = [[UIView alloc] init];
+//    label1.backgroundColor = [self randomColor];
+//
+//    [scrollView addSubview:label1];
+//
+//    [label1 makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self);
+//        make.width.equalTo(self);
+//        make.leading.equalTo(label.trailing);
+//        make.height.equalTo(self);
+//        make.trailing.equalTo(scrollView);
+//    }];
+    
+    
+//    UIView *lastLabel = nil;
+//    for (NSInteger i = 0; i < 2; i++) {
+//        UIView *label = [[UIView alloc] init];
+//        label.backgroundColor = [self randomColor];
+//
+//        [scrollView addSubview:label];
+//
+//        [label makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(@0);
+//            make.width.equalTo(self);
+//            make.leading.equalTo(lastLabel ? lastLabel.trailing : @0);
+//            make.bottom.equalTo(self);
+//        }];
+//        lastLabel = label;
+//    }
+    
+    
+    UIView *label = [[UIView alloc] init];
+    label.backgroundColor = [self randomColor];
+    
+    [scrollView addSubview:label];
+    
+    [label makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@0);
+        make.width.equalTo(self);
+        make.leading.equalTo(@0);
+        make.bottom.equalTo(self);
+    }];
+    
+    
+    UIView *label2 = [[UIView alloc] init];
+    label2.backgroundColor = [self randomColor];
+    
+    [scrollView addSubview:label2];
+    
+    
+    
+    /**
+     make.top.equalTo(@0); 等价于 make.top.equalTo 父视图
+    
+     */
+    [label2 makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@0); //
+        make.width.equalTo(self);
+        make.leading.equalTo(label.trailing);
+        make.bottom.equalTo(self);
+    }];
+
+    [containerView makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.equalTo(label2);
+    }];
+    
+    
+    
+    
+    /*
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.backgroundColor = [UIColor grayColor];
+    [self addSubview:scrollView];
+    
+    [scrollView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self).insets(UIEdgeInsetsMake(10, 5, 10, 5));
+    }];
+    
+    
+    // 需要创建一个容器，存放创建的子控件
+    UIView *containerView = [[UIView alloc] init];
+    [scrollView addSubview:containerView];
+    
+    [containerView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(scrollView);
+        make.height.equalTo(scrollView);
+    }];
+    
+//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+//    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+//    [scrollView addSubview:collectionView];
+    
+    UIView *leftView = [[UIView alloc] init];
+    leftView.backgroundColor = [UIColor greenColor];
+    
+    UIView *rightView = [[UIView alloc] init];
+    rightView.backgroundColor = [UIColor cyanColor];
+    [scrollView addSubview:leftView];
+    [scrollView addSubview:rightView];
+    
+    [leftView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.leading.equalTo(self);
+        make.height.mas_equalTo(300);
+        make.width.mas_equalTo(self);
+    }];
+    
+    [rightView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self);
+        make.height.mas_equalTo(400);
+        make.width.mas_equalTo(self);
+        make.leading.mas_equalTo(leftView.trailing);
+    }];
+    
+    
+    
+//    [collectionView makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self);
+//        make.width.equalTo(self);
+//        make.leading.equalTo(rightView.trailing);
+//        make.bottom.equalTo(self);
+//    }];
+    
+    
+    [containerView makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.equalTo(rightView);
+    }];
+     
+     
+     */
 }
 
 - (UIColor *)randomColor {
