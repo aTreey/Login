@@ -15,8 +15,9 @@
 
 #import "EOCPerson_27.h"
 
-@interface EffectiveDetailController ()
+#import "GCDTest.h"
 
+@interface EffectiveDetailController ()
 @end
 
 @implementation EffectiveDetailController
@@ -61,11 +62,10 @@
     person.lastName = @"zhang";
 }
 
-- (void) test_8 {
+- (void)test_8 {
     EOCPerson8 *person = [EOCPerson8 new];
     [person methond];
     [person methond4];
 }
-
 
 @end

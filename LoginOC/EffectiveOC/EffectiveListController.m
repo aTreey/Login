@@ -19,15 +19,23 @@
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.listArray = @[
-                       @"Protocol和Category"
+                       @"Protocol和Category",
+                       @"AutomaticReferenceCountingController"
                        ];
 }
 
 #pragma mark - delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    EffectiveDetailController *controller = [EffectiveDetailController new];
-    controller.title = self.listArray[indexPath.row];
-    [self.navigationController pushViewController:controller animated:true];
+    
+    if (indexPath.row == 0) {
+        EffectiveDetailController *controller = [EffectiveDetailController new];
+        controller.title = self.listArray[indexPath.row];
+        [self.navigationController pushViewController:controller animated:true];
+    } else {
+        UIViewController *controller = [[NSClassFromString(self.listArray[indexPath.row]) alloc] init];
+        controller.title = self.listArray[indexPath.row];
+        [self.navigationController pushViewController:controller animated:true];
+    }
 }
 
 
