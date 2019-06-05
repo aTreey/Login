@@ -7,7 +7,7 @@
 //
 
 #import "lBLivePlayerManager.h"
-#import "NELivePlayerController.h"
+#import <NELivePlayerFramework/NELivePlayerFramework.h>
 
 @interface lBLivePlayerManager ()
 
@@ -64,9 +64,8 @@ static lBLivePlayerManager *instance = nil;
 
 - (void)setupLiverPlayer {
     NSError *error = nil;
-    self.livePlayer = [[NELivePlayerController alloc] initWithContentURL:[NSURL URLWithString:self.liveUrl]
-                                                  needConfigAudioSession:NO
-                                                                   error:&error];
+    NELPUrlConfig *config = [NELPUrlConfig new];
+    self.livePlayer = [[NELivePlayerController alloc] initWithContentURL:[NSURL URLWithString:self.liveUrl] config:config error:&error];
     
     if (self.livePlayer == nil || error) {
         NSLog(@"error = %@", error);

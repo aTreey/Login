@@ -450,6 +450,8 @@
     [UIView animateWithDuration:0.5 animations:^{
         [self layoutIfNeeded];
     }];
+    
+    [self updateConstraintsIfNeeded];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

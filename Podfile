@@ -9,6 +9,7 @@ pod 'Masonry'
 pod 'AFNetworking'
 pod 'KissXML'
 pod 'SCRecorder'
+pod 'NELivePlayer'
 
   # Pods for LoginOC
 

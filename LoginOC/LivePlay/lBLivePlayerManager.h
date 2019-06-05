@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NELivePlayer.h"
+#import <NELivePlayerFramework/NELivePlayerFramework.h>
 
 @protocol lBLivePlayerManagerDelegate <NSObject>
 

@@ -7,10 +7,9 @@
 //
 
 #import "LiveController.h"
-
-#import "NELivePlayerController.h"
 #import "AppDelegate+SuspendedPlay.h"
 #import "lBLivePlayerManager.h"
+#import <NELivePlayerFramework/NELivePlayerFramework.h>
 
 
 @interface LiveController ()
