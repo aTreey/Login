@@ -10,6 +10,7 @@ pod 'AFNetworking'
 pod 'KissXML'
 pod 'SCRecorder'
 pod 'NELivePlayer'
+pod 'HyphenateLite'
 
   # Pods for LoginOC
 
