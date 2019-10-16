@@ -9,11 +9,21 @@
 #import "SOAPController.h"
 #import <AFNetworking.h>
 #import "Soap.h"
-#import "LoginOC-swift.h"
+#import "LoginOC-Swift.h"
 
+
+typedef NS_ENUM(NSUInteger, TestDisplacementEnum) {
+    TestDisplacementEnumNone = 1 << 0,
+    TestDisplacementEnumA = 1 << 1,
+    TestDisplacementEnumB = 1 << 2,
+    TestDisplacementEnumC = 1 << 3,
+};
 
 @interface SOAPController ()
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
+// 位移枚举
+@property (nonatomic, assign) TestDisplacementEnum displacementEnum;
+
 @end
 
 @implementation SOAPController
@@ -21,12 +31,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
-    [self setupManager];
-    
+//    [self setupManager];
+    self.displacementEnum = TestDisplacementEnumA;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.displacementEnum = self.displacementEnum | TestDisplacementEnumB;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+//    self.displacementEnum = self.displacementEnum | TestDisplacementEnumC;
+    
 //    [self soapTest];
     
     NSDictionary *obj = self.dict;
@@ -42,12 +59,37 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self afnetworkingSoap];
+    
+    [self testDisplacementEnum:self.displacementEnum];
+    
+}
+
+- (void)testDisplacementEnum:(TestDisplacementEnum)displacementEnum {
+    if (displacementEnum == TestDisplacementEnumA) {
+        NSLog(@" == TestDisplacementEnumA");
+
+    } else if (displacementEnum == TestDisplacementEnumB) {
+        NSLog(@" == TestDisplacementEnumB");
+    } else if (displacementEnum == TestDisplacementEnumC) {
+        NSLog(@" == TestDisplacementEnumC");
+    }
+    
+//    else if (((displacementEnum & TestDisplacementEnumA) == TestDisplacementEnumA)
+//               && ((displacementEnum & TestDisplacementEnumB) == TestDisplacementEnumB)
+//               ) {
+//        NSLog(@" == TestDisplacement");
+//    }
+    
+    else if ((displacementEnum & TestDisplacementEnumA) == TestDisplacementEnumA) {
+        NSLog(@" == TestDisplacementEnumA");
+    }
+}
+
+- (void)testSoap {
     OC_Swift_EnumController *testController = [OC_Swift_EnumController new];
     testController.type = TestStateTwo;
     [self.navigationController pushViewController:testController animated:true];
 }
-
-
 
 
 - (void)soapTest {

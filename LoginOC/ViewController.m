@@ -15,6 +15,14 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 
 @interface ViewController ()
 
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIView *scrollContentView;
+
+@property (nonatomic, strong) UIScrollView *scrollView2;
+@property (nonatomic, strong) UIView *scrollContentView2;
+
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation ViewController
@@ -32,14 +40,18 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     
 //    [self suspendPlayVido];
     
-    [self loginModule];
-    
-    [self dropMenuView];
+//    [self loginModule];
+//
+//    [self dropMenuView];
     
 //    [self testBlock];
 //
 //    [self gcdTest];
 //    [self anaylsisHTML];
+    
+    [self testScrollView];
+//    [self horizontalScrollView];
+    [self fetchVehicleStatus];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -142,6 +154,126 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 //    dispatch_semaphore_signal(single);
     NSLog(@"single5555 = %@", single);
 
+}
+
+- (void)testScrollView {
+    self.scrollView = [UIScrollView new];
+    self.scrollContentView = [UIView  new];
+    
+    self.scrollView2 = [UIScrollView new];
+    self.scrollContentView2 = [UIView  new];
+    
+    [self.view addSubview:self.scrollView];
+    [self.scrollView addSubview:self.scrollContentView];
+    
+//    [self.view addSubview:self.scrollView2];
+//    [self.scrollView addSubview:self.scrollContentView2];
+    
+    [self.scrollView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(200, 0, 100, 0));
+    }];
+    
+    [self.scrollContentView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.scrollView);
+        make.height.equalTo(self.scrollView);
+    }];
+    
+    UILabel *testLable = [UILabel new];
+    UILabel *testLable2 = [UILabel new];
+    
+    testLable.text = [NSString stringWithFormat:@"第1111个"];
+    testLable.textAlignment = NSTextAlignmentCenter;
+    testLable.backgroundColor = [UIColor blueColor];
+    
+    testLable2.text = [NSString stringWithFormat:@"第2222个"];
+    testLable2.textAlignment = NSTextAlignmentCenter;
+    testLable2.backgroundColor = [UIColor redColor];
+
+    
+    [self.scrollView addSubview:testLable];
+    
+    [testLable makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@0);
+        make.width.equalTo(self.view);
+        make.leading.mas_equalTo(0);
+        make.bottom.equalTo(self.view);
+    }];
+    
+    [self.scrollView addSubview:testLable2];
+    [testLable2 makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@0);
+        make.width.equalTo(self.view);
+        make.leading.equalTo(testLable.mas_trailing);
+        make.bottom.equalTo(self.view);
+    }];
+    
+    [self.scrollContentView makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.equalTo(testLable2.trailing);
+    }];
+}
+
+
+- (void)horizontalScrollView {
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:scrollView];
+    
+    [scrollView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(10, 5, 10, 5));
+    }];
+    
+    
+    // 需要创建一个容器，存放创建的子控件
+    UIView *containerView = [[UIView alloc] init];
+    [scrollView addSubview:containerView];
+    
+    [containerView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(scrollView);
+        make.height.equalTo(scrollView);
+    }];
+    
+    UILabel *lastLabel = nil;
+    for (NSInteger i = 0; i < 30; i++) {
+        UILabel *label = [[UILabel alloc] init];
+        label.text = [NSString stringWithFormat:@"第%ld个", i];
+        label.textAlignment = NSTextAlignmentCenter;
+//        label.backgroundColor = [self randomColor];
+        
+        [scrollView addSubview:label];
+        
+        [label makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(@0);
+            make.width.equalTo(self.view);
+            make.leading.equalTo(lastLabel ? lastLabel.trailing : @0);
+            make.bottom.equalTo(self.view);
+        }];
+        lastLabel = label;
+    }
+    
+    [containerView makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.equalTo(lastLabel.trailing);
+    }];
+}
+
+- (void)fetchVehicleStatus {
+    [self startTimer];
+    NSLog(@"time ========= %@", [NSDate date]);
+
+}
+
+- (void)startTimer {
+    [_timer invalidate];
+    _timer = [NSTimer timerWithTimeInterval:5
+                                     target:self
+                                   selector:@selector(fetchVehicleStatus)
+                                   userInfo:nil
+                                    repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)endTimer {
+    [_timer invalidate];
+    _timer = nil;
 }
 
 @end

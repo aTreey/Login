@@ -11,6 +11,8 @@ pod 'KissXML'
 pod 'SCRecorder'
 pod 'NELivePlayer'
 pod 'HyphenateLite'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
 
   # Pods for LoginOC
 

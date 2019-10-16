@@ -94,8 +94,8 @@
     if (!self) { return nil; }
     
 //    [self verticlaScrollViewDemo];
-//    [self horizontalScrollView];
-    [self constraintsCollectionView];
+    [self horizontalScrollView];
+//    [self constraintsCollectionView];
     
     return self;
 }
