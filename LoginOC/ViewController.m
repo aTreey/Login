@@ -10,6 +10,7 @@
 #import "LoginController.h"
 #import "LiveController.h"
 #import "UIViewController+LayoutGuide.h"
+#import <UIColor+Extension.h>
 
 typedef void(^MyBlock)(NSInteger a, NSInteger b);
 
