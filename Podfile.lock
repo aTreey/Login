@@ -29,7 +29,7 @@ DEPENDENCIES:
   - AFNetworking
   - HyphenateLite
   - KissXML
-  - LGUitls (from `./LoginModule/LGUitls`)
+  - LGUitls (from `./LGUitls`)
   - Masonry
   - NELivePlayer
   - SCRecorder
@@ -49,7 +49,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   LGUitls:
-    :path: "./LoginModule/LGUitls"
+    :path: "./LGUitls"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -62,6 +62,6 @@ SPEC CHECKSUMS:
   SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 45ffc5206a6d27f72232bd0cf799385dd9580846
+PODFILE CHECKSUM: ffac7cac921fe9128d9595d40f60a2318f117448
 
 COCOAPODS: 1.8.3
