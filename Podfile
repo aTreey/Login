@@ -10,7 +10,12 @@ target 'LoginOC' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
    use_frameworks!
    
-   pod 'LGUitls'
+   # 远程私有库
+   pod 'LGUitls', :project_name => 'PrivateModule'
+   pod 'LGEffectiveObjectiveC', :project_name => 'PrivateModule'
+   pod 'LGObjectiveCPro', :project_name => 'PrivateModule'
+   
+   # 本地私有库
    pod 'LGNetworking', :path => './LoginModule/LGNetworking'
   
 pod 'Masonry', :project_name => 'AutoLayout'

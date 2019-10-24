@@ -16,7 +16,9 @@ PODS:
     - AFNetworking/NSURLSession
   - HyphenateLite (3.6.1)
   - KissXML (5.2.3)
+  - LGEffectiveObjectiveC (0.1.0)
   - LGNetworking (0.1.0)
+  - LGObjectiveCPro (0.1.0)
   - LGUitls (0.1.0)
   - Masonry (1.1.0)
   - NELivePlayer (2.4.2)
@@ -30,7 +32,9 @@ DEPENDENCIES:
   - AFNetworking
   - HyphenateLite
   - KissXML
+  - LGEffectiveObjectiveC
   - LGNetworking (from `./LoginModule/LGNetworking`)
+  - LGObjectiveCPro
   - LGUitls
   - Masonry
   - NELivePlayer
@@ -40,6 +44,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/aTreey/MyGitSpec.git:
+    - LGEffectiveObjectiveC
+    - LGObjectiveCPro
     - LGUitls
   trunk:
     - AFNetworking
@@ -59,7 +65,9 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   HyphenateLite: 4f85c9c66ab6571e027671866afb76d3c8f52f12
   KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
+  LGEffectiveObjectiveC: fa9f2705f8fe9aace3968a4e727aac57c9c5cbd6
   LGNetworking: 15708a1963acfef97a91c0b8cb7af657bf29e921
+  LGObjectiveCPro: 1b87f6d7abbc831803676502c512e3503eb8ed79
   LGUitls: 0875c594bb0b85787605885fe60bdf6bb7165893
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   NELivePlayer: 8b1f443f8d41d0733a8d38e7407da2042dc71841
@@ -67,6 +75,6 @@ SPEC CHECKSUMS:
   SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: d2ef10898303f81b77a168dfd97f9c5cbd4c7092
+PODFILE CHECKSUM: 48fc03d3f1f6e7b86db898c3e9601e01eaa5128a
 
 COCOAPODS: 1.8.3
