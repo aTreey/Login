@@ -9,7 +9,9 @@
 #import "MasonryTestController.h"
 
 @interface MasonryTestController ()
+
 @property (nonatomic, strong) Class viewClass;
+
 @end
 
 @implementation MasonryTestController

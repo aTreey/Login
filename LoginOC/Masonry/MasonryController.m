@@ -8,11 +8,16 @@
 
 #import "MasonryController.h"
 #import "MasonryTestController.h"
+#import "MasonryAutoLayoutController.h"
+#import "HorizontalTwoLabel.h"
 
 #import "MasonryTestView.h"
 
 @interface MasonryController ()
+
 @property (nonatomic, strong) NSArray *datas;
+@property (nonatomic, strong) NSArray *section2Datas;
+
 @end
 
 @implementation MasonryController
@@ -21,6 +26,7 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"masonryAutolayoutCell"];
     
     self.datas = @[
                    [[MasonryTestController alloc] initWithTitle:@"尺寸/位置/约束冲突" viewClass:MasonryTestView.class],
@@ -40,6 +46,9 @@
                    ];
     
     
+    self.section2Datas = @[
+                            [[MasonryAutoLayoutController alloc] initWithTitle:@"1.并排label" viewClass:HorizontalTwoLabel.class],
+                            ];
     
 }
 
@@ -51,18 +60,25 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.datas.count;
+    return section == 0 ? self.datas.count : self.section2Datas.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    UIViewController *controller = self.datas[indexPath.row];
-    cell.textLabel.text = controller.title;
-    return cell;
+    if (indexPath.section == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        UIViewController *controller = self.datas[indexPath.row];
+        cell.textLabel.text = controller.title;
+        return cell;
+    } else {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"masonryAutolayoutCell"];
+        UIViewController *controller = self.section2Datas[indexPath.row];
+        cell.textLabel.text = controller.title;
+        return cell;
+    }
 }
 
 
@@ -70,7 +86,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
-    UIViewController *controller = self.datas[indexPath.row];
+    UIViewController *controller = nil;
+    if (indexPath.section == 0) {
+        controller = self.datas[indexPath.row];
+    } else {
+        controller = self.section2Datas[indexPath.row];
+    }
     [self.navigationController pushViewController:controller animated:true];
 }
 

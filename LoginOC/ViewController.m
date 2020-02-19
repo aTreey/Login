@@ -11,6 +11,8 @@
 #import "LiveController.h"
 #import "UIViewController+LayoutGuide.h"
 #import <UIColor+Extension.h>
+#import "Person_Prototype.h"
+
 
 typedef void(^MyBlock)(NSInteger a, NSInteger b);
 
@@ -23,6 +25,12 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 @property (nonatomic, strong) UIView *scrollContentView2;
 
 @property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) UILabel *htmlLabel;
+
+@property (nonatomic, strong) UIView *view1;
+@property (nonatomic, strong) UIView *view2;
+@property (nonatomic, strong) UIView *view3;
+@property (nonatomic, strong) UIView *view4;
 
 @end
 
@@ -31,36 +39,136 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self test];
+    //    [self test];
     
-//    [self spaceTest];
-//
-//    [self containerCenter];
-//
-//    [self testAutoresizingMask];
+    //    [self spaceTest];
+    //
+    //    [self containerCenter];
+    //
+    //    [self testAutoresizingMask];
     
-//    [self suspendPlayVido];
+    //    [self suspendPlayVido];
     
-//    [self loginModule];
-//
-//    [self dropMenuView];
+    //    [self loginModule];
+    //
+    //    [self dropMenuView];
     
-//    [self testBlock];
-//
-//    [self gcdTest];
-//    [self anaylsisHTML];
+    //    [self testBlock];
+    //
+    //    [self gcdTest];
+    //    [self anaylsisHTML];
     
     [self testScrollView];
-//    [self horizontalScrollView];
-    [self fetchVehicleStatus];
+    //    [self horizontalScrollView];
+    //    [self fetchVehicleStatus];
+    
+    [self designPatters];
+    
+    [self cornerradiusAndShadow];
+    
+    
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:@""];
+    [components.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"---");
+    }];
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSInteger random = (arc4random() % 101);
     NSLog(@"=====%ld", random);
-    [self dispatch_semaphore_t:random];
+    //    [self dispatch_semaphore_t:random];
+    [self webService];
 }
 
+- (void)viewDidLayoutSubviews {
+    
+//    self.view1.layer.shadowColor = [UIColor redColor].CGColor;
+//    self.view1.layer.shadowOffset =  CGSizeMake(0, 5);
+//    self.view1.layer.shadowOpacity = 1;
+    
+    CALayer *subLayer=[self.view2 layer];
+    subLayer.shadowColor = [UIColor redColor].CGColor;
+    subLayer.shadowOffset = CGSizeMake(5,8);
+    subLayer.shadowOpacity = 1;
+//
+//    [self.view1.layer insertSublayer:subLayer atIndex:0];
+    
+}
+
+- (void)cornerradiusAndShadow {
+    UIView *view1 = [UIView new];
+    self.view1 = view1;
+    UIView *view2 = [UIView new];
+    self.view2 = view2;
+    UIView *view3 = [UIView new];
+    self.view3 = view3;
+    UIView *view4 = [UIView new];
+    self.view4 = view4;
+    
+        
+    [self.view addSubview:view1];
+    [self.view1 addSubview:view3];
+    [self.view1 addSubview:view2];
+    [self.view1 addSubview:view4];
+    
+    view1.layer.cornerRadius = 10;
+    view1.layer.masksToBounds = YES;
+    
+    view1.backgroundColor = [UIColor cyanColor];
+    view2.backgroundColor = [UIColor blueColor];
+    view3.backgroundColor = [UIColor clearColor];
+    
+    [view1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(200, 200));
+    }];
+    
+    [view2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view1);
+        make.centerX.mas_equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(100, 80));
+    }];
+    [view3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view2.mas_bottom);
+        make.centerX.mas_equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(300, 70));
+    }];
+    
+    
+//    view1.layer.shadowColor = [UIColor redColor].CGColor;
+//    view1.layer.shadowOffset =  CGSizeMake(0, 5);
+//    view1.layer.shadowOpacity = 1;
+    
+    
+    
+//    [view1.layer insertSublayer:subLayer below:view2.layer];
+}
+
+- (void)setupHtmlLabel {
+    self.htmlLabel = [UILabel new];
+    
+}
+
+- (void)designPatters {
+    [Person_Prototype test];
+    [Student_Prototype test];
+    [Person_Prototype1 test];
+    [Student_Prototype1 test];
+}
+
+- (void)webService {
+    NSURL *url = [NSURL URLWithString:@"http://192.168.74.233:8888/api/fe/list"];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (!error && data) {
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+            NSLog(@"response = %@", dict);
+        }
+    }] resume];
+}
 
 - (void)testBlock {
     __block int value = 1024;
@@ -79,7 +187,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 
 
 - (void)gcdTest {
-//    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    //    dispatch_queue_t mainQueue = dispatch_get_main_queue();
     dispatch_queue_t globleQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_sync(globleQueue, ^{
         NSLog(@"mainqueue");
@@ -152,9 +260,9 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     
     dispatch_semaphore_wait(single, DISPATCH_TIME_FOREVER);
     NSLog(@"2222222----222");
-//    dispatch_semaphore_signal(single);
+    //    dispatch_semaphore_signal(single);
     NSLog(@"single5555 = %@", single);
-
+    
 }
 
 - (void)testScrollView {
@@ -167,11 +275,13 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.scrollContentView];
     
-//    [self.view addSubview:self.scrollView2];
-//    [self.scrollView addSubview:self.scrollContentView2];
+    //    [self.view addSubview:self.scrollView2];
+    //    [self.scrollView addSubview:self.scrollContentView2];
     
     [self.scrollView makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(200, 0, 100, 0));
+        make.top.mas_equalTo(self.mas_topLayoutGuideBottom);
+        make.leading.trailing.equalTo(self.view);
+        make.height.mas_equalTo(80);
     }];
     
     [self.scrollContentView makeConstraints:^(MASConstraintMaker *make) {
@@ -189,7 +299,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     testLable2.text = [NSString stringWithFormat:@"第2222个"];
     testLable2.textAlignment = NSTextAlignmentCenter;
     testLable2.backgroundColor = [UIColor redColor];
-
+    
     
     [self.scrollView addSubview:testLable];
     
@@ -197,7 +307,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
         make.top.equalTo(@0);
         make.width.equalTo(self.view);
         make.leading.mas_equalTo(0);
-        make.bottom.equalTo(self.view);
+        make.bottom.equalTo(self.scrollContentView);
     }];
     
     [self.scrollView addSubview:testLable2];
@@ -205,7 +315,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
         make.top.equalTo(@0);
         make.width.equalTo(self.view);
         make.leading.equalTo(testLable.mas_trailing);
-        make.bottom.equalTo(self.view);
+        make.bottom.equalTo(self.scrollContentView);
     }];
     
     [self.scrollContentView makeConstraints:^(MASConstraintMaker *make) {
@@ -217,6 +327,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 - (void)horizontalScrollView {
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.backgroundColor = [UIColor grayColor];
+    scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     [self.view addSubview:scrollView];
     
     [scrollView makeConstraints:^(MASConstraintMaker *make) {
@@ -238,7 +349,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
         UILabel *label = [[UILabel alloc] init];
         label.text = [NSString stringWithFormat:@"第%ld个", i];
         label.textAlignment = NSTextAlignmentCenter;
-//        label.backgroundColor = [self randomColor];
+        //        label.backgroundColor = [self randomColor];
         
         [scrollView addSubview:label];
         
@@ -259,7 +370,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 - (void)fetchVehicleStatus {
     [self startTimer];
     NSLog(@"time ========= %@", [NSDate date]);
-
+    
 }
 
 - (void)startTimer {
