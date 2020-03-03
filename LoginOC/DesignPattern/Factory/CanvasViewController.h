@@ -19,6 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) CanvasView *canvasView;
 
+
+/// <#Description#>
+/// @param generator <#generator description#>
+- (void)loadCanvasViewWithGenerator:(CanvasViewGenerator *)generator;
+
 @end
 
 NS_ASSUME_NONNULL_END

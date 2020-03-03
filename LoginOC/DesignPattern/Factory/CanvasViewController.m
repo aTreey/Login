@@ -17,17 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 使用 CanvasViewGenerator 的工厂方法取得默认的画布视图
     CanvasViewGenerator *defaultGenerator = [[CanvasViewGenerator alloc] init];
     [self loadCanvasViewWithGenerator:defaultGenerator];
 }
 
 - (void)loadCanvasViewWithGenerator:(CanvasViewGenerator *)generator {
-  [self.canvasView removeFromSuperview];
-  CGRect aFrame = CGRectMake(0, 0, 320, 436);
-  CanvasView *aCanvasView = [generator canvasViewWithFrame:aFrame];
-  [self setCanvasView:aCanvasView];
-  NSInteger viewIndex = [[[self view] subviews] count] - 1;
-  [[self view] insertSubview:self.canvasView atIndex:viewIndex];
+    [self.canvasView removeFromSuperview];
+    CGRect aFrame = CGRectMake(0, 0, 320, 436);
+    CanvasView *aCanvasView = [generator canvasViewWithFrame:aFrame];
+    self.canvasView = aCanvasView;
+    [self.view addSubview:aCanvasView];
 }
 /*
 #pragma mark - Navigation
