@@ -66,12 +66,9 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     
     [self cornerradiusAndShadow];
     
+    [self testComponents];
     
-    NSURLComponents *components = [[NSURLComponents alloc] initWithString:@""];
-    [components.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSLog(@"---");
-    }];
-    
+    [self testSingleton];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -386,6 +383,17 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 - (void)endTimer {
     [_timer invalidate];
     _timer = nil;
+}
+
+- (void)testComponents {
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:@""];
+    [components.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"---");
+    }];
+}
+
+- (void)testSingleton {
+    
 }
 
 @end
