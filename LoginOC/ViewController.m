@@ -12,6 +12,7 @@
 #import "UIViewController+LayoutGuide.h"
 #import <UIColor+Extension.h>
 #import "Person_Prototype.h"
+#import "MySingleton.h"
 
 
 typedef void(^MyBlock)(NSInteger a, NSInteger b);
@@ -393,7 +394,11 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 }
 
 - (void)testSingleton {
+    Singleton *singleton = [Singleton sharedInstance];
+    Singleton *mySingleton = [MySingleton sharedInstance];
     
+    NSLog(@"singleton ---- %@", singleton);
+    NSLog(@"my singleton ---- %@", mySingleton);
 }
 
 @end
