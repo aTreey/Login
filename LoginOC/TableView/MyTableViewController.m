@@ -20,6 +20,7 @@
     _datas = @[@"TableHeaderScaleController",
                @"SOAPController",
                @"SCRecorderController",
+               @"FormViewController"
                ];
 }
 
