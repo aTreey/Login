@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FormBaseCell : UITableViewCell
 
+@property (nonatomic, strong) UILabel *leftLabel;
+@property (nonatomic, strong) UILabel *rightLabel;
+
+@property (nonatomic, assign) CGFloat rightLabelRightMargin;
+@property (nonatomic, assign) CGFloat leftLabelLeftMargin;
+
+
 - (void)initSubViews;
 
 @end

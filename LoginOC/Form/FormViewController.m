@@ -32,6 +32,11 @@
     row0.rowHeight = 60;
     row0.hidden = NO;
     row0.noValueDisplayText = @"请选择0";
+    row0.rowConfigBlock = ^(FormCell_0  *_Nonnull cell, id  _Nonnull value, NSIndexPath * _Nonnull indexPath) {
+        cell.accessoryType = (value ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone);
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    };
+    
     
     Class cell_1 = [FormCell_1 class];
     FormRow *row1 = [[FormRow alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass(cell_1)];

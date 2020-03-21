@@ -12,7 +12,8 @@
 
 - (void)initSubViews {
     [super initSubViews];
-    self.textLabel.text = @"标题0";
+    self.leftLabel.text = @"标题0";
+    self.rightLabel.text = @"副标题";
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -33,7 +33,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FormRow *row = self.form.rowArray[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:row.reuseIdentifier];
-    
+    if (row.rowConfigBlock) {
+        row.rowConfigBlock(cell, row.value, indexPath);
+    }
     return cell;
 }
 
