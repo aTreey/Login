@@ -7,6 +7,8 @@
 //
 
 #import "FormCell_0.h"
+#import "FormRow.h"
+
 
 @implementation FormCell_0
 
@@ -14,6 +16,11 @@
     [super initSubViews];
     self.leftLabel.text = @"标题0";
     self.rightLabel.text = @"副标题";
+}
+
+- (void)update {
+    self.rightLabel.text = self.rowDescriptor.value ? self.rowDescriptor.value : self.rowDescriptor.noValueDisplayText;
+    NSLog(@"FormCell_0 --- update");
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

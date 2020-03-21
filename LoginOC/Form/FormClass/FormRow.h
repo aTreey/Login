@@ -47,8 +47,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  cell 配置
  */
-
 @property (nonatomic, copy) void(^rowConfigBlock)(id cell, id value, NSIndexPath *indexPath);
+
+/// didSelectRow
+@property (nonatomic, copy) void(^didSelectBlock)(NSIndexPath *indexPath, id value);
+/// didSelectRow with Cell
+@property (nonatomic, copy) void(^didSelectCellBlock)(NSIndexPath *indexPath, id value, id cell);
 
 @end
 

@@ -26,6 +26,45 @@
     }];
 }
 
+- (NSIndexPath *)indexPathOfGSRow:(FormRow *)row {
+    if (row.isHidden) {
+        return nil;
+    }
+    
+    __block NSInteger index = -1;
+    __block BOOL find = NO;
+    [self.rowArray enumerateObjectsUsingBlock:^(FormRow * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (!obj.isHidden) {
+            index++;
+        }
+        if (row == obj) {
+            find = YES;
+            *stop = YES;
+        }
+    }];
+    
+    if (!find) {
+        return nil;
+    }
+    return [NSIndexPath indexPathWithIndex:index];
+}
+
+- (FormRow *)rowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    __block NSInteger index = -1;
+    __block FormRow *row = nil;
+    [self.rowArray enumerateObjectsUsingBlock:^(FormRow * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (!obj.isHidden) {
+            index++;
+        }
+        if (index == indexPath.row) {
+            row = obj;
+        }
+    }];
+    
+    return row;
+}
+
 #pragma mark - setter
 
 - (NSMutableArray<FormRow *> *)rowArray {

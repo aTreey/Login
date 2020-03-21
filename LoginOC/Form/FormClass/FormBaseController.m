@@ -8,6 +8,7 @@
 
 #import "FormBaseController.h"
 #import "FormRow.h"
+#import "FormBaseCell.h"
 
 @interface FormBaseController ()
 
@@ -32,10 +33,12 @@
 #pragma mark - protocol
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FormRow *row = self.form.rowArray[indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:row.reuseIdentifier];
+    FormBaseCell *cell = [tableView dequeueReusableCellWithIdentifier:row.reuseIdentifier];
     if (row.rowConfigBlock) {
         row.rowConfigBlock(cell, row.value, indexPath);
     }
+    cell.rowDescriptor = row;
+    [cell update];
     return cell;
 }
 
@@ -58,6 +61,11 @@
 - (void)tableView:(UITableView *)tableView
          didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    FormRow *row = [self.form rowAtIndexPath:indexPath];
+    !row.didSelectBlock ? : row.didSelectBlock(indexPath, row.value);
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    !row.didSelectCellBlock ? : row.didSelectCellBlock(indexPath, row.value, cell);
 }
 
 #pragma mark - private methods

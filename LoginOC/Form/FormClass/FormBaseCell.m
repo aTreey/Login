@@ -58,4 +58,8 @@
     return _rightLabel;
 }
 
+- (void)update {
+    NSLog(@"FormBaseCell -- update");
+}
+
 @end

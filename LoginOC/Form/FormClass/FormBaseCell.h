@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FormRowProtocol.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FormBaseCell : UITableViewCell
+@interface FormBaseCell : UITableViewCell <FormRowProtocol>
+
+@property (nonatomic, weak) FormRow *rowDescriptor;
 
 @property (nonatomic, strong) UILabel *leftLabel;
 @property (nonatomic, strong) UILabel *rightLabel;
