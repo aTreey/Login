@@ -29,6 +29,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self registerSuspendedPlayNotification];
     
+    NSString *ip = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"SERVER_IP"];
+    NSLog(@"ip = %@", ip);
+    
     return YES;
 }
 
