@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// 需要一个目标接口、告诉适配器提供什么
+/// SetStrokeColorCommand 的目标接口、告诉适配器提供什么
 @protocol SetStrokeColorCommandDelegate <NSObject>
 
 

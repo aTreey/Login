@@ -35,8 +35,11 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ESu-ey-y1O" customClass="CommandSlider">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ESu-ey-y1O" customClass="CommandSlider">
                                     <rect key="frame" x="24" y="0.0" width="333" height="31"/>
+                                    <connections>
+                                        <action selector="onCommandSliderValueChanged:" destination="-1" eventType="valueChanged" id="RFU-fP-PFo"/>
+                                    </connections>
                                 </slider>
                             </subviews>
                             <constraints>
@@ -52,8 +55,11 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lr4-F8-mRl" customClass="CommandSlider">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lr4-F8-mRl" customClass="CommandSlider">
                                     <rect key="frame" x="25.5" y="0.0" width="331.5" height="30.5"/>
+                                    <connections>
+                                        <action selector="onCommandSliderValueChanged:" destination="-1" eventType="valueChanged" id="UVN-yo-iif"/>
+                                    </connections>
                                 </slider>
                             </subviews>
                             <constraints>
@@ -69,8 +75,11 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KGq-XE-8k1" customClass="CommandSlider">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KGq-XE-8k1" customClass="CommandSlider">
                                     <rect key="frame" x="24" y="0.0" width="333" height="31"/>
+                                    <connections>
+                                        <action selector="onCommandSliderValueChanged:" destination="-1" eventType="valueChanged" id="oXq-9g-rwi"/>
+                                    </connections>
                                 </slider>
                             </subviews>
                             <constraints>
