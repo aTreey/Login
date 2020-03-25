@@ -21,6 +21,7 @@
                @"SOAPController",
                @"SCRecorderController",
                @"FormViewController",
+               @"CanvasViewController",
                @"PaletteViewController"
                ];
 }
