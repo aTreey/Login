@@ -9,6 +9,7 @@
 #import "CanvasViewController.h"
 
 @interface CanvasViewController ()
+@property (weak, nonatomic) IBOutlet UIToolbar *toolBarView;
 
 @end
 
@@ -22,12 +23,21 @@
     [self loadCanvasViewWithGenerator:defaultGenerator];
 }
 
+- (void)updateViewConstraints {
+    [self.canvasView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.leading.trailing.mas_equalTo(self.view);
+        make.bottom.mas_equalTo(self.toolBarView.mas_top);
+    }];
+    [super updateViewConstraints];
+}
+
 - (void)loadCanvasViewWithGenerator:(CanvasViewGenerator *)generator {
     [self.canvasView removeFromSuperview];
-    CGRect aFrame = CGRectMake(0, 0, 320, 436);
-    CanvasView *aCanvasView = [generator canvasViewWithFrame:aFrame];
+//    CGRect aFrame = CGRectMake(0, 0, 320, 436);
+    CanvasView *aCanvasView = [generator canvasViewWithFrame:CGRectZero];
     self.canvasView = aCanvasView;
     [self.view addSubview:aCanvasView];
+    [self.view updateConstraintsIfNeeded];
 }
 /*
 #pragma mark - Navigation
