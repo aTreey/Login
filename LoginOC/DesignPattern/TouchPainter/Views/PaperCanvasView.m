@@ -18,6 +18,7 @@
         UIImageView *backgroundView = [[UIImageView alloc]
                                         initWithImage:backgroundImage];
         [self addSubview:backgroundView];
+        self.backgroundColor = [UIColor lightGrayColor];
     }
     return self;
 }

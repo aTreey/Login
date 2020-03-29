@@ -1,1 +1,5 @@
-Yes, it worked!
+192.168.3.7
+/Users/yuhongpeng/Library/Developer/Xcode/DerivedData/LoginOC-herhdlpljmpbqggcvwdcjynjwagv/Build/Products/Debug-iphonesimulator
+/Users/yuhongpeng/Library/Developer/Xcode/DerivedData/LoginOC-herhdlpljmpbqggcvwdcjynjwagv/Build/Products/Debug-iphonesimulator
+/Users/yuhongpeng/Library/Developer/Xcode/DerivedData/LoginOC-herhdlpljmpbqggcvwdcjynjwagv/Build/Products/Debug-iphonesimulator/LoginOC.app/Info.plist
+/Users/yuhongpeng/Library/Developer/Xcode/DerivedData/LoginOC-herhdlpljmpbqggcvwdcjynjwagv/Build/Products/Debug-iphonesimulator/LoginOC.app/Info.plist

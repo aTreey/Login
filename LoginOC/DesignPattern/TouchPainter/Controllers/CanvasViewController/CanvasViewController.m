@@ -7,9 +7,12 @@
 //
 
 #import "CanvasViewController.h"
+#import "Person_xibObject.h"
+
 
 @interface CanvasViewController ()
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBarView;
+@property (nonatomic, strong) IBOutlet Person_xibObject *person;
 
 @end
 

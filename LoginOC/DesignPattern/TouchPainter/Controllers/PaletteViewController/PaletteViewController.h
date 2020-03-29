@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommandSlider.h"
 #import "SetStrokeColorCommand.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -18,6 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 @interface PaletteViewController : UIViewController <SetStrokeColorCommandDelegate>
+
+
+/// 滑块事件处理
+/// @param sender 颜色滑块
+- (IBAction)onCommandSliderValueChanged:(CommandSlider *)sender;
 
 @end
 
