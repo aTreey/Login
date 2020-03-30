@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CoordinatingController : NSObject
 
 @property (nonatomic, readonly) CanvasViewController *canvasViewController;
+@property (nonatomic, readonly) UIViewController *activeViewController;
 
 + (CoordinatingController *) sharedInstance;
 

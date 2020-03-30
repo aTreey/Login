@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CommandSlider : UISlider
 
-@property (nonatomic, strong) IBOutlet Command *command;
+@property (nonatomic, strong) Command *command;
 
 @end
 

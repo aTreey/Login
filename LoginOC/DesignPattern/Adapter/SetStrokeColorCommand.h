@@ -8,6 +8,11 @@
 
 #import "Command.h"
 
+// 修改颜色滑块值回调
+typedef void(^RGBValuesProvider)(CGFloat * _Nullable red, CGFloat * _Nullable green, CGFloat * _Nullable blue);
+// 修改完成更新颜色回调
+typedef void (^PostColorUpdateProvider)(UIColor * _Nullable color);
+
 @class SetStrokeColorCommand;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -22,9 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param green 绿
 /// @param blue 蓝
 - (void) command:(SetStrokeColorCommand *) command
-                didRequestColorComponentsForRed:(CGFloat) red
-                                          green:(CGFloat) green
-                                           blue:(CGFloat) blue;
+                didRequestColorComponentsForRed:(CGFloat *) red
+                                          green:(CGFloat *) green
+                                           blue:(CGFloat *) blue;
 
 
 /// 颜色更新过程结束时调用，命令对象把自己和更新后的颜色传给适配器，这样它就可以利用这个时机用新颜色作任何其他处理
@@ -40,6 +45,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SetStrokeColorCommand : Command
 
 @property (nonatomic, weak) id<SetStrokeColorCommandDelegate> delegate;
+
+/**
+ 使用block 实现适配模式
+ */
+@property (nonatomic, copy) RGBValuesProvider RGBValuesProvider;
+@property (nonatomic, copy) PostColorUpdateProvider postColorUpdateProvider;
+
 
 /// 命令对象中委托应该是个接收器，接收来自命令对象的任何动作消息，
 /// 事实上此处命令的接收器不在此处定义为属性，而应在execute方法获得

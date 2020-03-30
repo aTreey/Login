@@ -7,6 +7,8 @@
 //
 
 #import "CommandSlider.h"
+#import "SetStrokeColorCommand.h"
+
 
 @implementation CommandSlider
 
@@ -17,5 +19,14 @@
     // Drawing code
 }
 */
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.command = [[SetStrokeColorCommand alloc] init];
+    }
+    return self;
+}
 
 @end

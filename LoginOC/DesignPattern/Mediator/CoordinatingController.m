@@ -11,6 +11,7 @@
 @interface CoordinatingController ()
 
 @property (nonatomic, readwrite) CanvasViewController *canvasViewController;
+@property (nonatomic, readwrite) UIViewController *activeViewController;
 
 @end
 
@@ -20,7 +21,8 @@ static CoordinatingController *sharedCoordinator = nil;
 
 - (void) initialize
 {
-  self.canvasViewController = [[CanvasViewController alloc] init];
+    self.canvasViewController = [[CanvasViewController alloc] init];
+    self.activeViewController = self.canvasViewController;
 }
 
 + (CoordinatingController *) sharedInstance
