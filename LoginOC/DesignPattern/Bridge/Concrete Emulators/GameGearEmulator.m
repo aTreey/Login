@@ -1,14 +1,14 @@
 //
-//  GameBoyEmulator.m
+//  GameGearEmulator.m
 //  LoginOC
 //
-//  Created by 于鸿鹏 on 2020/3/30.
+//  Created by 于鸿鹏 on 2020/3/31.
 //  Copyright © 2020 HongpengYu. All rights reserved.
 //
 
-#import "GameBoyEmulator.h"
+#import "GameGearEmulator.h"
 
-@implementation GameBoyEmulator
+@implementation GameGearEmulator
 /**
 重载抽象类中的方法， 以提供自己的特定平台
 */

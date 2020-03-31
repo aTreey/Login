@@ -11,4 +11,9 @@
 
 @implementation ConsoleController
 
+- (void)setCommand:(ConsoleCommand)command {
+    [self.emulator loadInstructionsForCommand:command];
+    [self.emulator executeInstructions];
+}
+
 @end

@@ -11,10 +11,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// 仿真器的抽象类
+/// 仿真器的抽象类，为其子类定义了接口，
 @interface ConsoleEmulator : NSObject
 
-/// 讲任何具体的操作系统指令加载到内部数据结构中
+/// 将任何具体的操作系统指令加载到内部数据结构中
 /// @param command ConsoleCommand 命令
 - (void) loadInstructionsForCommand:(ConsoleCommand)command;
 
