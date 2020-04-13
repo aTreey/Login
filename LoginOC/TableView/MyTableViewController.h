@@ -10,4 +10,6 @@
 
 @interface MyTableViewController : UITableViewController
 
+@property (nonatomic, assign) CGFloat containerTop;
+
 @end

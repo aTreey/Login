@@ -1,6 +1,6 @@
 # Uncomment the next line to define a global platform for your project
  platform :ios, '9.0'
-source 'https://cdn.cocoapods.org/'
+source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/aTreey/MyGitSpec.git'
 
 install! 'cocoapods',
@@ -16,7 +16,7 @@ target 'LoginOC' do
    pod 'LGObjectiveCPro', :project_name => 'PrivateModule'
    
    # 本地私有库
-   pod 'LGNetworking', :path => './LoginModule/LGNetworking'
+   # pod 'LGNetworking', :path => './LoginModule/LGNetworking'
   
 pod 'Masonry', :project_name => 'AutoLayout'
 

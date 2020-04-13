@@ -25,4 +25,4 @@
 #path=`pwd`
 ip=`ifconfig | grep inet\ | grep -v 127.0 | grep -v 0.0.0.0| head -1 | cut -d " " -f 2`
 
-echo $ip >> /Users/yuhongpeng/development/Login/LoginOC/Resource/ip.txt
+echo $ip >> /Users/yuhongpeng/development/Login/Resource/ip.txt

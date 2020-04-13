@@ -66,7 +66,7 @@
         <!--Effective-OC 52个方法-->
         <scene sceneID="gsu-27-gff">
             <objects>
-                <tableViewController id="zvu-b4-FXc" customClass="EffectiveListController" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="zvu-b4-FXc" customClass="EffectiveListController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oN7-RX-Mls">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +131,7 @@
         <!--Masonry-->
         <scene sceneID="4Ye-LJ-01j">
             <objects>
-                <tableViewController title="Masonry" id="3FV-Ft-0Ut" customClass="MasonryController" sceneMemberID="viewController">
+                <tableViewController title="Masonry" hidesBottomBarWhenPushed="YES" id="3FV-Ft-0Ut" customClass="MasonryController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O3Z-So-SVw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,7 +202,7 @@
         <!--My Table View Controller-->
         <scene sceneID="1ct-Mf-Agf">
             <objects>
-                <tableViewController id="fKF-7F-P6J" customClass="MyTableViewController" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="fKF-7F-P6J" customClass="MyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hml-dK-6gF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

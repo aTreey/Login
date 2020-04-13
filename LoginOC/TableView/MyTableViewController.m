@@ -23,6 +23,7 @@
     _datas = @[@"TableHeaderScaleController",
                @"SOAPController",
                @"SCRecorderController",
+               @"ContainerViewController",
                @"FormViewController",
                @"CanvasViewController",
                @"PaletteViewController"
@@ -66,6 +67,10 @@
     PaperCanvasViewGenerator *paperGenerator = [PaperCanvasViewGenerator new];
     ClothCanvasViewGenerator *clothGenerator = [ClothCanvasViewGenerator new];
     [vc loadCanvasViewWithGenerator:clothGenerator];
+}
+
+- (CGFloat)containerTop {
+    return _containerTop;
 }
 
 @end
