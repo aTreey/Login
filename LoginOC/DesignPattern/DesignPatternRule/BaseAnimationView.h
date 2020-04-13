@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)changeToDisableStateAnimated:(BOOL)animated duration:(NSTimeInterval)duration;
 
 
+- (void)changeToHighlightStateAnimated:(BOOL)animated duration:(NSTimeInterval)duration;
+
 @end
 
 NS_ASSUME_NONNULL_END
