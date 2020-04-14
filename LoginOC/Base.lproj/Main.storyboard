@@ -53,20 +53,20 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="MRr-PW-tmC" kind="relationship" relationship="viewControllers" id="O0d-wh-jX0"/>
-                        <segue destination="9Yj-zv-3DR" kind="relationship" relationship="viewControllers" id="QhS-lI-Cui"/>
-                        <segue destination="eTH-mr-7mQ" kind="relationship" relationship="viewControllers" id="rpf-c1-Je1"/>
-                        <segue destination="L2v-iu-dwW" kind="relationship" relationship="viewControllers" id="YiA-Z2-dsW"/>
+                        <segue destination="MRr-PW-tmC" kind="relationship" relationship="viewControllers" id="RGC-v4-sjj"/>
+                        <segue destination="9Yj-zv-3DR" kind="relationship" relationship="viewControllers" id="UFU-ZN-Ev1"/>
+                        <segue destination="eTH-mr-7mQ" kind="relationship" relationship="viewControllers" id="7em-W2-ats"/>
+                        <segue destination="L2v-iu-dwW" kind="relationship" relationship="viewControllers" id="qKz-dW-Tnf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWa-jC-Pby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2118" y="-161"/>
+            <point key="canvasLocation" x="-2492" y="-279"/>
         </scene>
         <!--Effective-OC 52个方法-->
         <scene sceneID="gsu-27-gff">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="zvu-b4-FXc" customClass="EffectiveListController" sceneMemberID="viewController">
+                <tableViewController id="zvu-b4-FXc" customClass="EffectiveListController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oN7-RX-Mls">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +131,7 @@
         <!--Masonry-->
         <scene sceneID="4Ye-LJ-01j">
             <objects>
-                <tableViewController title="Masonry" hidesBottomBarWhenPushed="YES" id="3FV-Ft-0Ut" customClass="MasonryController" sceneMemberID="viewController">
+                <tableViewController title="Masonry" id="3FV-Ft-0Ut" customClass="MasonryController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O3Z-So-SVw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,7 +183,7 @@
         <!--TableView-->
         <scene sceneID="FSQ-EO-j16">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MRr-PW-tmC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="MRr-PW-tmC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="TableView" id="TGW-eM-CvB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AmN-Zg-Dme">
@@ -197,12 +197,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="id9-ic-g43" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1306" y="-1181"/>
+            <point key="canvasLocation" x="-1306" y="-1171"/>
         </scene>
         <!--My Table View Controller-->
         <scene sceneID="1ct-Mf-Agf">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="fKF-7F-P6J" customClass="MyTableViewController" sceneMemberID="viewController">
+                <tableViewController id="fKF-7F-P6J" customClass="MyTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hml-dK-6gF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,7 +227,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pra-lc-cxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="vnd-Vg-iE6"/>
             </objects>
-            <point key="canvasLocation" x="-626" y="-1182"/>
+            <point key="canvasLocation" x="-551" y="-1182"/>
         </scene>
     </scenes>
 </document>
