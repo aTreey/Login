@@ -14,14 +14,14 @@
 */
 
 - (void)loadInstructionsForCommand:(ConsoleCommand)command {
-    
+    NSLog(@" GameGearEmulator loadInstructionsForCommand = %lu", (unsigned long)command);
 }
 /**
 重载抽象类中的方法， 以提供自己的特定平台
 */
 
 - (void)executeInstructions {
-    
+    NSLog(@" GameGearEmulator executeInstructions");
 }
 
 @end

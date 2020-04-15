@@ -26,7 +26,8 @@
                @"ContainerViewController",
                @"FormViewController",
                @"CanvasViewController",
-               @"PaletteViewController"
+               @"PaletteViewController",
+               @"BridgeViewController"
                ];
 }
 

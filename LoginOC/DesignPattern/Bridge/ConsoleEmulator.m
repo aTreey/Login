@@ -11,11 +11,11 @@
 @implementation ConsoleEmulator
 
 - (void)loadInstructionsForCommand:(ConsoleCommand)command {
-    
+    NSLog(@"加载指令 --- %@", [self class]);
 }
  
 - (void)executeInstructions {
-    
+    NSLog(@"executeInstructions 指令 --- %@", [self class]);
 }
 
 @end

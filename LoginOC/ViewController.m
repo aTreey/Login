@@ -76,7 +76,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     NSInteger random = (arc4random() % 101);
     NSLog(@"=====%ld", random);
     //    [self dispatch_semaphore_t:random];
-    [self webService];
+//    [self webService];
 }
 
 - (void)viewDidLayoutSubviews {
