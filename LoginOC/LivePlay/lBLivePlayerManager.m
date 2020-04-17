@@ -2,7 +2,7 @@
 //  lBLivePlayerManager.m
 //  LoginOC
 //
-//  Created by liepin on 2018/4/7.
+//  Created by yhp on 2018/4/7.
 //  Copyright © 2018年 HongpengYu. All rights reserved.
 //
 

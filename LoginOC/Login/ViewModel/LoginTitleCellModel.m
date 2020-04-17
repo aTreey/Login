@@ -2,7 +2,7 @@
 //  LoginTitleCellModel.m
 //  LoginOC
 //
-//  Created by liepin on 2018/3/23.
+//  Created by yhp on 2018/3/23.
 //  Copyright © 2018年 HongpengYu. All rights reserved.
 //
 

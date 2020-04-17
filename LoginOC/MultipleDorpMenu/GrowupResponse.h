@@ -1,9 +1,9 @@
 //
 //  GrowupResponse.h
-//  ios-lebanban-app
+//  ios--app
 //
 //  Created by iOnRoad on 2017/2/20.
-//  Copyright © 2017年 liepin. All rights reserved.
+//  Copyright © 2017年 yhp. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

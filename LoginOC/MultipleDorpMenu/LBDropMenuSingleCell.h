@@ -1,9 +1,9 @@
 //
 //  LBDropMenuSingleCell.h
-//  ios-lebanban-app
+//  ios--app
 //
-//  Created by liepin on 2018/4/9.
-//  Copyright © 2018年 liepin. All rights reserved.
+//  Created by yhp on 2018/4/9.
+//  Copyright © 2018年 yhp. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

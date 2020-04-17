@@ -2,7 +2,7 @@
 //  LoginButtonCellModel.m
 //  LoginOC
 //
-//  Created by liepin on 2018/3/27.
+//  Created by yhp on 2018/3/27.
 //  Copyright © 2018年 HongpengYu. All rights reserved.
 //
 
