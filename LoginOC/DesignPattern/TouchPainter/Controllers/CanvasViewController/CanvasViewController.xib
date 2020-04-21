@@ -3,18 +3,21 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CanvasViewController">
             <connections>
+                <outlet property="person" destination="0DA-JP-fYw" id="ORO-lc-jx2"/>
                 <outlet property="toolBarView" destination="too-RS-7hY" id="gtI-5f-svI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <customObject id="0DA-JP-fYw" customClass="Person_xibObject"/>
+        <customObject id="Xuz-bN-chv" customClass="CoordinatingController"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="CanvasView">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,19 +30,27 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="bGw-0G-KZQ"/>
                         <barButtonItem style="plain" systemItem="save" id="SRQ-aa-W8c"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5mK-vH-6Pd"/>
-                        <barButtonItem style="plain" systemItem="action" id="RJb-sL-XUh"/>
+                        <barButtonItem tag="2" style="plain" systemItem="action" id="RJb-sL-XUh">
+                            <connections>
+                                <action selector="requectViewChangeByObject:" destination="Xuz-bN-chv" id="cQt-hs-Xft"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4ag-Tq-4Mn"/>
-                        <barButtonItem style="plain" systemItem="compose" id="FO2-Dj-WhT"/>
+                        <barButtonItem tag="1" style="plain" systemItem="compose" id="FO2-Dj-WhT">
+                            <connections>
+                                <action selector="requectViewChangeByObject:" destination="Xuz-bN-chv" id="3U2-js-Tir"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Mgu-BI-dcQ"/>
-                        <barButtonItem style="plain" systemItem="reply" id="c12-PX-94u"/>
+                        <barButtonItem tag="4" style="plain" systemItem="reply" id="c12-PX-94u"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="qMF-UU-8dU"/>
-                        <barButtonItem style="plain" systemItem="refresh" id="jQy-Pb-lOn"/>
+                        <barButtonItem tag="5" style="plain" systemItem="refresh" id="jQy-Pb-lOn"/>
                     </items>
                 </toolbar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="139" y="107"/>
+            <point key="canvasLocation" x="137.68115942028987" y="106.47321428571428"/>
         </view>
     </objects>
 </document>

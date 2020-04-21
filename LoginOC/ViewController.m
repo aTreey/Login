@@ -59,17 +59,17 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     //    [self gcdTest];
     //    [self anaylsisHTML];
     
-    [self testScrollView];
+//    [self testScrollView];
     //    [self horizontalScrollView];
     //    [self fetchVehicleStatus];
     
-    [self designPatters];
-    
-    [self cornerradiusAndShadow];
-    
-    [self testComponents];
-    
-    [self testSingleton];
+//    [self designPatters];
+//
+//    [self cornerradiusAndShadow];
+//
+//    [self testComponents];
+//
+//    [self testSingleton];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

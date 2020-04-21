@@ -7,6 +7,7 @@
 //
 
 #import "CoordinatingController.h"
+#import "PaletteViewController.h"
 
 @interface CoordinatingController ()
 
@@ -38,5 +39,42 @@ static CoordinatingController *sharedCoordinator = nil;
   
   return sharedCoordinator;
 }
+
+
+#pragma mark - 切换控制器方法
+
+- (IBAction)requectViewChangeByObject:(id)sender {
+    if ([sender isKindOfClass:[UIBarButtonItem class]]) {
+        switch ([(UIBarButtonItem *)sender tag]) {
+            case kButtonTagOpenPaletteView:
+            {
+                PaletteViewController *controller = [PaletteViewController new];
+                [self.canvasViewController presentViewController:controller animated:YES completion:nil];
+                self.activeViewController = controller;
+            }
+                break;
+                
+            case kButtonTagOpenThumbnailView:
+            {
+                PaletteViewController *controller = [PaletteViewController new];
+                [self.canvasViewController presentViewController:controller animated:YES completion:nil];
+                self.activeViewController = controller;
+            }
+                break;
+            default:
+            {
+                [self.canvasViewController dismissViewControllerAnimated:YES completion:nil];
+                self.activeViewController = self.canvasViewController;
+            }
+                break;
+        }
+    }
+    
+    else {
+        [self.canvasViewController dismissViewControllerAnimated:YES completion:nil];
+        self.activeViewController = self.canvasViewController;
+    }
+}
+
 
 @end

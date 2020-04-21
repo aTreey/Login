@@ -734,19 +734,19 @@
 		73E4FBE32449FBA7007FDBDA /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				73E4FBE42449FBA7007FDBDA /* SCRecordSessionManager.h */,
 				73E4FBE52449FBA7007FDBDA /* LoginOC-Bridging-Header.h */,
-				73E4FBE62449FBA7007FDBDA /* SCRecorderController.m */,
 				73E4FBE72449FBA7007FDBDA /* MyTableViewController.h */,
-				73E4FBE82449FBA7007FDBDA /* SCRecorderPlayerController.xib */,
-				73E4FBE92449FBA7007FDBDA /* SCRecorderPlayerController.h */,
-				73E4FBEA2449FBA7007FDBDA /* TableHeaderScaleController.m */,
-				73E4FBEB2449FBA7007FDBDA /* SCRecorderController.h */,
-				73E4FBEC2449FBA7007FDBDA /* WebService */,
-				73E4FBF82449FBA7007FDBDA /* SCRecordSessionManager.m */,
 				73E4FBF92449FBA7007FDBDA /* MyTableViewController.m */,
-				73E4FBFB2449FBA7007FDBDA /* TableHeaderScaleController.h */,
+				73E4FBEB2449FBA7007FDBDA /* SCRecorderController.h */,
+				73E4FBE62449FBA7007FDBDA /* SCRecorderController.m */,
+				73E4FBE92449FBA7007FDBDA /* SCRecorderPlayerController.h */,
 				73E4FBFC2449FBA7007FDBDA /* SCRecorderPlayerController.m */,
+				73E4FBE82449FBA7007FDBDA /* SCRecorderPlayerController.xib */,
+				73E4FBE42449FBA7007FDBDA /* SCRecordSessionManager.h */,
+				73E4FBF82449FBA7007FDBDA /* SCRecordSessionManager.m */,
+				73E4FBFB2449FBA7007FDBDA /* TableHeaderScaleController.h */,
+				73E4FBEA2449FBA7007FDBDA /* TableHeaderScaleController.m */,
+				73E4FBEC2449FBA7007FDBDA /* WebService */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -832,13 +832,13 @@
 				73E4FC4A2449FBA7007FDBDA /* Prototype */,
 				73E4FC542449FBA7007FDBDA /* DesignPatternRule */,
 				73E4FC5E2449FBA7007FDBDA /* Utilities */,
-				73E4FC652449FBA7007FDBDA /* TouchPainter */,
 				73E4FC792449FBA7007FDBDA /* Singleton */,
 				73E4FC7E2449FBA7007FDBDA /* Command */,
 				73E4FC812449FBA7007FDBDA /* Builder */,
 				73E4FC8F2449FBA7007FDBDA /* Mediator */,
 				73E4FC922449FBA7007FDBDA /* Factory */,
 				73E4FCA52449FBA7007FDBDA /* Facade（外观模式） */,
+				73E4FC652449FBA7007FDBDA /* TouchPainter */,
 			);
 			path = DesignPattern;
 			sourceTree = "<group>";
@@ -1029,9 +1029,9 @@
 		73E4FC662449FBA7007FDBDA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				73E4FC6E2449FBA7007FDBDA /* CanvasViewController */,
 				73E4FC672449FBA7007FDBDA /* PaletteViewController */,
 				73E4FC6B2449FBA7007FDBDA /* xib Object Test */,
-				73E4FC6E2449FBA7007FDBDA /* CanvasViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1058,8 +1058,8 @@
 		73E4FC6E2449FBA7007FDBDA /* CanvasViewController */ = {
 			isa = PBXGroup;
 			children = (
-				73E4FC6F2449FBA7007FDBDA /* CanvasViewController.m */,
 				73E4FC702449FBA7007FDBDA /* CanvasViewController.h */,
+				73E4FC6F2449FBA7007FDBDA /* CanvasViewController.m */,
 				73E4FC712449FBA7007FDBDA /* CanvasViewController.xib */,
 			);
 			path = CanvasViewController;
@@ -1135,8 +1135,8 @@
 		73E4FC8F2449FBA7007FDBDA /* Mediator */ = {
 			isa = PBXGroup;
 			children = (
-				73E4FC902449FBA7007FDBDA /* CoordinatingController.m */,
 				73E4FC912449FBA7007FDBDA /* CoordinatingController.h */,
+				73E4FC902449FBA7007FDBDA /* CoordinatingController.m */,
 			);
 			path = Mediator;
 			sourceTree = "<group>";

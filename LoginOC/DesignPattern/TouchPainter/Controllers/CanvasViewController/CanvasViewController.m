@@ -8,7 +8,7 @@
 
 #import "CanvasViewController.h"
 #import "Person_xibObject.h"
-
+#import "CoordinatingController.h"
 
 @interface CanvasViewController ()
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBarView;
@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    self.coordinatingController = [CoordinatingController sharedInstance];
     // 使用 CanvasViewGenerator 的工厂方法取得默认的画布视图
     CanvasViewGenerator *defaultGenerator = [[CanvasViewGenerator alloc] init];
     [self loadCanvasViewWithGenerator:defaultGenerator];

@@ -11,6 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, ButtonTag) {
+    kButtonTagDone,
+    kButtonTagOpenPaletteView,
+    kButtonTagOpenThumbnailView
+};
+
 /// 单例实例起中介者作用，协调应用程序中的各个视图控制器
 @interface CoordinatingController : NSObject
 

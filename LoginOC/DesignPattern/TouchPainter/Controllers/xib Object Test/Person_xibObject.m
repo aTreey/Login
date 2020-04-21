@@ -10,6 +10,15 @@
 
 @implementation Person_xibObject
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        NSLog(@"666");
+    }
+    return self;
+}
+
 - (IBAction)eat:(id)sender {
     NSLog(@"person eat");
 }

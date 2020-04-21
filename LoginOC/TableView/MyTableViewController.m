@@ -67,7 +67,7 @@
     CanvasViewController *vc = (CanvasViewController *)controller;
     PaperCanvasViewGenerator *paperGenerator = [PaperCanvasViewGenerator new];
     ClothCanvasViewGenerator *clothGenerator = [ClothCanvasViewGenerator new];
-    [vc loadCanvasViewWithGenerator:clothGenerator];
+    [vc loadCanvasViewWithGenerator:paperGenerator];
 }
 
 - (CGFloat)containerTop {
