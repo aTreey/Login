@@ -13,6 +13,8 @@
 @interface CanvasViewController ()
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBarView;
 @property (nonatomic, strong) IBOutlet Person_xibObject *person;
+@property (nonatomic, strong, readwrite) Scribble *scribble;
+
 
 @end
 
@@ -20,10 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 设置默认画布
 //    self.coordinatingController = [CoordinatingController sharedInstance];
     // 使用 CanvasViewGenerator 的工厂方法取得默认的画布视图
     CanvasViewGenerator *defaultGenerator = [[CanvasViewGenerator alloc] init];
     [self loadCanvasViewWithGenerator:defaultGenerator];
+    
+    
+    // 初始化 Scribble 模型
+    Scribble *scribble = [[Scribble alloc] init];
+    [self setScribble:scribble];
 }
 
 - (void)updateViewConstraints {
@@ -51,5 +59,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+#pragma mark - setter
+
+// 把所有东西挂接到 Scribble 的实例
+- (void)setScribble:(Scribble *)scribble {
+    _scribble = scribble;
+    
+    // 把自己作为观察者添加到scribble
+    // 观察其内部变化状态——Mark的任何变化
+    [_scribble addObserver:self forKeyPath:@"mark" options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionOld context:nil];
+}
 
 @end

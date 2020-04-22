@@ -11,18 +11,19 @@
  */
 #import "CanvasView.h"
 #import "CanvasViewGenerator.h"
+#import "Scribble.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CanvasViewController : UIViewController
-
+@property (nonatomic, strong, readonly) Scribble *scribble;
 @property (nonatomic, strong) CanvasView *canvasView;
 @property (nonatomic, strong) UIColor *strokeColor;
 
 
-/// <#Description#>
-/// @param generator <#generator description#>
+/// 加载画布
+/// @param generator 画布生成器
 - (void)loadCanvasViewWithGenerator:(CanvasViewGenerator *)generator;
 
 @end

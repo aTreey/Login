@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1731B3F2A51FF0E913DB54EF /* Pods_LoginOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E155B1576882010081AF25B1 /* Pods_LoginOC.framework */; };
+		7331E73A244FF6460078FCEB /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 7331E739244FF6460078FCEB /* Scribble.m */; };
 		73C4DC82244A02D500E56B07 /* UIViewController+LayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C4DC7F244A02D500E56B07 /* UIViewController+LayoutGuide.m */; };
 		73C4DC83244A02D500E56B07 /* AppDelegate+SuspendedPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C4DC80244A02D500E56B07 /* AppDelegate+SuspendedPlay.m */; };
 		73C4DC85244A02EF00E56B07 /* OC_Swift_EnumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C4DC84244A02EE00E56B07 /* OC_Swift_EnumController.swift */; };
@@ -136,7 +137,6 @@
 		73E4FD4A2449FBA8007FDBDA /* CabDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FCAB2449FBA7007FDBDA /* CabDriver.m */; };
 		73E4FD4B2449FBA8007FDBDA /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FCAC2449FBA7007FDBDA /* Car.m */; };
 		73E4FD4C2449FBA8007FDBDA /* ScribbleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FCAE2449FBA7007FDBDA /* ScribbleManager.m */; };
-		73E4FD4D2449FBA8007FDBDA /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FCB02449FBA7007FDBDA /* Scribble.m */; };
 		73E4FD4E2449FBA8007FDBDA /* Blocks1.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FCB32449FBA7007FDBDA /* Blocks1.m */; };
 		73E4FD4F2449FBA8007FDBDA /* AutomaticReferenceCountingController+NSOperationBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FCB72449FBA7007FDBDA /* AutomaticReferenceCountingController+NSOperationBlock.m */; };
 		73E4FD502449FBA8007FDBDA /* AutomaticReferenceCountingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FCBA2449FBA7007FDBDA /* AutomaticReferenceCountingController.m */; };
@@ -177,6 +177,9 @@
 /* Begin PBXFileReference section */
 		176262D7D519C8E2C76B0898 /* Pods-LoginOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginOC.debug.xcconfig"; path = "Target Support Files/Pods-LoginOC/Pods-LoginOC.debug.xcconfig"; sourceTree = "<group>"; };
 		68AFED4201AB7682B1D42F19 /* Pods-LoginOCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginOCUITests.debug.xcconfig"; path = "Target Support Files/Pods-LoginOCUITests/Pods-LoginOCUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7331E737244FDF3F0078FCEB /* Obsever.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Obsever.md; sourceTree = "<group>"; };
+		7331E738244FF6460078FCEB /* Scribble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scribble.h; sourceTree = "<group>"; };
+		7331E739244FF6460078FCEB /* Scribble.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Scribble.m; sourceTree = "<group>"; };
 		73C4DC742449FE2B00E56B07 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		73C4DC752449FF2200E56B07 /* LoginOC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoginOC-Bridging-Header.h"; sourceTree = "<group>"; };
 		73C4DC7E244A02D500E56B07 /* UIViewController+LayoutGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LayoutGuide.h"; sourceTree = "<group>"; };
@@ -427,10 +430,8 @@
 		73E4FCAA2449FBA7007FDBDA /* Taximeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Taximeter.h; sourceTree = "<group>"; };
 		73E4FCAB2449FBA7007FDBDA /* CabDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabDriver.m; sourceTree = "<group>"; };
 		73E4FCAC2449FBA7007FDBDA /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
-		73E4FCAD2449FBA7007FDBDA /* Scribble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scribble.h; sourceTree = "<group>"; };
 		73E4FCAE2449FBA7007FDBDA /* ScribbleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleManager.m; sourceTree = "<group>"; };
 		73E4FCAF2449FBA7007FDBDA /* ScribbleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleManager.h; sourceTree = "<group>"; };
-		73E4FCB02449FBA7007FDBDA /* Scribble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scribble.m; sourceTree = "<group>"; };
 		73E4FCB32449FBA7007FDBDA /* Blocks1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blocks1.m; sourceTree = "<group>"; };
 		73E4FCB42449FBA7007FDBDA /* Blocks1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blocks1.h; sourceTree = "<group>"; };
 		73E4FCB52449FBA7007FDBDA /* AutomaticReferenceCountingController+KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AutomaticReferenceCountingController+KVO.h"; sourceTree = "<group>"; };
@@ -508,6 +509,16 @@
 				9F66C500AE0CE55B53CDE8FD /* Pods_LoginOCUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7331E736244FDDED0078FCEB /* MementoObserver */ = {
+			isa = PBXGroup;
+			children = (
+				7331E737244FDF3F0078FCEB /* Obsever.md */,
+				7331E738244FF6460078FCEB /* Scribble.h */,
+				7331E739244FF6460078FCEB /* Scribble.m */,
+			);
+			path = MementoObserver;
 			sourceTree = "<group>";
 		};
 		73C4DC782449FF4500E56B07 /* Swift */ = {
@@ -826,6 +837,8 @@
 		73E4FC192449FBA7007FDBDA /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				7331E736244FDDED0078FCEB /* MementoObserver */,
+				73E4FCA52449FBA7007FDBDA /* Facade（外观模式） */,
 				73E4FC1A2449FBA7007FDBDA /* Bridge */,
 				73E4FC2A2449FBA7007FDBDA /* AbstractFactory */,
 				73E4FC462449FBA7007FDBDA /* Adapter */,
@@ -837,7 +850,6 @@
 				73E4FC812449FBA7007FDBDA /* Builder */,
 				73E4FC8F2449FBA7007FDBDA /* Mediator */,
 				73E4FC922449FBA7007FDBDA /* Factory */,
-				73E4FCA52449FBA7007FDBDA /* Facade（外观模式） */,
 				73E4FC652449FBA7007FDBDA /* TouchPainter */,
 			);
 			path = DesignPattern;
@@ -1177,10 +1189,8 @@
 			isa = PBXGroup;
 			children = (
 				73E4FCA62449FBA7007FDBDA /* FacdeExample */,
-				73E4FCAD2449FBA7007FDBDA /* Scribble.h */,
 				73E4FCAE2449FBA7007FDBDA /* ScribbleManager.m */,
 				73E4FCAF2449FBA7007FDBDA /* ScribbleManager.h */,
-				73E4FCB02449FBA7007FDBDA /* Scribble.m */,
 			);
 			path = "Facade（外观模式）";
 			sourceTree = "<group>";
@@ -1590,6 +1600,7 @@
 				73E4FD262449FBA8007FDBDA /* Vertex.m in Sources */,
 				73E4FD362449FBA8007FDBDA /* PaperCanvasView.m in Sources */,
 				73E4FD162449FBA8007FDBDA /* GameBoyEmulator.m in Sources */,
+				7331E73A244FF6460078FCEB /* Scribble.m in Sources */,
 				73E4FCE82449FBA8007FDBDA /* MasonryAutoLayoutController.m in Sources */,
 				73E4FCE92449FBA8007FDBDA /* MasonryTestView.m in Sources */,
 				73E4FD2E2449FBA8007FDBDA /* CommandSlider.m in Sources */,
@@ -1597,7 +1608,6 @@
 				73E4FCD92449FBA8007FDBDA /* CHJBaseMessageCell.m in Sources */,
 				73E4FCEA2449FBA8007FDBDA /* MasonryController.m in Sources */,
 				73E4FD1B2449FBA8007FDBDA /* SierraToolbar.m in Sources */,
-				73E4FD4D2449FBA8007FDBDA /* Scribble.m in Sources */,
 				73E4FCF02449FBA8007FDBDA /* LBDropMenuSegmentView.m in Sources */,
 				73E4FD1D2449FBA8007FDBDA /* AcmeBrandingFactory.m in Sources */,
 				73E4FD3C2449FBA8007FDBDA /* StandardCharacterBuilder.m in Sources */,
