@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) Scribble *scribble;
 @property (nonatomic, strong) CanvasView *canvasView;
 @property (nonatomic, strong) UIColor *strokeColor;
+@property (nonatomic, assign) CGFloat strokeSize;
 
 
 /// 加载画布

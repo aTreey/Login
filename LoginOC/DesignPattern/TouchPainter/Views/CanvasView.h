@@ -7,6 +7,7 @@
 //  画布类
 
 #import <UIKit/UIKit.h>
+#import "Mark.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 用子类来扩展他，
 /// 它的实例由CanvasViewGenerator 抽象类中定义的工厂方法 canvasViewWithFrame: 来创建
 @interface CanvasView : UIView
+
+@property (nonatomic, strong) id <Mark> mark;
 
 @end
 
