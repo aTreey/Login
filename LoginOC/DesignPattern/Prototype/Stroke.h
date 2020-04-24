@@ -9,7 +9,7 @@
 #import "Mark.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+/// 画笔
 @interface Stroke : NSObject <Mark, NSCopying>
 /// 使用私有变量来设置属性
 {

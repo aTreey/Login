@@ -973,15 +973,15 @@
 		73E4FC4A2449FBA7007FDBDA /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
-				73E4FC4B2449FBA7007FDBDA /* Vertex.h */,
 				73E4FC4C2449FBA7007FDBDA /* Person_Prototype.h */,
+				73E4FC502449FBA7007FDBDA /* Person_Prototype.m */,
+				73E4FC522449FBA7007FDBDA /* Dot.h */,
 				73E4FC4D2449FBA7007FDBDA /* Dot.m */,
 				73E4FC4E2449FBA7007FDBDA /* Mark.h */,
 				73E4FC4F2449FBA7007FDBDA /* Stroke.h */,
-				73E4FC502449FBA7007FDBDA /* Person_Prototype.m */,
-				73E4FC512449FBA7007FDBDA /* Vertex.m */,
-				73E4FC522449FBA7007FDBDA /* Dot.h */,
 				73E4FC532449FBA7007FDBDA /* Stroke.m */,
+				73E4FC4B2449FBA7007FDBDA /* Vertex.h */,
+				73E4FC512449FBA7007FDBDA /* Vertex.m */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
