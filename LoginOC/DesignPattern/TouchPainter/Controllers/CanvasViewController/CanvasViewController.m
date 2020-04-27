@@ -51,7 +51,8 @@
 
 - (void)updateViewConstraints {
     [self.canvasView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.leading.trailing.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop);
+        make.leading.trailing.mas_equalTo(self.view);
         make.bottom.mas_equalTo(self.toolBarView.mas_top);
     }];
     [super updateViewConstraints];
@@ -62,7 +63,7 @@
 //    CGRect aFrame = CGRectMake(0, 0, 320, 436);
     CanvasView *aCanvasView = [generator canvasViewWithFrame:CGRectZero];
     self.canvasView = aCanvasView;
-    
+    self.canvasView.backgroundColor = [UIColor lightGrayColor];
     NSInteger viewIndex = self.view.subviews.count - 1;
     [self.view insertSubview:aCanvasView atIndex:viewIndex];
     [self.view updateConstraintsIfNeeded];

@@ -9,7 +9,8 @@
 #import "Vertex.h"
 
 @implementation Vertex
-@synthesize location = location_;
+
+// 属性的 setter 与 getter 方法由用户自己实现，不自动生成
 @dynamic color, size;
 
 - (id)initWithLocation:(CGPoint)location {
@@ -17,18 +18,6 @@
         [self setLocation:location];
     }
     return self;
-}
-
-- (void)addMark:(nonnull id<Mark>)mark {
-    
-}
-
-- (nonnull id<Mark>)childMarkAtIndex:(NSUInteger)index {
-    return nil;
-}
-
-- (void)removeMark:(nonnull id<Mark>)mark {
-    
 }
 
 #pragma mark -
@@ -41,21 +30,39 @@
     return vertexCopy;
 }
 
-// 默认属性什么都不做
+#pragma mark -
+#pragma mark - Mark 操作什么也不做
 
-#pragma mark - setter
+- (void)addMark:(nonnull id<Mark>)mark {
+    
+}
+
+- (void)removeMark:(nonnull id<Mark>)mark {
+    
+}
+
+- (nonnull id<Mark>)childMarkAtIndex:(NSUInteger)index {
+    return nil;
+}
+
+- (id<Mark>)lastChild {
+    return nil;
+}
+
+- (NSUInteger)count {
+    return 0;
+}
+
+
+#pragma mark - 默认属性什么都不做
+#pragma mark - setter / getter
+
 - (void)setColor:(UIColor *)color {
     
 }
 
 - (void)setSize:(CGFloat)size {
     
-}
-
-#pragma mark - getter
-
-- (id<Mark>)lastChild {
-    return nil;
 }
 
 - (UIColor *)color {
@@ -66,5 +73,17 @@
     return 0.0;
 }
 
+
+#pragma mark -
+#pragma mark - 绘图方法
+
+/// Vertex 的绘制方法，顶点只提供线条中的特定位置，只会在上下文中用位置（坐标）往线上添加一个点
+/// @param context <#context description#>
+- (void)drawWithContext:(CGContextRef)context {
+    CGFloat x = self.location.x;
+    CGFloat y = self.location.y;
+    
+    CGContextAddLineToPoint(context, x, y);
+}
 
 @end

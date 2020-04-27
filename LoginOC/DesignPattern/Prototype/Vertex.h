@@ -21,11 +21,15 @@ NS_ASSUME_NONNULL_BEGIN
   CGPoint location_;
 }
 
+// 重新声明子类重载的属性和方法是个好习惯，
 @property (nonatomic, strong) UIColor *color;
 @property (nonatomic, assign) CGFloat size;
-@property (nonatomic, assign) CGPoint location;
-@property (nonatomic, readonly) NSInteger count; // 子节点的个数
+@property (nonatomic, readonly) NSUInteger count; // 子节点的个数
 @property (nonatomic, readonly) id <Mark> lastChild;
+
+// 真正有用的属性，其他属性什么都没做
+@property (nonatomic, assign) CGPoint location;
+
 
 // 返回实现类的一个实例
 - (id)initWithLocation:(CGPoint)location;
@@ -33,6 +37,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeMark:(id <Mark>) mark;
 - (id <Mark>)childMarkAtIndex:(NSUInteger) index;
 - (id)copyWithZone:(NSZone *)zone;
+
+
+/// 绘图方法
+/// @param context 上下文
+- (void)drawWithContext:(CGContextRef)context;
 
 @end
 

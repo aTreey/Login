@@ -21,17 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *color;
 @property (nonatomic, assign) CGFloat size;
 
-
-// for the Visitor pattern 访客模式
-//- (void) acceptMarkVisitor:(id <MarkVisitor>)visitor;
-
 // for the Prototype pattern 原型模式
 - (id) copyWithZone:(NSZone *)zone;
-
-// for the Memento pattern
-- (id)initWithCoder:(NSCoder *)coder;
-- (void)encodeWithCoder:(NSCoder *)coder;
-
 
 @end
 
