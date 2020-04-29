@@ -30,6 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeMark:(id <Mark>) mark;
 - (id <Mark>)childMarkAtIndex:(NSUInteger) index;
 
+
+// 工厂方法
+- (NSEnumerator *)enumerator;
+
 // 添加绘图操作，让每个节点可以根据其特定的目的绘制自己
 - (void) drawWithContext:(CGContextRef) context;
 

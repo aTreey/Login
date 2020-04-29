@@ -38,6 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param context 上下文
 - (void)drawWithContext:(CGContextRef)context;
 
+- (NSEnumerator *)enumerator;
+
 @end
 
 NS_ASSUME_NONNULL_END

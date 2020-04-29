@@ -35,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseCopyObject : NSObject <NSCopying>
 
+/// 由子类重载实现，复制（赋值操作）
+/// @param object 子类对象
 - (void)copyOperationWithObject:(id)object;
 
 @end
@@ -52,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Student_Prototype1 : Person_Prototype1
 
-//注意属行中如果有类似Person、NSArray类型的属性，则需要注意：
+//注意属性中如果有类似Person、NSArray类型的属性，则需要注意：
 
 @property (nonatomic, assign) NSInteger age;
 @property (nonatomic, copy) NSString *address;

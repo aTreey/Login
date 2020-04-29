@@ -67,7 +67,8 @@
 // 子类不要重载这个方法
 - (id)copyWithZone:(NSZone *)zone {
     BaseCopyObject *object = [[[self class] allocWithZone:zone] init];
-    [self copyOperationWithObject:object];//赋值操作
+    // 因为是基类，赋值操作
+    [self copyOperationWithObject:object];
     return object;
 }
 

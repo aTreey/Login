@@ -7,6 +7,7 @@
 //
 
 #import "Stroke.h"
+#import "MarkEnumerator+Private.h"
 
 @interface Stroke ()
 
@@ -101,6 +102,13 @@
     }
     CGContextSetStrokeColorWithColor(context, self.color.CGColor);
     CGContextStrokePath(context);
+}
+
+#pragma mark -
+#pragma mark -
+
+- (NSEnumerator *)enumerator {
+    return [[MarkEnumerator alloc] initWithMark:self];
 }
 
 
