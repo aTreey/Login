@@ -47,6 +47,7 @@
     // 初始化 Scribble 模型
     Scribble *scribble = [[Scribble alloc] init];
     [self setScribble:scribble];
+    [CoordinatingController sharedInstance];
 }
 
 - (void)updateViewConstraints {
