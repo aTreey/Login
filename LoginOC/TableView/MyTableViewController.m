@@ -27,7 +27,8 @@
                @"FormViewController",
                @"CanvasViewController",
                @"PaletteViewController",
-               @"BridgeViewController"
+               @"BridgeViewController",
+               @"ObserverPatternViewController"
                ];
 }
 
