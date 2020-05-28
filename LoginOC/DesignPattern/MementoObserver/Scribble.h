@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Scribble : NSObject
 
 /// 父类
+/// 只供ScribScribble对象来访问的mark属性
 @property (nonatomic, strong) id<Mark> parentMark;
 
 

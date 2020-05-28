@@ -1158,11 +1158,11 @@
 		73E4FC722449FBA7007FDBDA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				73E4FC732449FBA7007FDBDA /* ClothCanvasView.m */,
-				73E4FC742449FBA7007FDBDA /* CanvasView.m */,
-				73E4FC752449FBA7007FDBDA /* PaperCanvasView.h */,
 				73E4FC762449FBA7007FDBDA /* CanvasView.h */,
+				73E4FC742449FBA7007FDBDA /* CanvasView.m */,
 				73E4FC772449FBA7007FDBDA /* ClothCanvasView.h */,
+				73E4FC732449FBA7007FDBDA /* ClothCanvasView.m */,
+				73E4FC752449FBA7007FDBDA /* PaperCanvasView.h */,
 				73E4FC782449FBA7007FDBDA /* PaperCanvasView.m */,
 			);
 			path = Views;

@@ -43,7 +43,6 @@
     CanvasViewGenerator *defaultGenerator = [[CanvasViewGenerator alloc] init];
     [self loadCanvasViewWithGenerator:defaultGenerator];
     
-    
     // 初始化 Scribble 模型
     Scribble *scribble = [[Scribble alloc] init];
     [self setScribble:scribble];
