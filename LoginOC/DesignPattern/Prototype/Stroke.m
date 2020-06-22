@@ -105,11 +105,22 @@
 }
 
 #pragma mark -
-#pragma mark -
+#pragma mark - 迭代器模式
 
 - (NSEnumerator *)enumerator {
     return [[MarkEnumerator alloc] initWithMark:self];
 }
 
+#pragma mark -
+#pragma mark - 访问者模式协议
+/// stroke 跟Dot和Vertex不同，stroke 是一个组合类，需要管理子节点
+
+- (void)acceptMarkVisitor:(id<MarkVisitor>)visitor {
+    // 后续遍历，子节点会先于其父节点被访问，需要保证所有的顶点verter都被处理了之后，再在stroke中执行最终的步骤
+    for (id<Mark> dot in self.children) {
+        [dot acceptMarkVisitor:visitor];
+    }
+    [visitor visitStroke:self];
+}
 
 @end

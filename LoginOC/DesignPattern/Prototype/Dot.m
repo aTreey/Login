@@ -38,4 +38,10 @@
     CGContextFillEllipseInRect(context, frame);
 }
 
+#pragma mark - 
+#pragma mark - 访问者模式协议
+- (void)acceptMarkVisitor:(id<MarkVisitor>)visitor {
+    [visitor visitDot:self];
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "CanvasView.h"
+#import "MarkRenderer.h"
 
 @implementation CanvasView
 
@@ -21,9 +22,12 @@
 
 - (void)drawRect:(CGRect)rect
 {
-  
-  // Drawing code
-  CGContextRef context = UIGraphicsGetCurrentContext();
+    // Drawing code
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // 使用访问者模式
+    MarkRenderer *markRenderer = [[MarkRenderer alloc] initWithCGContext:context];
+    [self.mark acceptMarkVisitor:markRenderer];
   
 }
 

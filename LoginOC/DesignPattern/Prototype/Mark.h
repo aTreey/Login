@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MarkVisitor.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -30,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeMark:(id <Mark>) mark;
 - (id <Mark>)childMarkAtIndex:(NSUInteger) index;
 
+// 访问者模式
+- (void)acceptMarkVisitor:(id <MarkVisitor>) visitor;
 
 // 工厂方法
 - (NSEnumerator *)enumerator;
