@@ -46,7 +46,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     //
     //    [self containerCenter];
     //
-    //    [self testAutoresizingMask];
+        [self testAutoresizingMask];
     
     //    [self suspendPlayVido];
     

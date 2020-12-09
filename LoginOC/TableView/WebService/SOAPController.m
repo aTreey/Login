@@ -33,6 +33,8 @@ typedef NS_ENUM(NSUInteger, TestDisplacementEnum) {
     self.view.backgroundColor = [UIColor blueColor];
 //    [self setupManager];
     self.displacementEnum = TestDisplacementEnumA;
+    
+    [self afnTest];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -195,14 +197,16 @@ typedef NS_ENUM(NSUInteger, TestDisplacementEnum) {
 
 
 - (void)afnTest {
+    _manager = [AFHTTPSessionManager manager];
+    _manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
+    [_manager.requestSerializer setValue:@"text/xml" forHTTPHeaderField:@"Content-Type"];
     
-    _manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    
-    NSString *url = @"https://api.douban.com/v2/movie/in_theaters";
-    [_manager POST:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSString *url = @"https://www.baidu.com";
+    [_manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@", responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error = %@", error);
     }];
 }
+
 @end

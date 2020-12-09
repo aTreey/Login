@@ -45,7 +45,7 @@ SPEC REPOS:
     - LGEffectiveObjectiveC
     - LGObjectiveCPro
     - LGUitls
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - HyphenateLite
     - KissXML
@@ -70,4 +70,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1a2d99e404446fd9f14887e6e0ac5ac1a9937419
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3
