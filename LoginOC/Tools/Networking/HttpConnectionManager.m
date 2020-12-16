@@ -10,12 +10,49 @@
 #import "HttpRequestBuilder.h"
 
 
-@interface HttpConnectionManager() <NSURLSessionTaskDelegate>
+#define MAX_TASK_COUNT 3
+
+static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking.session.manager.lock";
+
+@interface HttpTaskContext: NSObject
+
+/// success callback
+@property (nonatomic, copy) HttpRequestSuccess success;
+
+/// failure callback
+@property (nonatomic, copy) HttpRequestFailed failure;
+
+/// task
+@property (nonatomic, strong) NSURLSessionTask *task;
+
+///
+@property (nonatomic, assign) NSUInteger excuteCount;
+
+/// 下一次请求时间
+@property (nonatomic, assign) NSTimeInterval nextExcuteTime;
+
+/// 请求创建时间
+@property (nonatomic, assign) NSTimeInterval createTime;
+
+/// urlsession
+@property (nonatomic, weak) NSURLSession *session;
+
+/// 是否忽略https
+@property (nonatomic, assign) BOOL ignoreHttps;
+
+@end
+
+@implementation HttpTaskContext
+
+@end
+
+
+@interface HttpConnectionManager() <NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *taskDatas;
-// session config, 设置
+
 /**
- 
+ session config, 设置
  */
 @property (nonatomic, strong) NSURLSession *defaultSession;
 
@@ -24,7 +61,13 @@
  */
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
+@property (nonatomic, strong) NSMutableDictionary *taskContext;
 
+@property (nonatomic, strong) NSMutableArray *mutableTasks;
+
+@property (readwrite, nonatomic, strong) NSLock *lock;
+
+@property (nonatomic, assign) NSUInteger runningTaskCount;
 
 @end
 
@@ -48,8 +91,14 @@
     self = [super init];
     if (self) {
         self.taskDatas = [NSMutableDictionary dictionary];
+        self.taskContext = [NSMutableDictionary dictionary];
+        self.mutableTasks = [NSMutableArray array];
         self.operationQueue = [[NSOperationQueue alloc] init];
         self.operationQueue.maxConcurrentOperationCount = 1;
+        
+        // 使用 NSLock 性能较好，防止多线程问题
+        self.lock = [[NSLock alloc] init];
+        self.lock.name = HttpConnectionSessionManagerLockName;
         
         /**
          设置Session配置，如缓存策略、超时、代理、管道、要支持的TLS版本、cookie策略、凭据存储等。默认缓存是使用磁盘缓存
@@ -60,15 +109,24 @@
     return self;
 }
 
-- (NSString *)request:(NSString *)URL method:(NSString *)method parameters:(nullable id)parameters customHeaders:(nullable NSDictionary *)headers cacheFirst:(BOOL)cacheFirst success:(HttpRequestSuccess)success failure:(HttpRequestFailed)failure {
+- (NSString *)request:(NSString *)URL
+               method:(NSString *)method
+           parameters:(nullable id)parameters
+        customHeaders:(nullable NSDictionary *)headers
+           cacheFirst:(BOOL)cacheFirst
+              success:(HttpRequestSuccess)success
+              failure:(HttpRequestFailed)failure {
     
-    NSMutableURLRequest *mutableRequest = [HttpRequestBuilder createRequestWithURLString:URL method:method parameters:parameters];
+    NSMutableURLRequest *mutableRequest = nil;
     
+    [self.lock lock];
+    mutableRequest = [HttpRequestBuilder createRequestWithURLString:URL method:method parameters:parameters];
     if (headers) {
         for (NSString *key in headers) {
             [mutableRequest setValue:headers[key] forHTTPHeaderField:key];
         }
     }
+    [self.lock unlock];
     
     if (!mutableRequest) {
         return nil;
@@ -79,12 +137,84 @@
     
     NSURLSessionTask *task = [self.defaultSession dataTaskWithRequest:mutableRequest];
     NSString *taskKey = [self getTaskKeyForTask:task];
+    
+    HttpTaskContext *taskContext = [[HttpTaskContext alloc] init];
+    taskContext.createTime = [[NSDate date] timeIntervalSince1970];
+    taskContext.task = task;
+    taskContext.session = self.defaultSession;
+    taskContext.excuteCount = 0;
+    taskContext.success = success;
+    taskContext.failure = failure;
+    
+    [self.lock lock];
+    self.taskContext[taskKey] = taskContext;
+    [self.mutableTasks addObject:task];
+    [self.lock unlock];
+    
+    [self excuteReuqestIfNeeded];
+    
     return taskKey;
 }
 
-
 - (NSString *)getTaskKeyForTask: (NSURLSessionTask*)task {
     return [NSString stringWithFormat:@"%lu", task.taskIdentifier];
+}
+
+
+- (void)excuteReuqestIfNeeded {
+    if (self.runningTaskCount >= MAX_TASK_COUNT || self.mutableTasks.count == 0) {
+        return;
+    }
+    NSURLSessionTask *willRunTask;
+    [self.lock lock];
+    willRunTask = [self.mutableTasks objectAtIndex:0];
+    [self.mutableTasks removeObjectAtIndex:0];
+    [self.lock unlock];
+
+    [willRunTask resume];
+    self.runningTaskCount += 1;
+}
+
+#pragma mark -
+#pragma mark - NSURLSessionTaskDelegate
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+    NSString *taskKey = [self getTaskKeyForTask:dataTask];
+    NSMutableData *responseData = self.taskDatas[taskKey];
+    if (!responseData) {
+        responseData = [NSMutableData dataWithData:data];
+        self.taskDatas[taskKey] = responseData;
+    } else {
+        [self.taskDatas[taskKey] appendData:data];
+    }
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    if (error) {
+        NSLog(@"%@ Request Failed: %@", task.originalRequest.URL, error);
+    }
+    NSString *taskKey = [self getTaskKeyForTask:task];
+    NSMutableData *responseData = self.taskDatas[taskKey];
+    HttpTaskContext *context = self.taskContext[taskKey];
+    
+    NSDictionary *response;
+    if (responseData) {
+        response = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+    }
+    
+    [self.lock lock];
+    [self.taskDatas removeObjectForKey:taskKey];
+    [self.taskContext removeObjectForKey:taskKey];
+    [self.lock unlock];
+    
+    self.runningTaskCount -= 1;
+    [self excuteReuqestIfNeeded];
+    
+    if (error) {
+        context.failure(error, response);
+    } else {
+        context.success(response);
+    }
 }
 
 @end

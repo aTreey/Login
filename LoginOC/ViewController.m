@@ -46,7 +46,8 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     //
     //    [self containerCenter];
     //
-        [self testAutoresizingMask];
+//        [self testAutoresizingMask];
+    [self testString_description];
     
     //    [self suspendPlayVido];
     
@@ -399,6 +400,18 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     
     NSLog(@"singleton ---- %@", singleton);
     NSLog(@"my singleton ---- %@", mySingleton);
+}
+
+- (void)testString_description {
+    NSMutableDictionary *dict = [@{@"key1": @"value1", @"key2": @[@"1", @"2"], @"key3": @[@1, @2]} mutableCopy];
+    
+    [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        NSLog(@"key === %@",key);
+        NSLog(@"value ==== %@", obj);
+        NSLog(@"value description ==== %@", [obj description]);
+        NSString *str = [NSString stringWithFormat:@"%@", [key description]];
+        NSLog(@"str ==== %@", str);
+    }];
 }
 
 @end

@@ -33,8 +33,8 @@
                     [mutableUrlString appendString:@"&"];
                 }
                 NSString *value = parameters[key];
-//                [mutableUrlString appendFormat:@"%@=%@", [self urlEncode:key], [self urlEncode:[value description]]];
-                i ++;
+                [mutableUrlString appendFormat:@"%@=%@", [self urlEncode:key], [self urlEncode:[value description]]];
+                i++;
             }
         }
         parametersInRequestBody = NO;
@@ -105,6 +105,12 @@
                            [[UIDevice currentDevice] systemVersion],
                            [[UIScreen mainScreen] scale]];
     return userAgent;
+}
+
++ (NSString*)urlEncode:(NSString*)source {
+    NSString *charactersToEscape = @"?!@#$^&%*+:;='\"`<>()[]{}/\\| ";
+    NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+    return [source stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
 }
 
 @end
