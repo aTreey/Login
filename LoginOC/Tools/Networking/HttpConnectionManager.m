@@ -243,7 +243,7 @@ static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking
     }
     
     NSString *lastModifiedValue = httpResponse.allHeaderFields[@"Last-Modified"];
-    if (lastModifiedValue && responseData) {
+    if (lastModifiedValue && responseData && httpResponse.statusCode == 200) {
         NSCachedURLResponse *cachedResponse = [[NSCachedURLResponse alloc] initWithResponse:task.response data:responseData];
         [[NSURLCache sharedURLCache] storeCachedResponse:cachedResponse forRequest:task.originalRequest];
     }
