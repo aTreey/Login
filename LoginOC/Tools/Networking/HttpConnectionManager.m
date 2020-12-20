@@ -10,7 +10,9 @@
 #import "HttpRequestBuilder.h"
 
 
-#define MAX_TASK_COUNT 3
+#define MAX_TASK_COUNT      3
+#define PrintLog           YES
+
 
 static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking.session.manager.lock";
 
@@ -211,6 +213,9 @@ static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking
 #pragma mark - NSURLSessionTaskDelegate
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+    if (PrintLog) {
+        NSLog(@"%@ didReceiveData length: %ld", dataTask.originalRequest.URL, data.length);
+    }
     NSString *taskKey = [self getTaskKeyForTask:dataTask];
     NSMutableData *responseData = self.taskDatas[taskKey];
     if (!responseData) {
@@ -222,7 +227,7 @@ static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking
 }
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    if (error) {
+    if (PrintLog) {
         NSLog(@"%@ Request Failed: %@", task.originalRequest.URL, error);
     }
     NSString *taskKey = [self getTaskKeyForTask:task];
@@ -248,6 +253,12 @@ static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking
         [[NSURLCache sharedURLCache] storeCachedResponse:cachedResponse forRequest:task.originalRequest];
     }
     
+    // error
+    NSError *httpError = error;
+    if (httpResponse.statusCode >= 400) {
+        httpError = [NSError errorWithDomain:@"NetworkError" code:httpResponse.statusCode userInfo:nil];
+    }
+    
     [self.lock lock];
     [self.taskDatas removeObjectForKey:taskKey];
     [self.taskContext removeObjectForKey:taskKey];
@@ -257,8 +268,8 @@ static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking
     self.runningTaskCount -= 1;
     [self excuteReuqestIfNeeded];
     
-    if (error) {
-        context.failure(error, response);
+    if (httpError) {
+        context.failure(httpError, response);
     } else {
         context.success(response);
     }
