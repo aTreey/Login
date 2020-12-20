@@ -209,6 +209,62 @@ static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking
                                              diskPath:@"HttpConnectionDisKCache"];
 }
 
+
+
+#pragma mark -
+#pragma mark - NSURLSessionDelegate
+
+/// 当前session 失效时调用
+/// @param session session
+/// @param error error
+- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error {
+    NSLog(@"当前 session =%@ 失效", session.sessionDescription);
+}
+
+/// https 认证
+/// @param session session
+/// @param challenge 认证挑战
+/// @param completionHandler 回调
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
+    /*
+         NSURLSessionAuthChallengePerformDefaultHandling：默认方式处理
+         NSURLSessionAuthChallengeUseCredential：使用指定的证书
+         NSURLSessionAuthChallengeCancelAuthenticationChallenge：取消挑战
+     */
+
+    // 挑战处理类型使用默认
+    NSURLSessionAuthChallengeDisposition disposition = NSURLSessionAuthChallengePerformDefaultHandling;
+    
+    // 此处服务器端需要客户端返回一个根据认证挑战的保护空间提供的信任产生的挑战证书。
+    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+        
+        // 使用证书校验方法对服务端的servierTrust 校验
+        SecTrustResultType result;
+        OSStatus status = SecTrustEvaluate(challenge.protectionSpace.serverTrust, &result);
+        if (status != 0) {
+            disposition = NSURLSessionAuthChallengeCancelAuthenticationChallenge;
+        }
+        
+        if (result != kSecTrustResultUnspecified) {
+            NSInteger certCount = SecTrustGetCertificateCount(challenge.protectionSpace.serverTrust);
+            NSMutableString *error = [NSMutableString string];
+            for (NSInteger i = 0; i < certCount; i++) {
+                SecCertificateRef certificateRef = SecTrustGetCertificateAtIndex(challenge.protectionSpace.serverTrust, i);
+                NSString *desc = (__bridge_transfer NSString*) CFCopyDescription(certificateRef);
+                [error appendFormat:@"didReceiveChallenge %ld issuer : %@", (long)i, desc];
+                NSLog(@"证书验证失败%@", error);
+            }
+            
+            disposition = NSURLSessionAuthChallengeCancelAuthenticationChallenge;
+        }
+    }
+    
+    if (completionHandler) {
+        completionHandler(disposition, nil);
+    }
+}
+
+
 #pragma mark -
 #pragma mark - NSURLSessionTaskDelegate
 
