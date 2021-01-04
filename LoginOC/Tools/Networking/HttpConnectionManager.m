@@ -293,6 +293,7 @@ static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking
     NSDictionary *response;
     if (responseData) {
         response = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+        response = [HttpRequestBuilder JSONObjectByRemovingKeysWithNullValues:response];
     }
     
     
@@ -327,7 +328,7 @@ static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking
     if (httpError) {
         context.failure(httpError, response);
     } else {
-        context.success(response);
+        context.success(responseData);
     }
 }
 

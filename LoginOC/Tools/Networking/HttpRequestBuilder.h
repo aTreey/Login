@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSMutableURLRequest*)createRequestWithURLString:(NSString *)URLString method:(NSString *)method parameters:(nullable id)parameters;
 
++ (id)JSONObjectByRemovingKeysWithNullValues:(id)JSONObject;
+
 @end
 
 NS_ASSUME_NONNULL_END

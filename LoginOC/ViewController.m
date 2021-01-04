@@ -33,6 +33,18 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 @property (nonatomic, strong) UIView *view3;
 @property (nonatomic, strong) UIView *view4;
 
+/**
+ 使用strong修饰NSString 有什么问题
+ */
+@property (nonatomic, strong) NSString *strongString;
+@property (nonatomic,   copy) NSString *stringCopy;
+
+
+/**
+ 使用copy修饰 NSMutableString，会崩溃
+ */
+@property (nonatomic, copy) NSMutableString *mutableStr;
+
 @end
 
 @implementation ViewController
@@ -71,6 +83,8 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 //    [self testComponents];
 //
 //    [self testSingleton];
+    
+    [self iOSInterview];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -411,6 +425,93 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
         NSLog(@"value description ==== %@", [obj description]);
         NSString *str = [NSString stringWithFormat:@"%@", [key description]];
         NSLog(@"str ==== %@", str);
+    }];
+}
+
+
+///---------------- iOS 面试之道 -------------------------
+
+- (void)iOSInterview {
+    [self iOSGrammer];
+}
+
+- (void)iOSGrammer {
+    
+    /**
+     NSString 使用copy和strong修饰的区别
+     self.title 的值还是会被修改成了@“mutableTitle”，无论title 是用copy 还是strong 修饰值都会被修改；
+     但是如果再次修改 mutableTitle 的值；使用strong 修饰的字符串会被修改成和mutableTitle 一样的值
+     但是如果使用copy 修饰的字符串，这个值是不会被再次修改的，还是被self.title = mutableTitle; 赋值的时候mutableTitle 的值；
+     原因："copy表示该属性不保留新值，而是将其拷贝。这样一来，属性的封装性就可以得到保护，其对应的值是不会无意间被修改的
+     */
+    self.strongString = @"strong 修饰字符串";
+    NSLog(@"self.strongString原始值 ==== %@", self.strongString);
+    
+    
+    self.stringCopy = @"copy string";
+    NSLog(@"copyString 原始值 ==== %@", self.stringCopy);
+    
+    
+    NSMutableString *mutableStr = @"NSMutableString String".mutableCopy;
+    
+    // 使用strong修饰字符串，有会无意间被修改的可能性
+    self.strongString = mutableStr;
+    NSLog(@"self.strongString 修改后的值==== %@,  mutableStr === %@", self.strongString, mutableStr);
+    
+    
+    // 使用copy修复的字符串
+    self.stringCopy = mutableStr;
+    NSLog(@"self.copyString 修改后的值==== %@,  mutableStr === %@", self.stringCopy, mutableStr);
+    
+    
+    // 再次修改 mutableStr 后对原始值的影响
+    [mutableStr appendString:@"被修改了"];
+    NSLog(@"////////////////////////////////////////////");
+    NSLog(@"strongString原始值 ==== %@", self.strongString);
+    NSLog(@"copyString 原始值 ==== %@", self.stringCopy);
+    NSLog(@"mutableStr 值 ==== %@", mutableStr);
+
+    
+    /**
+     语法：== 判断的是两个指针是否是同一个对象； isequal 判断的是这两个值是否相等。
+     iOS中两个指针指向不同的对象，尽管它们的值相同。但是 iOS 的编译器优化了内存分配，当两个指针指向两个值一样的 NSString 时，两者指向同一个内存地址
+     */
+    NSString *firstStr = @"helloworld";
+    NSString *secondStr = @"helloworld";
+    
+    if (firstStr == secondStr) {
+      NSLog(@"Equal");
+    } else {
+      NSLog(@"Not Equal");
+    }
+    
+    
+    /**
+     多线程问题
+     */
+    
+    UILabel *alertLabel = [[UILabel alloc] initWithFrame:CGRectMake(100,100,100,100)];
+    alertLabel.text = @"Wait 4 seconds...";
+    [self.view addSubview:alertLabel];
+    NSLog(@"当前线程=-----%@", [NSThread currentThread]);
+    
+    // 创建自定义的队列
+    NSOperationQueue *backgroundQueue = [[NSOperationQueue alloc] init];
+    // 创建主队列
+    NSOperationQueue *mainQuequ = [NSOperationQueue mainQueue];
+    
+    /**
+     使用addOperation:添加任务到队列后能开启新线程，并发执行任务
+     当 maxConcurrentOperationCount 为1时，说明添加的任务时串行执行的
+     串行执行 != 同一个线程执行
+     */
+    [backgroundQueue addOperationWithBlock:^{
+        [NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:4]];
+        NSLog(@"延时执行=-----%@", [NSThread currentThread]);
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            NSLog(@"主队列中更新UI-----%@", [NSThread currentThread]);
+            alertLabel.text = @"Ready to go!";
+        }];
     }];
 }
 

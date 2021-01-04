@@ -113,4 +113,28 @@
     return [source stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
 }
 
++ (id)JSONObjectByRemovingKeysWithNullValues:(id)JSONObject {
+    if ([JSONObject isKindOfClass:[NSArray class]]) {
+        NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:[(NSArray *)JSONObject count]];
+        for (id value in (NSArray *)JSONObject) {
+            if (![value isKindOfClass:[NSNull class]]) {
+                [mutableArray addObject:[self JSONObjectByRemovingKeysWithNullValues:value]];
+            }
+        }
+        return mutableArray;
+    } else if ([JSONObject isKindOfClass:[NSDictionary class]]) {
+        NSMutableDictionary *mutableDictionary = [NSMutableDictionary dictionaryWithDictionary:JSONObject];
+        for (id <NSCopying> key in [(NSDictionary *)JSONObject allKeys]) {
+            id value = (NSDictionary *)JSONObject[key];
+            if (!value || [value isEqual:[NSNull null]]) {
+                [mutableDictionary removeObjectForKey:key];
+            } else if ([value isKindOfClass:[NSArray class]] || [value isKindOfClass:[NSDictionary class]]) {
+                mutableDictionary[key] = [self JSONObjectByRemovingKeysWithNullValues:value];
+            }
+        }
+        return mutableDictionary;
+    }
+    return JSONObject;
+}
+
 @end
