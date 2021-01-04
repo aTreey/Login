@@ -11,6 +11,7 @@
 		7324B9CE247571DC00DD98FA /* ObserverPatternViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7324B9CD247571DC00DD98FA /* ObserverPatternViewController.m */; };
 		7324B9D22475721D00DD98FA /* SubscriptionServiceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7324B9D12475721D00DD98FA /* SubscriptionServiceCenter.m */; };
 		7331E73A244FF6460078FCEB /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 7331E739244FF6460078FCEB /* Scribble.m */; };
+		7332303625A373A600DBBD38 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7332303525A373A600DBBD38 /* CustomButton.m */; };
 		7332C6972456B99A00B3C00B /* MarkEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7332C6962456B99A00B3C00B /* MarkEnumerator.m */; };
 		73439CCB2578AC03001926EB /* WebViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 73439CCA2578AC03001926EB /* WebViewPool.m */; };
 		73956B1725760C2F003AA702 /* HttpConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73956B1625760C2F003AA702 /* HttpConnectionManager.m */; };
@@ -193,6 +194,8 @@
 		7331E737244FDF3F0078FCEB /* Obsever.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Obsever.md; sourceTree = "<group>"; };
 		7331E738244FF6460078FCEB /* Scribble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scribble.h; sourceTree = "<group>"; };
 		7331E739244FF6460078FCEB /* Scribble.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Scribble.m; sourceTree = "<group>"; };
+		7332303425A373A600DBBD38 /* CustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		7332303525A373A600DBBD38 /* CustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		7332C6952456B99A00B3C00B /* MarkEnumerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkEnumerator.h; sourceTree = "<group>"; };
 		7332C6962456B99A00B3C00B /* MarkEnumerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkEnumerator.m; sourceTree = "<group>"; };
 		73439CC62577F143001926EB /* Resume.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Resume.md; sourceTree = "<group>"; };
@@ -565,6 +568,15 @@
 			path = MementoObserver;
 			sourceTree = "<group>";
 		};
+		7332303325A3735F00DBBD38 /* TouchEventExample */ = {
+			isa = PBXGroup;
+			children = (
+				7332303425A373A600DBBD38 /* CustomButton.h */,
+				7332303525A373A600DBBD38 /* CustomButton.m */,
+			);
+			path = TouchEventExample;
+			sourceTree = "<group>";
+		};
 		7332C6912456B8F700B3C00B /* Iterator */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,6 +719,7 @@
 				73E4FB682449FAA1007FDBDA /* SceneDelegate.m */,
 				73E4FB6A2449FAA1007FDBDA /* ViewController.h */,
 				73E4FB6B2449FAA1007FDBDA /* ViewController.m */,
+				7332303325A3735F00DBBD38 /* TouchEventExample */,
 				73E4FB6D2449FAA1007FDBDA /* Main.storyboard */,
 				73E4FB702449FAA3007FDBDA /* Assets.xcassets */,
 				73E4FB722449FAA3007FDBDA /* LaunchScreen.storyboard */,
@@ -1725,6 +1738,7 @@
 				73E4FD192449FBA8007FDBDA /* AcmeMainButton.m in Sources */,
 				73E4FD2B2449FBA8007FDBDA /* BaseAnimationView.m in Sources */,
 				73E4FCE42449FBA8007FDBDA /* LoginDetailCell.m in Sources */,
+				7332303625A373A600DBBD38 /* CustomButton.m in Sources */,
 				73E4FD0C2449FBA8007FDBDA /* Form.m in Sources */,
 				73E4FD522449FBA8007FDBDA /* AutomaticReferenceCountingController+AddProperty.m in Sources */,
 				73E4FD372449FBA8007FDBDA /* MySingleton.m in Sources */,

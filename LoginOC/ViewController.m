@@ -13,6 +13,7 @@
 #import <UIColor+Extension.h>
 #import "Person_Prototype.h"
 #import "MySingleton.h"
+#import "CustomButton.h"
 
 
 typedef void(^MyBlock)(NSInteger a, NSInteger b);
@@ -433,6 +434,8 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 
 - (void)iOSInterview {
     [self iOSGrammer];
+    
+    [self viewAandCAlayer];
 }
 
 - (void)iOSGrammer {
@@ -513,6 +516,37 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
             alertLabel.text = @"Ready to go!";
         }];
     }];
+}
+
+
+- (void)viewAandCAlayer {
+    /**
+     UIView 有layer、backgroundColor 两个属性
+     layer 是CALayer 类型的，UIView 的显示部分是由CALayer 的contents 部分决定的
+     两者的关系是，UIView 为其提供内容，以及负责处理触摸等事件，参与响应链，CALayer 负责显示内容
+     如此设计符合单一职责的设计原则
+     */
+    
+    /**
+     事件传递：点击屏幕 --> UIApplication --> UIWindow --> hitTest: --> pointInside --> 遍历子视图（倒序，当视图未隐藏、可交互并且 alpha > 0.01 时才会继续递归）
+     // 返回响应事件的视图
+     - (UIView *)hitTest:(CGPoint)point
+     // 点击位置是否在当前视图范围内
+     - (BOOL)pointInside:(CGPoint)point
+     */
+    CustomButton *cornerRadiusButton = [[CustomButton alloc] initWithFrame:CGRectMake(50, 120, 100, 100)];
+    [cornerRadiusButton addTarget:self action:@selector(cornerRadiusButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    cornerRadiusButton.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:cornerRadiusButton];
+    
+    /**
+     视图响应：
+     最外层的View（lable、button、textfield）--> UIView --> UIViewController --> UIWindow --> UIApplication --> UIApplicationDelegate
+     */
+}
+
+- (void)cornerRadiusButtonAction {
+    NSLog(@"正方形按钮圆形区域响应点击事件");
 }
 
 @end
