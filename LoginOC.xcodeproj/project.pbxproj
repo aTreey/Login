@@ -13,6 +13,8 @@
 		7331E73A244FF6460078FCEB /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 7331E739244FF6460078FCEB /* Scribble.m */; };
 		7332303625A373A600DBBD38 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7332303525A373A600DBBD38 /* CustomButton.m */; };
 		7332C6972456B99A00B3C00B /* MarkEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7332C6962456B99A00B3C00B /* MarkEnumerator.m */; };
+		734269D125A4ABDC004101B9 /* KVOObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 734269D025A4ABDC004101B9 /* KVOObject.m */; };
+		734269D725A4AC03004101B9 /* KVOObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 734269D625A4AC03004101B9 /* KVOObserver.m */; };
 		73439CCB2578AC03001926EB /* WebViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 73439CCA2578AC03001926EB /* WebViewPool.m */; };
 		73956B1725760C2F003AA702 /* HttpConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73956B1625760C2F003AA702 /* HttpConnectionManager.m */; };
 		73B3836C24587B0900C7AAD5 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3836B24587B0900C7AAD5 /* NSMutableArray+Stack.m */; };
@@ -198,6 +200,10 @@
 		7332303525A373A600DBBD38 /* CustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		7332C6952456B99A00B3C00B /* MarkEnumerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkEnumerator.h; sourceTree = "<group>"; };
 		7332C6962456B99A00B3C00B /* MarkEnumerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkEnumerator.m; sourceTree = "<group>"; };
+		734269CF25A4ABDC004101B9 /* KVOObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOObject.h; sourceTree = "<group>"; };
+		734269D025A4ABDC004101B9 /* KVOObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOObject.m; sourceTree = "<group>"; };
+		734269D525A4AC03004101B9 /* KVOObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOObserver.h; sourceTree = "<group>"; };
+		734269D625A4AC03004101B9 /* KVOObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOObserver.m; sourceTree = "<group>"; };
 		73439CC62577F143001926EB /* Resume.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Resume.md; sourceTree = "<group>"; };
 		73439CC92578AC03001926EB /* WebViewPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewPool.h; sourceTree = "<group>"; };
 		73439CCA2578AC03001926EB /* WebViewPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewPool.m; sourceTree = "<group>"; };
@@ -587,6 +593,17 @@
 			path = Iterator;
 			sourceTree = "<group>";
 		};
+		734269C525A4ABA3004101B9 /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				734269CF25A4ABDC004101B9 /* KVOObject.h */,
+				734269D025A4ABDC004101B9 /* KVOObject.m */,
+				734269D525A4AC03004101B9 /* KVOObserver.h */,
+				734269D625A4AC03004101B9 /* KVOObserver.m */,
+			);
+			path = KVO;
+			sourceTree = "<group>";
+		};
 		73439CC72578A9CE001926EB /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -719,6 +736,7 @@
 				73E4FB682449FAA1007FDBDA /* SceneDelegate.m */,
 				73E4FB6A2449FAA1007FDBDA /* ViewController.h */,
 				73E4FB6B2449FAA1007FDBDA /* ViewController.m */,
+				734269C525A4ABA3004101B9 /* KVO */,
 				7332303325A3735F00DBBD38 /* TouchEventExample */,
 				73E4FB6D2449FAA1007FDBDA /* Main.storyboard */,
 				73E4FB702449FAA3007FDBDA /* Assets.xcassets */,
@@ -1766,6 +1784,7 @@
 				73E4FD1D2449FBA8007FDBDA /* AcmeBrandingFactory.m in Sources */,
 				73E4FD3C2449FBA8007FDBDA /* StandardCharacterBuilder.m in Sources */,
 				73E4FD472449FBA8007FDBDA /* AndoridDevice.m in Sources */,
+				734269D725A4AC03004101B9 /* KVOObserver.m in Sources */,
 				7324B9CE247571DC00DD98FA /* ObserverPatternViewController.m in Sources */,
 				73E4FD5A2449FBA8007FDBDA /* StrongTest.m in Sources */,
 				7332C6972456B99A00B3C00B /* MarkEnumerator.m in Sources */,
@@ -1803,6 +1822,7 @@
 				73E4FD4C2449FBA8007FDBDA /* ScribbleManager.m in Sources */,
 				73B3836C24587B0900C7AAD5 /* NSMutableArray+Stack.m in Sources */,
 				73E4FD272449FBA8007FDBDA /* Stroke.m in Sources */,
+				734269D125A4ABDC004101B9 /* KVOObject.m in Sources */,
 				73E4FD322449FBA8007FDBDA /* CanvasViewController.m in Sources */,
 				73E4FD572449FBA8007FDBDA /* Son_cycle.m in Sources */,
 				73E4FD082449FBA8007FDBDA /* FormCell_0.m in Sources */,

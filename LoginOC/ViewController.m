@@ -14,6 +14,8 @@
 #import "Person_Prototype.h"
 #import "MySingleton.h"
 #import "CustomButton.h"
+#import "KVOObject.h"
+#import "KVOObserver.h"
 
 
 typedef void(^MyBlock)(NSInteger a, NSInteger b);
@@ -436,6 +438,8 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     [self iOSGrammer];
     
     [self viewAandCAlayer];
+    
+    [self testKVO];
 }
 
 - (void)iOSGrammer {
@@ -542,11 +546,50 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     /**
      视图响应：
      最外层的View（lable、button、textfield）--> UIView --> UIViewController --> UIWindow --> UIApplication --> UIApplicationDelegate
+     
+     
+     - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+     - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+     - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+     - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
      */
 }
 
 - (void)cornerRadiusButtonAction {
     NSLog(@"正方形按钮圆形区域响应点击事件");
+    [self testKVO];
+}
+
+/**
+ KVO
+ 调用了addOberviseforkeyPath 方法后，系统会在运行时动态创建一个NSKVONotifying_A 的类，将原来的isa指针指向新创建的类
+ 新创建的类时继承了原来注册观察者的对象，通过重写setter 方法来实现监听;
+ 通过调用了 KVO change notification
+ - (void)willChangeValueForKey:(NSString *)key;
+ - (void)didChangeValueForKey:(NSString *)key;
+ 
+ */
+- (void)testKVO {
+    KVOObject *obj = [[KVOObject alloc] init];
+    KVOObserver *observer = [[KVOObserver alloc] init];
+    
+    [obj addObserver:observer forKeyPath:@"value" options:NSKeyValueObservingOptionNew context:NULL];
+    // setter 方法设置值，可触发KVO的通知
+    obj.value = 1;
+    
+    /**
+     1. 通过KVC设置值kvo是否可以监听到?
+     可以，setValue:forkey:会出发 setter方法
+     */
+    [obj setValue:@2 forKey:@"value"];
+    
+    /**
+     2. 对成员变量赋值是否可以出发KVO
+     不可以，因为KVO底层原理是NSKVONotify_A的类重写setter方法并且在设置值的前后插入了两行代码
+     需要手动调用才可以
+     */
+    
+    [obj increase];
 }
 
 @end
