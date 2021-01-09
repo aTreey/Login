@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 只声明，不实现，验证消息转发机制
 - (void)test;
 
+- (void)exchangeMethodTest;
+
 - (void)otherTest;
 @end
 

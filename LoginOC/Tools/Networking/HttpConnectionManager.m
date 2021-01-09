@@ -232,6 +232,21 @@ static NSString * const HttpConnectionSessionManagerLockName = @"HTTP.networking
          NSURLSessionAuthChallengeCancelAuthenticationChallenge：取消挑战
      */
 
+    
+    
+    /**
+     HTTPS 链接建立过程
+     1. client向server发送一段请求报文信息，报文包含TLS版本、客户端支持的加密算法、随机数C
+     2. server端向client端返回握手报文消息，包括商定的加密算法、随机数S,server证书；
+     3. client端收后对证书的公钥进行验证，判断其合法性，根据随机数C、S和预主密钥组装会话密钥
+     4. client发送报文到server端，通过server的公钥对预主密钥加密传输
+     5. server端通过私钥解密得到预主密钥，server通过随机数C、S和得到的预主密钥组装会话密钥
+     6. client端发送加密的握手消息
+     7. server端发送加密的握手消息
+     8. 验证安全通道是否完成
+     */
+    
+    
     // 挑战处理类型使用默认
     NSURLSessionAuthChallengeDisposition disposition = NSURLSessionAuthChallengePerformDefaultHandling;
     

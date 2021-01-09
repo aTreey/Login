@@ -16,6 +16,7 @@
 #import "CustomButton.h"
 #import "KVOObject.h"
 #import "KVOObserver.h"
+#import "RunTimeObject.h"
 
 
 typedef void(^MyBlock)(NSInteger a, NSInteger b);
@@ -558,6 +559,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
 - (void)cornerRadiusButtonAction {
     NSLog(@"正方形按钮圆形区域响应点击事件");
     [self testKVO];
+    [self testRuntime];
 }
 
 /**
@@ -590,6 +592,12 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
      */
     
     [obj increase];
+}
+
+- (void)testRuntime {
+    RunTimeObject *objc = [[RunTimeObject alloc] init];
+    [objc test];
+    [objc exchangeMethodTest];
 }
 
 @end

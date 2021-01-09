@@ -13,11 +13,20 @@
 		7331E73A244FF6460078FCEB /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 7331E739244FF6460078FCEB /* Scribble.m */; };
 		7332303625A373A600DBBD38 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7332303525A373A600DBBD38 /* CustomButton.m */; };
 		7332C6972456B99A00B3C00B /* MarkEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7332C6962456B99A00B3C00B /* MarkEnumerator.m */; };
+		733D723325A8B83E005D62C5 /* AlwaysThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 733D723225A8B83E005D62C5 /* AlwaysThread.m */; };
+		733D724025A985B7005D62C5 /* BusinessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 733D723F25A985B7005D62C5 /* BusinessObject.m */; };
 		734269D125A4ABDC004101B9 /* KVOObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 734269D025A4ABDC004101B9 /* KVOObject.m */; };
 		734269D725A4AC03004101B9 /* KVOObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 734269D625A4AC03004101B9 /* KVOObserver.m */; };
 		73439CCB2578AC03001926EB /* WebViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 73439CCA2578AC03001926EB /* WebViewPool.m */; };
 		73956B1725760C2F003AA702 /* HttpConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73956B1625760C2F003AA702 /* HttpConnectionManager.m */; };
 		73B3836C24587B0900C7AAD5 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3836B24587B0900C7AAD5 /* NSMutableArray+Stack.m */; };
+		73BA2DBF25A991CE002B9FDC /* BridgeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DBE25A991CE002B9FDC /* BridgeDemo.m */; };
+		73BA2DC525A99243002B9FDC /* BridgeBaseA.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DC425A99243002B9FDC /* BridgeBaseA.m */; };
+		73BA2DCB25A9924F002B9FDC /* BridgeBaseB.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DCA25A9924F002B9FDC /* BridgeBaseB.m */; };
+		73BA2DD125A99272002B9FDC /* BridgeA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DD025A99272002B9FDC /* BridgeA1.m */; };
+		73BA2DD725A99282002B9FDC /* BridgeA2.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DD625A99282002B9FDC /* BridgeA2.m */; };
+		73BA2DDD25A992A8002B9FDC /* BridgeB1.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DDC25A992A8002B9FDC /* BridgeB1.m */; };
+		73BA2DE325A992B3002B9FDC /* BridgeB2.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DE225A992B3002B9FDC /* BridgeB2.m */; };
 		73C06B48257D138400D6F013 /* HttpRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C06B47257D138400D6F013 /* HttpRequestBuilder.m */; };
 		73C4DC82244A02D500E56B07 /* UIViewController+LayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C4DC7F244A02D500E56B07 /* UIViewController+LayoutGuide.m */; };
 		73C4DC83244A02D500E56B07 /* AppDelegate+SuspendedPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C4DC80244A02D500E56B07 /* AppDelegate+SuspendedPlay.m */; };
@@ -200,6 +209,10 @@
 		7332303525A373A600DBBD38 /* CustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		7332C6952456B99A00B3C00B /* MarkEnumerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkEnumerator.h; sourceTree = "<group>"; };
 		7332C6962456B99A00B3C00B /* MarkEnumerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkEnumerator.m; sourceTree = "<group>"; };
+		733D723125A8B83E005D62C5 /* AlwaysThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlwaysThread.h; sourceTree = "<group>"; };
+		733D723225A8B83E005D62C5 /* AlwaysThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlwaysThread.m; sourceTree = "<group>"; };
+		733D723E25A985B7005D62C5 /* BusinessObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessObject.h; sourceTree = "<group>"; };
+		733D723F25A985B7005D62C5 /* BusinessObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessObject.m; sourceTree = "<group>"; };
 		734269CF25A4ABDC004101B9 /* KVOObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOObject.h; sourceTree = "<group>"; };
 		734269D025A4ABDC004101B9 /* KVOObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOObject.m; sourceTree = "<group>"; };
 		734269D525A4AC03004101B9 /* KVOObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOObserver.h; sourceTree = "<group>"; };
@@ -216,6 +229,20 @@
 		73B3836A24587B0900C7AAD5 /* NSMutableArray+Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Stack.h"; sourceTree = "<group>"; };
 		73B3836B24587B0900C7AAD5 /* NSMutableArray+Stack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Stack.m"; sourceTree = "<group>"; };
 		73B383A22459CB3900C7AAD5 /* Prototype.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Prototype.md; sourceTree = "<group>"; };
+		73BA2DBD25A991CE002B9FDC /* BridgeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeDemo.h; sourceTree = "<group>"; };
+		73BA2DBE25A991CE002B9FDC /* BridgeDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeDemo.m; sourceTree = "<group>"; };
+		73BA2DC325A99243002B9FDC /* BridgeBaseA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeBaseA.h; sourceTree = "<group>"; };
+		73BA2DC425A99243002B9FDC /* BridgeBaseA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeBaseA.m; sourceTree = "<group>"; };
+		73BA2DC925A9924F002B9FDC /* BridgeBaseB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeBaseB.h; sourceTree = "<group>"; };
+		73BA2DCA25A9924F002B9FDC /* BridgeBaseB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeBaseB.m; sourceTree = "<group>"; };
+		73BA2DCF25A99272002B9FDC /* BridgeA1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeA1.h; sourceTree = "<group>"; };
+		73BA2DD025A99272002B9FDC /* BridgeA1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeA1.m; sourceTree = "<group>"; };
+		73BA2DD525A99282002B9FDC /* BridgeA2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeA2.h; sourceTree = "<group>"; };
+		73BA2DD625A99282002B9FDC /* BridgeA2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeA2.m; sourceTree = "<group>"; };
+		73BA2DDB25A992A8002B9FDC /* BridgeB1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeB1.h; sourceTree = "<group>"; };
+		73BA2DDC25A992A8002B9FDC /* BridgeB1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeB1.m; sourceTree = "<group>"; };
+		73BA2DE125A992B3002B9FDC /* BridgeB2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeB2.h; sourceTree = "<group>"; };
+		73BA2DE225A992B3002B9FDC /* BridgeB2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeB2.m; sourceTree = "<group>"; };
 		73C06B46257D138400D6F013 /* HttpRequestBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequestBuilder.h; sourceTree = "<group>"; };
 		73C06B47257D138400D6F013 /* HttpRequestBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpRequestBuilder.m; sourceTree = "<group>"; };
 		73C4DC742449FE2B00E56B07 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -490,11 +517,11 @@
 		73E4FCC32449FBA7007FDBDA /* Son_cycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Son_cycle.h; sourceTree = "<group>"; };
 		73E4FCC42449FBA7007FDBDA /* KVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOController.h; sourceTree = "<group>"; };
 		73E4FCC52449FBA7007FDBDA /* Father_cycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Father_cycle.m; sourceTree = "<group>"; };
-		73E4FCC62449FBA7007FDBDA /* RunTimeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimeObject.m; sourceTree = "<group>"; };
+		73E4FCC62449FBA7007FDBDA /* RunTimeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunTimeObject.m; path = "../OC高级编程/InterView/RunTimeObject.m"; sourceTree = "<group>"; };
 		73E4FCC72449FBA7007FDBDA /* KVO_Observer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVO_Observer.m; sourceTree = "<group>"; };
 		73E4FCC82449FBA7007FDBDA /* KVO_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVO_Test.h; sourceTree = "<group>"; };
 		73E4FCC92449FBA7007FDBDA /* Son_cycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Son_cycle.m; sourceTree = "<group>"; };
-		73E4FCCA2449FBA7007FDBDA /* RunTimeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTimeObject.h; sourceTree = "<group>"; };
+		73E4FCCA2449FBA7007FDBDA /* RunTimeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunTimeObject.h; path = "../OC高级编程/InterView/RunTimeObject.h"; sourceTree = "<group>"; };
 		73E4FCCB2449FBA7007FDBDA /* Father_cycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Father_cycle.h; sourceTree = "<group>"; };
 		73E4FCCC2449FBA7007FDBDA /* KVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOController.m; sourceTree = "<group>"; };
 		73E4FCCD2449FBA7007FDBDA /* KVO_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVO_Test.m; sourceTree = "<group>"; };
@@ -593,15 +620,60 @@
 			path = Iterator;
 			sourceTree = "<group>";
 		};
+		733D723025A8B7DA005D62C5 /* Runloop */ = {
+			isa = PBXGroup;
+			children = (
+				733D723125A8B83E005D62C5 /* AlwaysThread.h */,
+				733D723225A8B83E005D62C5 /* AlwaysThread.m */,
+			);
+			path = Runloop;
+			sourceTree = "<group>";
+		};
+		733D723D25A98569005D62C5 /* iOSInterViewDesignPatten */ = {
+			isa = PBXGroup;
+			children = (
+				733D723E25A985B7005D62C5 /* BusinessObject.h */,
+				733D723F25A985B7005D62C5 /* BusinessObject.m */,
+				73BA2DBD25A991CE002B9FDC /* BridgeDemo.h */,
+				73BA2DBE25A991CE002B9FDC /* BridgeDemo.m */,
+				73BA2DC325A99243002B9FDC /* BridgeBaseA.h */,
+				73BA2DC425A99243002B9FDC /* BridgeBaseA.m */,
+				73BA2DCF25A99272002B9FDC /* BridgeA1.h */,
+				73BA2DD025A99272002B9FDC /* BridgeA1.m */,
+				73BA2DD525A99282002B9FDC /* BridgeA2.h */,
+				73BA2DD625A99282002B9FDC /* BridgeA2.m */,
+				73BA2DC925A9924F002B9FDC /* BridgeBaseB.h */,
+				73BA2DCA25A9924F002B9FDC /* BridgeBaseB.m */,
+				73BA2DDB25A992A8002B9FDC /* BridgeB1.h */,
+				73BA2DDC25A992A8002B9FDC /* BridgeB1.m */,
+				73BA2DE125A992B3002B9FDC /* BridgeB2.h */,
+				73BA2DE225A992B3002B9FDC /* BridgeB2.m */,
+			);
+			path = iOSInterViewDesignPatten;
+			sourceTree = "<group>";
+		};
 		734269C525A4ABA3004101B9 /* KVO */ = {
 			isa = PBXGroup;
 			children = (
+				73E4FCCE2449FBA7007FDBDA /* KVO_Observer.h */,
+				73E4FCC72449FBA7007FDBDA /* KVO_Observer.m */,
+				73E4FCC82449FBA7007FDBDA /* KVO_Test.h */,
+				73E4FCCD2449FBA7007FDBDA /* KVO_Test.m */,
 				734269CF25A4ABDC004101B9 /* KVOObject.h */,
 				734269D025A4ABDC004101B9 /* KVOObject.m */,
 				734269D525A4AC03004101B9 /* KVOObserver.h */,
 				734269D625A4AC03004101B9 /* KVOObserver.m */,
 			);
 			path = KVO;
+			sourceTree = "<group>";
+		};
+		734269F425A5EBBE004101B9 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				73E4FCCA2449FBA7007FDBDA /* RunTimeObject.h */,
+				73E4FCC62449FBA7007FDBDA /* RunTimeObject.m */,
+			);
+			path = Runtime;
 			sourceTree = "<group>";
 		};
 		73439CC72578A9CE001926EB /* Tools */ = {
@@ -736,8 +808,11 @@
 				73E4FB682449FAA1007FDBDA /* SceneDelegate.m */,
 				73E4FB6A2449FAA1007FDBDA /* ViewController.h */,
 				73E4FB6B2449FAA1007FDBDA /* ViewController.m */,
-				734269C525A4ABA3004101B9 /* KVO */,
 				7332303325A3735F00DBBD38 /* TouchEventExample */,
+				734269C525A4ABA3004101B9 /* KVO */,
+				734269F425A5EBBE004101B9 /* Runtime */,
+				733D723D25A98569005D62C5 /* iOSInterViewDesignPatten */,
+				733D723025A8B7DA005D62C5 /* Runloop */,
 				73E4FB6D2449FAA1007FDBDA /* Main.storyboard */,
 				73E4FB702449FAA3007FDBDA /* Assets.xcassets */,
 				73E4FB722449FAA3007FDBDA /* LaunchScreen.storyboard */,
@@ -1378,23 +1453,23 @@
 		73E4FCB12449FBA7007FDBDA /* OC高级编程 */ = {
 			isa = PBXGroup;
 			children = (
-				73E4FCB22449FBA7007FDBDA /* Blocks */,
-				73E4FCB52449FBA7007FDBDA /* AutomaticReferenceCountingController+KVO.h */,
-				73E4FCB62449FBA7007FDBDA /* AutomaticReferenceCountingController+AddProperty.h */,
-				73E4FCB72449FBA7007FDBDA /* AutomaticReferenceCountingController+NSOperationBlock.m */,
-				73E4FCB82449FBA7007FDBDA /* AutomaticReferenceCountingController+Block.h */,
-				73E4FCB92449FBA7007FDBDA /* StrongTest.h */,
-				73E4FCBA2449FBA7007FDBDA /* AutomaticReferenceCountingController.m */,
-				73E4FCBB2449FBA7007FDBDA /* AutomaticReferenceCountingController+Runtime.h */,
-				73E4FCBC2449FBA7007FDBDA /* GCD */,
-				73E4FCBF2449FBA7007FDBDA /* AutomaticReferenceCountingController+NSOperationBlock.h */,
-				73E4FCC02449FBA7007FDBDA /* AutomaticReferenceCountingController+AddProperty.m */,
-				73E4FCC12449FBA7007FDBDA /* AutomaticReferenceCountingController+KVO.m */,
-				73E4FCC22449FBA7007FDBDA /* InterView */,
-				73E4FCCF2449FBA7007FDBDA /* StrongTest.m */,
-				73E4FCD02449FBA7007FDBDA /* AutomaticReferenceCountingController+Block.m */,
-				73E4FCD12449FBA7007FDBDA /* AutomaticReferenceCountingController+Runtime.m */,
 				73E4FCD22449FBA7007FDBDA /* AutomaticReferenceCountingController.h */,
+				73E4FCBA2449FBA7007FDBDA /* AutomaticReferenceCountingController.m */,
+				73E4FCB62449FBA7007FDBDA /* AutomaticReferenceCountingController+AddProperty.h */,
+				73E4FCC02449FBA7007FDBDA /* AutomaticReferenceCountingController+AddProperty.m */,
+				73E4FCB82449FBA7007FDBDA /* AutomaticReferenceCountingController+Block.h */,
+				73E4FCD02449FBA7007FDBDA /* AutomaticReferenceCountingController+Block.m */,
+				73E4FCB52449FBA7007FDBDA /* AutomaticReferenceCountingController+KVO.h */,
+				73E4FCC12449FBA7007FDBDA /* AutomaticReferenceCountingController+KVO.m */,
+				73E4FCBF2449FBA7007FDBDA /* AutomaticReferenceCountingController+NSOperationBlock.h */,
+				73E4FCB72449FBA7007FDBDA /* AutomaticReferenceCountingController+NSOperationBlock.m */,
+				73E4FCBB2449FBA7007FDBDA /* AutomaticReferenceCountingController+Runtime.h */,
+				73E4FCD12449FBA7007FDBDA /* AutomaticReferenceCountingController+Runtime.m */,
+				73E4FCB22449FBA7007FDBDA /* Blocks */,
+				73E4FCBC2449FBA7007FDBDA /* GCD */,
+				73E4FCC22449FBA7007FDBDA /* InterView */,
+				73E4FCB92449FBA7007FDBDA /* StrongTest.h */,
+				73E4FCCF2449FBA7007FDBDA /* StrongTest.m */,
 			);
 			path = "OC高级编程";
 			sourceTree = "<group>";
@@ -1402,8 +1477,8 @@
 		73E4FCB22449FBA7007FDBDA /* Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				73E4FCB32449FBA7007FDBDA /* Blocks1.m */,
 				73E4FCB42449FBA7007FDBDA /* Blocks1.h */,
+				73E4FCB32449FBA7007FDBDA /* Blocks1.m */,
 			);
 			path = Blocks;
 			sourceTree = "<group>";
@@ -1420,18 +1495,12 @@
 		73E4FCC22449FBA7007FDBDA /* InterView */ = {
 			isa = PBXGroup;
 			children = (
-				73E4FCC32449FBA7007FDBDA /* Son_cycle.h */,
-				73E4FCC42449FBA7007FDBDA /* KVOController.h */,
-				73E4FCC52449FBA7007FDBDA /* Father_cycle.m */,
-				73E4FCC62449FBA7007FDBDA /* RunTimeObject.m */,
-				73E4FCC72449FBA7007FDBDA /* KVO_Observer.m */,
-				73E4FCC82449FBA7007FDBDA /* KVO_Test.h */,
-				73E4FCC92449FBA7007FDBDA /* Son_cycle.m */,
-				73E4FCCA2449FBA7007FDBDA /* RunTimeObject.h */,
 				73E4FCCB2449FBA7007FDBDA /* Father_cycle.h */,
+				73E4FCC52449FBA7007FDBDA /* Father_cycle.m */,
+				73E4FCC42449FBA7007FDBDA /* KVOController.h */,
 				73E4FCCC2449FBA7007FDBDA /* KVOController.m */,
-				73E4FCCD2449FBA7007FDBDA /* KVO_Test.m */,
-				73E4FCCE2449FBA7007FDBDA /* KVO_Observer.h */,
+				73E4FCC32449FBA7007FDBDA /* Son_cycle.h */,
+				73E4FCC92449FBA7007FDBDA /* Son_cycle.m */,
 			);
 			path = InterView;
 			sourceTree = "<group>";
@@ -1693,8 +1762,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				73E4FD3F2449FBA8007FDBDA /* BuilderViewController.m in Sources */,
+				73BA2DCB25A9924F002B9FDC /* BridgeBaseB.m in Sources */,
 				73E4FD382449FBA8007FDBDA /* Singleton.m in Sources */,
 				73E4FD0B2449FBA8007FDBDA /* FormBaseCell.m in Sources */,
+				73BA2DD125A99272002B9FDC /* BridgeA1.m in Sources */,
 				73E4FCDF2449FBA8007FDBDA /* LoginLogoCellModel.m in Sources */,
 				73E4FD512449FBA8007FDBDA /* GCDTest.m in Sources */,
 				73E4FD4A2449FBA8007FDBDA /* CabDriver.m in Sources */,
@@ -1753,11 +1824,13 @@
 				73E4FD482449FBA8007FDBDA /* iPhoneDevice.m in Sources */,
 				73E4FCFA2449FBA8007FDBDA /* TableHeaderScaleController.m in Sources */,
 				73E4FD122449FBA8007FDBDA /* ConsoleEmulator.m in Sources */,
+				733D723325A8B83E005D62C5 /* AlwaysThread.m in Sources */,
 				73E4FD192449FBA8007FDBDA /* AcmeMainButton.m in Sources */,
 				73E4FD2B2449FBA8007FDBDA /* BaseAnimationView.m in Sources */,
 				73E4FCE42449FBA8007FDBDA /* LoginDetailCell.m in Sources */,
 				7332303625A373A600DBBD38 /* CustomButton.m in Sources */,
 				73E4FD0C2449FBA8007FDBDA /* Form.m in Sources */,
+				73BA2DD725A99282002B9FDC /* BridgeA2.m in Sources */,
 				73E4FD522449FBA8007FDBDA /* AutomaticReferenceCountingController+AddProperty.m in Sources */,
 				73E4FD372449FBA8007FDBDA /* MySingleton.m in Sources */,
 				73E4FD182449FBA8007FDBDA /* AcmeToolbar.m in Sources */,
@@ -1776,6 +1849,7 @@
 				73E4FCE82449FBA8007FDBDA /* MasonryAutoLayoutController.m in Sources */,
 				73E4FCE92449FBA8007FDBDA /* MasonryTestView.m in Sources */,
 				73E4FD2E2449FBA8007FDBDA /* CommandSlider.m in Sources */,
+				73BA2DC525A99243002B9FDC /* BridgeBaseA.m in Sources */,
 				73E4FD002449FBA8007FDBDA /* SCRecordSessionManager.m in Sources */,
 				73E4FCD92449FBA8007FDBDA /* CHJBaseMessageCell.m in Sources */,
 				73E4FCEA2449FBA8007FDBDA /* MasonryController.m in Sources */,
@@ -1790,6 +1864,7 @@
 				7332C6972456B99A00B3C00B /* MarkEnumerator.m in Sources */,
 				73E4FCEC2449FBA8007FDBDA /* HorizontalTwoLabel.m in Sources */,
 				73E4FD542449FBA8007FDBDA /* Father_cycle.m in Sources */,
+				73BA2DDD25A992A8002B9FDC /* BridgeB1.m in Sources */,
 				73E4FD432449FBA8007FDBDA /* PaperCanvasViewGenerator.m in Sources */,
 				73E4FD302449FBA8007FDBDA /* PaletteViewController.m in Sources */,
 				73956B1725760C2F003AA702 /* HttpConnectionManager.m in Sources */,
@@ -1805,10 +1880,12 @@
 				73E4FD062449FBA8007FDBDA /* FormDataListController.m in Sources */,
 				73E4FCDB2449FBA8007FDBDA /* CHJBaseChatViewController.m in Sources */,
 				73E4FD052449FBA8007FDBDA /* FormViewController.m in Sources */,
+				73BA2DBF25A991CE002B9FDC /* BridgeDemo.m in Sources */,
 				73E4FD352449FBA8007FDBDA /* CanvasView.m in Sources */,
 				73E4FD012449FBA8007FDBDA /* MyTableViewController.m in Sources */,
 				73E4FCDA2449FBA8007FDBDA /* CHJConversationViewController.m in Sources */,
 				73E4FCD62449FBA8007FDBDA /* ContainerViewController.m in Sources */,
+				73BA2DE325A992B3002B9FDC /* BridgeB2.m in Sources */,
 				73E4FD492449FBA8007FDBDA /* Taximeter.m in Sources */,
 				73E4FD252449FBA8007FDBDA /* Person_Prototype.m in Sources */,
 				73E4FCFD2449FBA8007FDBDA /* DDXMLElement+WSDL.m in Sources */,
@@ -1829,6 +1906,7 @@
 				73E4FD562449FBA8007FDBDA /* KVO_Observer.m in Sources */,
 				73E4FCF22449FBA8007FDBDA /* LBDropMenuView.m in Sources */,
 				73E4FCDE2449FBA8007FDBDA /* AccoutCellModel.m in Sources */,
+				733D724025A985B7005D62C5 /* BusinessObject.m in Sources */,
 				73E4FD412449FBA8007FDBDA /* CanvasViewGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

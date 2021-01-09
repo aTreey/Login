@@ -11,41 +11,41 @@
 
 @implementation RunTimeObject
 
-
+/// 动态添加的方法
 void testImp (void) {
     NSLog(@"test invoke");
 }
 
 + (void)load {
     // 通过Runtime 获取方法的机构体
-    Method test = class_getInstanceMethod(self, @selector(test));
+    Method exchangeMethodTest = class_getInstanceMethod(self, @selector(exchangeMethodTest));
     Method otherTest = class_getInstanceMethod(self, @selector(otherTest));
-    
     // 交换两个方法实现
-//    method_exchangeImplementations(test, otherTest);
+    method_exchangeImplementations(exchangeMethodTest, otherTest);
 }
 
-//- (void)test {
-//    NSLog(@"test");
-//}
-//
-//- (void)otherTest {
-//    // 因为发生了交换，不会形成死循环
-//    [self otherTest];
-//    NSLog(@"otherTest");
-//}
+
+- (void)exchangeMethodTest {
+    NSLog(@"exchangeMethodTest --test");
+}
+
+- (void)otherTest {
+    // 因为发生了交换，不会形成死循环，实际调用了exchangeMethodTest
+    [self otherTest];
+    NSLog(@"otherTest");
+}
 
 
 
 
-// 实现消息转发流程 中的方法
+//  实现消息转发流程中的方法
 /**
  是否要解决当前实例方法的实现
  */
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     if (sel == @selector(test)) {
         NSLog(@"resolveInstanceMethod:");
-        // 如果返回YES，消息转发就会结束
+        // 如果返回YES，消息已处理，消息转发结束
 //        return YES;
         
         
@@ -71,7 +71,7 @@ void testImp (void) {
 
 /**
  - 参数是 SEL 方法选择器
- - 返回值是 id 类型，说明有哪个对象来处理，转发的对象是谁，如果返回了转发目标就会结束当前调用
+ - 返回值是 id 类型，说明有哪个对象来处理 ，转发的对象是谁，如果返回了转发目标就会结束当前调用
  - 如果返回为nil，系统会调用 methodSignatureForSelector:方法，最后一次机会处理这个消息
  */
 - (id)forwardingTargetForSelector:(SEL)aSelector {
