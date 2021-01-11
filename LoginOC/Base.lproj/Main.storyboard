@@ -109,11 +109,11 @@
             </objects>
             <point key="canvasLocation" x="-1306" y="942"/>
         </scene>
-        <!--Masonry-->
+        <!--Demo-->
         <scene sceneID="YYv-Ki-qlm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eTH-mr-7mQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Masonry" id="jMS-fO-jFf"/>
+                    <tabBarItem key="tabBarItem" title="Demo" id="jMS-fO-jFf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NMg-g9-VjK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

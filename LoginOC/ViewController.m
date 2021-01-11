@@ -494,6 +494,14 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     }
     
     
+    NSArray *strArr = @[self.stringCopy, self.strongString];
+        
+    NSArray *copyArr = [[NSArray alloc] initWithArray:strArr copyItems:YES];
+    NSLog(@"数组copy 后 ---- %p", copyArr);
+    for (NSString *str in copyArr) {
+        NSLog(@"数组copyItem 后对象 ---- %p", str);
+    }
+    
     /**
      多线程问题
      */
@@ -599,5 +607,7 @@ typedef void(^MyBlock)(NSInteger a, NSInteger b);
     [objc test];
     [objc exchangeMethodTest];
 }
+
+
 
 @end

@@ -27,6 +27,11 @@
 		73BA2DD725A99282002B9FDC /* BridgeA2.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DD625A99282002B9FDC /* BridgeA2.m */; };
 		73BA2DDD25A992A8002B9FDC /* BridgeB1.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DDC25A992A8002B9FDC /* BridgeB1.m */; };
 		73BA2DE325A992B3002B9FDC /* BridgeB2.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DE225A992B3002B9FDC /* BridgeB2.m */; };
+		73BA2DE925A9B239002B9FDC /* AdapterTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DE825A9B239002B9FDC /* AdapterTarget.m */; };
+		73BA2DEF25A9B2CA002B9FDC /* AapterObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DEE25A9B2CA002B9FDC /* AapterObj.m */; };
+		73BA2DF525A9B3F4002B9FDC /* SharedInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DF425A9B3F4002B9FDC /* SharedInstance.m */; };
+		73BA2E0C25AB5AD6002B9FDC /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2E0B25AB5AD6002B9FDC /* Card.m */; };
+		73BA2E1225AB5AE2002B9FDC /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2E1125AB5AE2002B9FDC /* Deck.m */; };
 		73C06B48257D138400D6F013 /* HttpRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C06B47257D138400D6F013 /* HttpRequestBuilder.m */; };
 		73C4DC82244A02D500E56B07 /* UIViewController+LayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C4DC7F244A02D500E56B07 /* UIViewController+LayoutGuide.m */; };
 		73C4DC83244A02D500E56B07 /* AppDelegate+SuspendedPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C4DC80244A02D500E56B07 /* AppDelegate+SuspendedPlay.m */; };
@@ -173,6 +178,10 @@
 		73E4FD5B2449FBA8007FDBDA /* AutomaticReferenceCountingController+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FCD02449FBA7007FDBDA /* AutomaticReferenceCountingController+Block.m */; };
 		73E4FD5C2449FBA8007FDBDA /* AutomaticReferenceCountingController+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FCD12449FBA7007FDBDA /* AutomaticReferenceCountingController+Runtime.m */; };
 		73E4FD5D2449FBA8007FDBDA /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FCD42449FBA7007FDBDA /* CalendarManager.m */; };
+		73F7650325AB603600429C7B /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F7650225AB603600429C7B /* PlayingCard.m */; };
+		73F7650925AB67DC00429C7B /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F7650825AB67DC00429C7B /* PlayingCardDeck.m */; };
+		73F7653225AC9D7900429C7B /* CardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F7653025AC9D7900429C7B /* CardGameViewController.m */; };
+		73F7653325AC9D7900429C7B /* CardGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73F7653125AC9D7900429C7B /* CardGameViewController.xib */; };
 		9E1439C7B05F4BB6B2C12678 /* Pods_LoginOCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F66C500AE0CE55B53CDE8FD /* Pods_LoginOCUITests.framework */; };
 		C9EE240D896A263F4CF233E4 /* Pods_LoginOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA7608D5D80CECFAC0C0BAB /* Pods_LoginOCTests.framework */; };
 /* End PBXBuildFile section */
@@ -243,6 +252,16 @@
 		73BA2DDC25A992A8002B9FDC /* BridgeB1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeB1.m; sourceTree = "<group>"; };
 		73BA2DE125A992B3002B9FDC /* BridgeB2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeB2.h; sourceTree = "<group>"; };
 		73BA2DE225A992B3002B9FDC /* BridgeB2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeB2.m; sourceTree = "<group>"; };
+		73BA2DE725A9B239002B9FDC /* AdapterTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterTarget.h; sourceTree = "<group>"; };
+		73BA2DE825A9B239002B9FDC /* AdapterTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdapterTarget.m; sourceTree = "<group>"; };
+		73BA2DED25A9B2CA002B9FDC /* AapterObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AapterObj.h; sourceTree = "<group>"; };
+		73BA2DEE25A9B2CA002B9FDC /* AapterObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AapterObj.m; sourceTree = "<group>"; };
+		73BA2DF325A9B3F4002B9FDC /* SharedInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedInstance.h; sourceTree = "<group>"; };
+		73BA2DF425A9B3F4002B9FDC /* SharedInstance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedInstance.m; sourceTree = "<group>"; };
+		73BA2E0A25AB5AD6002B9FDC /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		73BA2E0B25AB5AD6002B9FDC /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		73BA2E1025AB5AE2002B9FDC /* Deck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		73BA2E1125AB5AE2002B9FDC /* Deck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		73C06B46257D138400D6F013 /* HttpRequestBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequestBuilder.h; sourceTree = "<group>"; };
 		73C06B47257D138400D6F013 /* HttpRequestBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpRequestBuilder.m; sourceTree = "<group>"; };
 		73C4DC742449FE2B00E56B07 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -532,6 +551,13 @@
 		73E4FCD22449FBA7007FDBDA /* AutomaticReferenceCountingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomaticReferenceCountingController.h; sourceTree = "<group>"; };
 		73E4FCD42449FBA7007FDBDA /* CalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
 		73E4FCD52449FBA7007FDBDA /* CalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
+		73F7650125AB603600429C7B /* PlayingCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
+		73F7650225AB603600429C7B /* PlayingCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
+		73F7650725AB67DC00429C7B /* PlayingCardDeck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
+		73F7650825AB67DC00429C7B /* PlayingCardDeck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
+		73F7652F25AC9D7900429C7B /* CardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardGameViewController.h; sourceTree = "<group>"; };
+		73F7653025AC9D7900429C7B /* CardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardGameViewController.m; sourceTree = "<group>"; };
+		73F7653125AC9D7900429C7B /* CardGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardGameViewController.xib; sourceTree = "<group>"; };
 		7C68203763257D0DBF067AA1 /* Pods-LoginOCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginOCUITests.release.xcconfig"; path = "Target Support Files/Pods-LoginOCUITests/Pods-LoginOCUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8AA7608D5D80CECFAC0C0BAB /* Pods_LoginOCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginOCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B822942E63101B087B9C027 /* Pods-LoginOCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginOCTests.release.xcconfig"; path = "Target Support Files/Pods-LoginOCTests/Pods-LoginOCTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -648,6 +674,12 @@
 				73BA2DDC25A992A8002B9FDC /* BridgeB1.m */,
 				73BA2DE125A992B3002B9FDC /* BridgeB2.h */,
 				73BA2DE225A992B3002B9FDC /* BridgeB2.m */,
+				73BA2DE725A9B239002B9FDC /* AdapterTarget.h */,
+				73BA2DE825A9B239002B9FDC /* AdapterTarget.m */,
+				73BA2DED25A9B2CA002B9FDC /* AapterObj.h */,
+				73BA2DEE25A9B2CA002B9FDC /* AapterObj.m */,
+				73BA2DF325A9B3F4002B9FDC /* SharedInstance.h */,
+				73BA2DF425A9B3F4002B9FDC /* SharedInstance.m */,
 			);
 			path = iOSInterViewDesignPatten;
 			sourceTree = "<group>";
@@ -751,6 +783,32 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		73BA2E0925AB5ABA002B9FDC /* StanfordiOS7Demo */ = {
+			isa = PBXGroup;
+			children = (
+				73BA2E1625AB5BB2002B9FDC /* Model */,
+			);
+			path = StanfordiOS7Demo;
+			sourceTree = "<group>";
+		};
+		73BA2E1625AB5BB2002B9FDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73BA2E0A25AB5AD6002B9FDC /* Card.h */,
+				73BA2E0B25AB5AD6002B9FDC /* Card.m */,
+				73BA2E1025AB5AE2002B9FDC /* Deck.h */,
+				73BA2E1125AB5AE2002B9FDC /* Deck.m */,
+				73F7650125AB603600429C7B /* PlayingCard.h */,
+				73F7650225AB603600429C7B /* PlayingCard.m */,
+				73F7650725AB67DC00429C7B /* PlayingCardDeck.h */,
+				73F7650825AB67DC00429C7B /* PlayingCardDeck.m */,
+				73F7652F25AC9D7900429C7B /* CardGameViewController.h */,
+				73F7653025AC9D7900429C7B /* CardGameViewController.m */,
+				73F7653125AC9D7900429C7B /* CardGameViewController.xib */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		73C4DC782449FF4500E56B07 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -784,6 +842,7 @@
 		73E4FB632449FAA1007FDBDA /* LoginOC */ = {
 			isa = PBXGroup;
 			children = (
+				73BA2E0925AB5ABA002B9FDC /* StanfordiOS7Demo */,
 				73439CC72578A9CE001926EB /* Tools */,
 				73C4DC782449FF4500E56B07 /* Swift */,
 				73E4FCD32449FBA7007FDBDA /* CalendarManager */,
@@ -800,8 +859,6 @@
 				73E4FBE32449FBA7007FDBDA /* TableView */,
 				73E4FB642449FAA1007FDBDA /* AppDelegate.h */,
 				73E4FB652449FAA1007FDBDA /* AppDelegate.m */,
-				73C4DC81244A02D500E56B07 /* AppDelegate+SuspendedPlay.h */,
-				73C4DC80244A02D500E56B07 /* AppDelegate+SuspendedPlay.m */,
 				73C4DC7E244A02D500E56B07 /* UIViewController+LayoutGuide.h */,
 				73C4DC7F244A02D500E56B07 /* UIViewController+LayoutGuide.m */,
 				73E4FB672449FAA1007FDBDA /* SceneDelegate.h */,
@@ -1061,6 +1118,8 @@
 		73E4FC122449FBA7007FDBDA /* LivePlay */ = {
 			isa = PBXGroup;
 			children = (
+				73C4DC81244A02D500E56B07 /* AppDelegate+SuspendedPlay.h */,
+				73C4DC80244A02D500E56B07 /* AppDelegate+SuspendedPlay.m */,
 				73E4FC132449FBA7007FDBDA /* LBLivePlayerView.h */,
 				73E4FC142449FBA7007FDBDA /* lBLivePlayerManager.m */,
 				73E4FC152449FBA7007FDBDA /* LiveController.m */,
@@ -1639,6 +1698,7 @@
 				73E4FD202449FBA8007FDBDA /* AbstractFactory.md in Resources */,
 				73E4FB742449FAA3007FDBDA /* LaunchScreen.storyboard in Resources */,
 				73E4FCF52449FBA8007FDBDA /* sorts.plist in Resources */,
+				73F7653325AC9D7900429C7B /* CardGameViewController.xib in Resources */,
 				73E4FB712449FAA3007FDBDA /* Assets.xcassets in Resources */,
 				73E4FD232449FBA8007FDBDA /* Adapter.md in Resources */,
 				73E4FCF92449FBA8007FDBDA /* SCRecorderPlayerController.xib in Resources */,
@@ -1775,12 +1835,14 @@
 				73E4FCFE2449FBA8007FDBDA /* SoapService.m in Sources */,
 				73E4FD0E2449FBA8007FDBDA /* LiveController.m in Sources */,
 				73E4FCE62449FBA8007FDBDA /* LoginLogoCell.m in Sources */,
+				73BA2DE925A9B239002B9FDC /* AdapterTarget.m in Sources */,
 				73E4FD3E2449FBA8007FDBDA /* Character.m in Sources */,
 				73C4DC85244A02EF00E56B07 /* OC_Swift_EnumController.swift in Sources */,
 				73E4FCE52449FBA8007FDBDA /* AccountFieldCell.m in Sources */,
 				73E2493D2491328200BFB8C9 /* MarkRenderer.m in Sources */,
 				73E4FD1E2449FBA8007FDBDA /* SierraBrandingFactory.m in Sources */,
 				73E4FCFF2449FBA8007FDBDA /* SoapUtility.m in Sources */,
+				73F7650325AB603600429C7B /* PlayingCard.m in Sources */,
 				73E4FD442449FBA8007FDBDA /* BaseDevice.m in Sources */,
 				73E4FD2C2449FBA8007FDBDA /* ExtensionAnimationView.m in Sources */,
 				73E4FD042449FBA8007FDBDA /* FormCell_2.m in Sources */,
@@ -1798,8 +1860,10 @@
 				73E4FD0D2449FBA8007FDBDA /* lBLivePlayerManager.m in Sources */,
 				73E4FD3B2449FBA8007FDBDA /* ChasingGame.m in Sources */,
 				73E4FD242449FBA8007FDBDA /* Dot.m in Sources */,
+				73F7650925AB67DC00429C7B /* PlayingCardDeck.m in Sources */,
 				73E4FCF82449FBA8007FDBDA /* SCRecorderController.m in Sources */,
 				73E4FD402449FBA8007FDBDA /* CoordinatingController.m in Sources */,
+				73BA2E1225AB5AE2002B9FDC /* Deck.m in Sources */,
 				73E4FCE22449FBA8007FDBDA /* TextFieldCell.m in Sources */,
 				73E4FCD82449FBA8007FDBDA /* CHJMessageContentView.m in Sources */,
 				73E4FD032449FBA8007FDBDA /* SCRecorderPlayerController.m in Sources */,
@@ -1839,6 +1903,7 @@
 				73E4FD582449FBA8007FDBDA /* KVOController.m in Sources */,
 				73E4FCE72449FBA8007FDBDA /* LoginItem.m in Sources */,
 				73E4FD1C2449FBA8007FDBDA /* SierraView.m in Sources */,
+				73BA2DF525A9B3F4002B9FDC /* SharedInstance.m in Sources */,
 				73E4FD592449FBA8007FDBDA /* KVO_Test.m in Sources */,
 				73E4FD422449FBA8007FDBDA /* ClothCanvasViewGenerator.m in Sources */,
 				73E4FD2D2449FBA8007FDBDA /* CommandBarButton.m in Sources */,
@@ -1858,6 +1923,7 @@
 				73E4FD1D2449FBA8007FDBDA /* AcmeBrandingFactory.m in Sources */,
 				73E4FD3C2449FBA8007FDBDA /* StandardCharacterBuilder.m in Sources */,
 				73E4FD472449FBA8007FDBDA /* AndoridDevice.m in Sources */,
+				73F7653225AC9D7900429C7B /* CardGameViewController.m in Sources */,
 				734269D725A4AC03004101B9 /* KVOObserver.m in Sources */,
 				7324B9CE247571DC00DD98FA /* ObserverPatternViewController.m in Sources */,
 				73E4FD5A2449FBA8007FDBDA /* StrongTest.m in Sources */,
@@ -1865,6 +1931,7 @@
 				73E4FCEC2449FBA8007FDBDA /* HorizontalTwoLabel.m in Sources */,
 				73E4FD542449FBA8007FDBDA /* Father_cycle.m in Sources */,
 				73BA2DDD25A992A8002B9FDC /* BridgeB1.m in Sources */,
+				73BA2E0C25AB5AD6002B9FDC /* Card.m in Sources */,
 				73E4FD432449FBA8007FDBDA /* PaperCanvasViewGenerator.m in Sources */,
 				73E4FD302449FBA8007FDBDA /* PaletteViewController.m in Sources */,
 				73956B1725760C2F003AA702 /* HttpConnectionManager.m in Sources */,
@@ -1879,6 +1946,7 @@
 				73E4FCFC2449FBA8007FDBDA /* SOAPController.m in Sources */,
 				73E4FD062449FBA8007FDBDA /* FormDataListController.m in Sources */,
 				73E4FCDB2449FBA8007FDBDA /* CHJBaseChatViewController.m in Sources */,
+				73BA2DEF25A9B2CA002B9FDC /* AapterObj.m in Sources */,
 				73E4FD052449FBA8007FDBDA /* FormViewController.m in Sources */,
 				73BA2DBF25A991CE002B9FDC /* BridgeDemo.m in Sources */,
 				73E4FD352449FBA8007FDBDA /* CanvasView.m in Sources */,

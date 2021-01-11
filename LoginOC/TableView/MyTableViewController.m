@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _datas = @[@"TableHeaderScaleController",
+    _datas = @[@[@"TableHeaderScaleController",
                @"SOAPController",
                @"SCRecorderController",
                @"ContainerViewController",
@@ -28,7 +28,8 @@
                @"CanvasViewController",
                @"PaletteViewController",
                @"BridgeViewController",
-               @"ObserverPatternViewController"
+               @"ObserverPatternViewController"],
+               @[@"CardGameViewController"]
                ];
 }
 
@@ -40,21 +41,21 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.datas.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _datas.count;
+    return [self.datas[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = _datas[indexPath.row];
+    cell.textLabel.text = _datas[indexPath.section][indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Class class = NSClassFromString(_datas[indexPath.row]);
+    Class class = NSClassFromString(_datas[indexPath.section][indexPath.row]);
     UIViewController *controller = [class new];
     if ([controller isKindOfClass:[CanvasViewController class]]) {
         [self handleCanvasViewController:controller];
