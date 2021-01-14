@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Card.h"
 
-@class Card;
 
 NS_ASSUME_NONNULL_BEGIN
 
