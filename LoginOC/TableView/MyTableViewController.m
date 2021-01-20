@@ -29,8 +29,10 @@
                @"PaletteViewController",
                @"BridgeViewController",
                @"ObserverPatternViewController"],
-               @[@"CardGameViewController"]
-               ];
+               
+               @[@"PlayingCardGameViewController",
+               @"AttributeStringViewController"
+               ]];
 }
 
 - (void)didReceiveMemoryWarning {

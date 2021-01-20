@@ -1,32 +1,32 @@
 //
-//  CardGameViewController.m
+//  PlayingCardGameViewController.m
 //  LoginOC
 //
-//  Created by 于鸿鹏 on 2021/1/11.
+//  Created by 于鸿鹏 on 2021/1/18.
 //  Copyright © 2021 于鸿鹏. All rights reserved.
 //
 
-#import "CardGameViewController.h"
+#import "PlayingCardGameViewController.h"
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 
 
-@interface CardGameViewController ()
+@interface PlayingCardGameViewController ()
 
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
-@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (nonatomic, assign) NSInteger flipsCount;
 @property (nonatomic, strong) Deck *deck;
 @property (nonatomic, strong) CardMatchingGame *game;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @end
 
-@implementation CardGameViewController
+@implementation PlayingCardGameViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)setFlipsCount:(NSInteger)flipsCount {
@@ -61,17 +61,15 @@
     return [UIImage imageNamed:card.isChosen ? @"" : @"defaultAppIcon"];
 }
 
-#pragma mark - Lazy
+- (Deck *)createDeck {
+    return [[PlayingCardDeck alloc] init];
+}
 
 - (Deck *)deck {
     if (!_deck) {
         _deck = [self createDeck];
     }
     return _deck;
-}
-
-- (Deck *)createDeck {
-    return [[PlayingCardDeck alloc] init];
 }
 
 - (CardMatchingGame *)game {

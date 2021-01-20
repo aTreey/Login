@@ -19,6 +19,9 @@
 		734269D725A4AC03004101B9 /* KVOObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 734269D625A4AC03004101B9 /* KVOObserver.m */; };
 		73439CCB2578AC03001926EB /* WebViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 73439CCA2578AC03001926EB /* WebViewPool.m */; };
 		73956B1725760C2F003AA702 /* HttpConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73956B1625760C2F003AA702 /* HttpConnectionManager.m */; };
+		73B2826D25B5CB94007DE3F3 /* PlayingCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2826C25B5CB94007DE3F3 /* PlayingCardGameViewController.m */; };
+		73B2828C25B5D501007DE3F3 /* AttributeStringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73B2828B25B5D501007DE3F3 /* AttributeStringViewController.xib */; };
+		73B2829225B5D553007DE3F3 /* AttributeStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2829125B5D553007DE3F3 /* AttributeStringViewController.m */; };
 		73B3836C24587B0900C7AAD5 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3836B24587B0900C7AAD5 /* NSMutableArray+Stack.m */; };
 		73BA2DBF25A991CE002B9FDC /* BridgeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DBE25A991CE002B9FDC /* BridgeDemo.m */; };
 		73BA2DC525A99243002B9FDC /* BridgeBaseA.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BA2DC425A99243002B9FDC /* BridgeBaseA.m */; };
@@ -235,6 +238,11 @@
 		73956B1525760C2F003AA702 /* HttpConnectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpConnectionManager.h; sourceTree = "<group>"; };
 		73956B1625760C2F003AA702 /* HttpConnectionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpConnectionManager.m; sourceTree = "<group>"; };
 		739748F82452BF94007831A3 /* Composite.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Composite.md; sourceTree = "<group>"; };
+		73B2826B25B5CB94007DE3F3 /* PlayingCardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardGameViewController.h; sourceTree = "<group>"; };
+		73B2826C25B5CB94007DE3F3 /* PlayingCardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardGameViewController.m; sourceTree = "<group>"; };
+		73B2828B25B5D501007DE3F3 /* AttributeStringViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributeStringViewController.xib; sourceTree = "<group>"; };
+		73B2829025B5D553007DE3F3 /* AttributeStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeStringViewController.h; sourceTree = "<group>"; };
+		73B2829125B5D553007DE3F3 /* AttributeStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributeStringViewController.m; sourceTree = "<group>"; };
 		73B38368245876D500C7AAD5 /* MarkEnumerator+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarkEnumerator+Private.h"; sourceTree = "<group>"; };
 		73B3836A24587B0900C7AAD5 /* NSMutableArray+Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Stack.h"; sourceTree = "<group>"; };
 		73B3836B24587B0900C7AAD5 /* NSMutableArray+Stack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Stack.m"; sourceTree = "<group>"; };
@@ -768,6 +776,33 @@
 			path = Compostie;
 			sourceTree = "<group>";
 		};
+		73B2827C25B5D0FA007DE3F3 /* AttributeString */ = {
+			isa = PBXGroup;
+			children = (
+				73B2829025B5D553007DE3F3 /* AttributeStringViewController.h */,
+				73B2829125B5D553007DE3F3 /* AttributeStringViewController.m */,
+				73B2828B25B5D501007DE3F3 /* AttributeStringViewController.xib */,
+			);
+			path = AttributeString;
+			sourceTree = "<group>";
+		};
+		73B2829925B5D7C2007DE3F3 /* Case */ = {
+			isa = PBXGroup;
+			children = (
+				73BA2E0925AB5ABA002B9FDC /* StanfordiOS7Demo */,
+				73439CC72578A9CE001926EB /* Tools */,
+				73C4DC782449FF4500E56B07 /* Swift */,
+				73E4FCD32449FBA7007FDBDA /* CalendarManager */,
+				73E4FBA02449FBA6007FDBDA /* ChatUI */,
+				73E4FB992449FBA6007FDBDA /* Container */,
+				73E4FBDF2449FBA7007FDBDA /* DorpMenu */,
+				73E4FBFD2449FBA7007FDBDA /* Form */,
+				73E4FC122449FBA7007FDBDA /* LivePlay */,
+				73E4FBD22449FBA6007FDBDA /* MultipleDorpMenu */,
+			);
+			path = Case;
+			sourceTree = "<group>";
+		};
 		73B3836924587ADB00C7AAD5 /* Custom Stack */ = {
 			isa = PBXGroup;
 			children = (
@@ -789,6 +824,7 @@
 		73BA2E0925AB5ABA002B9FDC /* StanfordiOS7Demo */ = {
 			isa = PBXGroup;
 			children = (
+				73B2827C25B5D0FA007DE3F3 /* AttributeString */,
 				73C4A81325B0784E00E1EEFD /* CardGame */,
 				73BA2E1625AB5BB2002B9FDC /* Model */,
 			);
@@ -817,6 +853,8 @@
 			children = (
 				73F7652F25AC9D7900429C7B /* CardGameViewController.h */,
 				73F7653025AC9D7900429C7B /* CardGameViewController.m */,
+				73B2826B25B5CB94007DE3F3 /* PlayingCardGameViewController.h */,
+				73B2826C25B5CB94007DE3F3 /* PlayingCardGameViewController.m */,
 				73F7653125AC9D7900429C7B /* CardGameViewController.xib */,
 			);
 			path = CardGame;
@@ -855,21 +893,11 @@
 		73E4FB632449FAA1007FDBDA /* LoginOC */ = {
 			isa = PBXGroup;
 			children = (
-				73BA2E0925AB5ABA002B9FDC /* StanfordiOS7Demo */,
-				73439CC72578A9CE001926EB /* Tools */,
-				73C4DC782449FF4500E56B07 /* Swift */,
-				73E4FCD32449FBA7007FDBDA /* CalendarManager */,
-				73E4FBA02449FBA6007FDBDA /* ChatUI */,
-				73E4FB992449FBA6007FDBDA /* Container */,
+				73E4FBE32449FBA7007FDBDA /* TableView */,
 				73E4FC192449FBA7007FDBDA /* DesignPattern */,
-				73E4FBDF2449FBA7007FDBDA /* DorpMenu */,
-				73E4FBFD2449FBA7007FDBDA /* Form */,
-				73E4FC122449FBA7007FDBDA /* LivePlay */,
 				73E4FBA92449FBA6007FDBDA /* Login */,
 				73E4FBC42449FBA6007FDBDA /* Masonry */,
-				73E4FBD22449FBA6007FDBDA /* MultipleDorpMenu */,
 				73E4FCB12449FBA7007FDBDA /* OC高级编程 */,
-				73E4FBE32449FBA7007FDBDA /* TableView */,
 				73E4FB642449FAA1007FDBDA /* AppDelegate.h */,
 				73E4FB652449FAA1007FDBDA /* AppDelegate.m */,
 				73C4DC7E244A02D500E56B07 /* UIViewController+LayoutGuide.h */,
@@ -1052,6 +1080,7 @@
 		73E4FBE32449FBA7007FDBDA /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				73B2829925B5D7C2007DE3F3 /* Case */,
 				73E4FBE52449FBA7007FDBDA /* LoginOC-Bridging-Header.h */,
 				73E4FBE72449FBA7007FDBDA /* MyTableViewController.h */,
 				73E4FBF92449FBA7007FDBDA /* MyTableViewController.m */,
@@ -1711,6 +1740,7 @@
 				73E4FD202449FBA8007FDBDA /* AbstractFactory.md in Resources */,
 				73E4FB742449FAA3007FDBDA /* LaunchScreen.storyboard in Resources */,
 				73E4FCF52449FBA8007FDBDA /* sorts.plist in Resources */,
+				73B2828C25B5D501007DE3F3 /* AttributeStringViewController.xib in Resources */,
 				73F7653325AC9D7900429C7B /* CardGameViewController.xib in Resources */,
 				73E4FB712449FAA3007FDBDA /* Assets.xcassets in Resources */,
 				73E4FD232449FBA8007FDBDA /* Adapter.md in Resources */,
@@ -1952,11 +1982,13 @@
 				73E4FB692449FAA1007FDBDA /* SceneDelegate.m in Sources */,
 				73E4FD4B2449FBA8007FDBDA /* Car.m in Sources */,
 				73E4FD102449FBA8007FDBDA /* BridgeViewController.m in Sources */,
+				73B2829225B5D553007DE3F3 /* AttributeStringViewController.m in Sources */,
 				73E4FD212449FBA8007FDBDA /* AbstractFactoryViewController.m in Sources */,
 				73E4FCD72449FBA8007FDBDA /* ContainerView.m in Sources */,
 				73E4FD0F2449FBA8007FDBDA /* LBLivePlayerView.m in Sources */,
 				73E4FD5B2449FBA8007FDBDA /* AutomaticReferenceCountingController+Block.m in Sources */,
 				73E4FCFC2449FBA8007FDBDA /* SOAPController.m in Sources */,
+				73B2826D25B5CB94007DE3F3 /* PlayingCardGameViewController.m in Sources */,
 				73E4FD062449FBA8007FDBDA /* FormDataListController.m in Sources */,
 				73E4FCDB2449FBA8007FDBDA /* CHJBaseChatViewController.m in Sources */,
 				73BA2DEF25A9B2CA002B9FDC /* AapterObj.m in Sources */,

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardGameViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayingCardGameViewController">
             <connections>
                 <outlet property="flipsLabel" destination="D4F-qT-GNf" id="vbR-9z-fPK"/>
                 <outlet property="scoreLabel" destination="3DC-PR-aJb" id="7Sv-O6-cmo"/>
@@ -194,7 +194,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="S8c-Qb-WvA" secondAttribute="trailing" id="aTj-Up-L6E"/>
                 <constraint firstItem="S8c-Qb-WvA" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="f58-a2-dUf"/>
             </constraints>
-            <point key="canvasLocation" x="-17.39130434782609" y="75"/>
+            <point key="canvasLocation" x="106" y="78"/>
         </view>
     </objects>
     <resources>
