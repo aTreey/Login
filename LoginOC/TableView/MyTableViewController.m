@@ -31,7 +31,8 @@
                @"ObserverPatternViewController"],
                
                @[@"PlayingCardGameViewController",
-               @"AttributeStringViewController"
+               @"AttributeStringViewController",
+               @"CardViewController"
                ]];
 }
 
