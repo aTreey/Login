@@ -44,6 +44,9 @@
 		73C4DC82244A02D500E56B07 /* UIViewController+LayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C4DC7F244A02D500E56B07 /* UIViewController+LayoutGuide.m */; };
 		73C4DC83244A02D500E56B07 /* AppDelegate+SuspendedPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C4DC80244A02D500E56B07 /* AppDelegate+SuspendedPlay.m */; };
 		73C4DC85244A02EF00E56B07 /* OC_Swift_EnumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C4DC84244A02EE00E56B07 /* OC_Swift_EnumController.swift */; };
+		73C79AF625BC7514006D1AEE /* DropitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C79AF425BC7514006D1AEE /* DropitViewController.m */; };
+		73C79AF725BC7514006D1AEE /* DropitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C79AF525BC7514006D1AEE /* DropitViewController.xib */; };
+		73C79AFD25BC82A7006D1AEE /* DropitBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C79AFC25BC82A7006D1AEE /* DropitBehavior.m */; };
 		73E2493D2491328200BFB8C9 /* MarkRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E2493C2491328200BFB8C9 /* MarkRenderer.m */; };
 		73E4FB662449FAA1007FDBDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FB652449FAA1007FDBDA /* AppDelegate.m */; };
 		73E4FB692449FAA1007FDBDA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E4FB682449FAA1007FDBDA /* SceneDelegate.m */; };
@@ -293,6 +296,11 @@
 		73C4DC80244A02D500E56B07 /* AppDelegate+SuspendedPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SuspendedPlay.m"; sourceTree = "<group>"; };
 		73C4DC81244A02D500E56B07 /* AppDelegate+SuspendedPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SuspendedPlay.h"; sourceTree = "<group>"; };
 		73C4DC84244A02EE00E56B07 /* OC_Swift_EnumController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OC_Swift_EnumController.swift; sourceTree = "<group>"; };
+		73C79AF325BC7514006D1AEE /* DropitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropitViewController.h; sourceTree = "<group>"; };
+		73C79AF425BC7514006D1AEE /* DropitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropitViewController.m; sourceTree = "<group>"; };
+		73C79AF525BC7514006D1AEE /* DropitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropitViewController.xib; sourceTree = "<group>"; };
+		73C79AFB25BC82A7006D1AEE /* DropitBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropitBehavior.h; sourceTree = "<group>"; };
+		73C79AFC25BC82A7006D1AEE /* DropitBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropitBehavior.m; sourceTree = "<group>"; };
 		73E2493A24912F9300BFB8C9 /* MarkVisitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkVisitor.h; sourceTree = "<group>"; };
 		73E2493B2491328200BFB8C9 /* MarkRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkRenderer.h; sourceTree = "<group>"; };
 		73E2493C2491328200BFB8C9 /* MarkRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkRenderer.m; sourceTree = "<group>"; };
@@ -849,6 +857,7 @@
 		73BA2E0925AB5ABA002B9FDC /* StanfordiOS7Demo */ = {
 			isa = PBXGroup;
 			children = (
+				73C79AF225BC74C5006D1AEE /* Dropit */,
 				7367F92825B886EE00A29AE2 /* CardView */,
 				73B2827C25B5D0FA007DE3F3 /* AttributeString */,
 				73C4A81325B0784E00E1EEFD /* CardGame */,
@@ -892,6 +901,18 @@
 				73C4DC84244A02EE00E56B07 /* OC_Swift_EnumController.swift */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		73C79AF225BC74C5006D1AEE /* Dropit */ = {
+			isa = PBXGroup;
+			children = (
+				73C79AF325BC7514006D1AEE /* DropitViewController.h */,
+				73C79AF425BC7514006D1AEE /* DropitViewController.m */,
+				73C79AF525BC7514006D1AEE /* DropitViewController.xib */,
+				73C79AFB25BC82A7006D1AEE /* DropitBehavior.h */,
+				73C79AFC25BC82A7006D1AEE /* DropitBehavior.m */,
+			);
+			path = Dropit;
 			sourceTree = "<group>";
 		};
 		73E4FB582449FAA1007FDBDA = {
@@ -1764,6 +1785,7 @@
 			files = (
 				73E4FCFB2449FBA8007FDBDA /* MobileCodeWS.xml in Resources */,
 				73E4FD202449FBA8007FDBDA /* AbstractFactory.md in Resources */,
+				73C79AF725BC7514006D1AEE /* DropitViewController.xib in Resources */,
 				73E4FB742449FAA3007FDBDA /* LaunchScreen.storyboard in Resources */,
 				73E4FCF52449FBA8007FDBDA /* sorts.plist in Resources */,
 				73B2828C25B5D501007DE3F3 /* AttributeStringViewController.xib in Resources */,
@@ -1895,6 +1917,7 @@
 				73BA2DCB25A9924F002B9FDC /* BridgeBaseB.m in Sources */,
 				73E4FD382449FBA8007FDBDA /* Singleton.m in Sources */,
 				73E4FD0B2449FBA8007FDBDA /* FormBaseCell.m in Sources */,
+				73C79AFD25BC82A7006D1AEE /* DropitBehavior.m in Sources */,
 				73BA2DD125A99272002B9FDC /* BridgeA1.m in Sources */,
 				73E4FCDF2449FBA8007FDBDA /* LoginLogoCellModel.m in Sources */,
 				73E4FD512449FBA8007FDBDA /* GCDTest.m in Sources */,
@@ -2041,6 +2064,7 @@
 				73E4FD4C2449FBA8007FDBDA /* ScribbleManager.m in Sources */,
 				73C4A81625B0786B00E1EEFD /* CardMatchingGame.m in Sources */,
 				73B3836C24587B0900C7AAD5 /* NSMutableArray+Stack.m in Sources */,
+				73C79AF625BC7514006D1AEE /* DropitViewController.m in Sources */,
 				7367F92425B880C600A29AE2 /* PlayingCardView.m in Sources */,
 				73E4FD272449FBA8007FDBDA /* Stroke.m in Sources */,
 				734269D125A4ABDC004101B9 /* KVOObject.m in Sources */,

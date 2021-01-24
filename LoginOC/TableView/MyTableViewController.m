@@ -32,7 +32,9 @@
                
                @[@"PlayingCardGameViewController",
                @"AttributeStringViewController",
-               @"CardViewController"
+               @"CardViewController",
+               @"DropitViewController",
+                 
                ]];
 }
 
