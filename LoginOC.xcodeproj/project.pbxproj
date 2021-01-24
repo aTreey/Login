@@ -23,6 +23,7 @@
 		7367F92C25B8871200A29AE2 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7367F92A25B8871200A29AE2 /* CardViewController.m */; };
 		7367F92D25B8871200A29AE2 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7367F92B25B8871200A29AE2 /* CardViewController.xib */; };
 		73956B1725760C2F003AA702 /* HttpConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73956B1625760C2F003AA702 /* HttpConnectionManager.m */; };
+		739DF01B25BD29E500E3A303 /* BezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739DF01A25BD29E500E3A303 /* BezierPathView.m */; };
 		73B2826D25B5CB94007DE3F3 /* PlayingCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2826C25B5CB94007DE3F3 /* PlayingCardGameViewController.m */; };
 		73B2828C25B5D501007DE3F3 /* AttributeStringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73B2828B25B5D501007DE3F3 /* AttributeStringViewController.xib */; };
 		73B2829225B5D553007DE3F3 /* AttributeStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2829125B5D553007DE3F3 /* AttributeStringViewController.m */; };
@@ -252,6 +253,8 @@
 		73956B1525760C2F003AA702 /* HttpConnectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpConnectionManager.h; sourceTree = "<group>"; };
 		73956B1625760C2F003AA702 /* HttpConnectionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpConnectionManager.m; sourceTree = "<group>"; };
 		739748F82452BF94007831A3 /* Composite.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Composite.md; sourceTree = "<group>"; };
+		739DF01925BD29E500E3A303 /* BezierPathView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierPathView.h; sourceTree = "<group>"; };
+		739DF01A25BD29E500E3A303 /* BezierPathView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierPathView.m; sourceTree = "<group>"; };
 		73B2826B25B5CB94007DE3F3 /* PlayingCardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardGameViewController.h; sourceTree = "<group>"; };
 		73B2826C25B5CB94007DE3F3 /* PlayingCardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardGameViewController.m; sourceTree = "<group>"; };
 		73B2828B25B5D501007DE3F3 /* AttributeStringViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributeStringViewController.xib; sourceTree = "<group>"; };
@@ -911,6 +914,8 @@
 				73C79AF525BC7514006D1AEE /* DropitViewController.xib */,
 				73C79AFB25BC82A7006D1AEE /* DropitBehavior.h */,
 				73C79AFC25BC82A7006D1AEE /* DropitBehavior.m */,
+				739DF01925BD29E500E3A303 /* BezierPathView.h */,
+				739DF01A25BD29E500E3A303 /* BezierPathView.m */,
 			);
 			path = Dropit;
 			sourceTree = "<group>";
@@ -2045,6 +2050,7 @@
 				73BA2DEF25A9B2CA002B9FDC /* AapterObj.m in Sources */,
 				73E4FD052449FBA8007FDBDA /* FormViewController.m in Sources */,
 				73BA2DBF25A991CE002B9FDC /* BridgeDemo.m in Sources */,
+				739DF01B25BD29E500E3A303 /* BezierPathView.m in Sources */,
 				73E4FD352449FBA8007FDBDA /* CanvasView.m in Sources */,
 				73E4FD012449FBA8007FDBDA /* MyTableViewController.m in Sources */,
 				73E4FCDA2449FBA8007FDBDA /* CHJConversationViewController.m in Sources */,

@@ -8,14 +8,19 @@
 
 #import "DropitViewController.h"
 #import "DropitBehavior.h"
+#import "BezierPathView.h"
+
 
 @interface DropitViewController () <UIDynamicAnimatorDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *gameView;
+@property (weak, nonatomic) IBOutlet BezierPathView *gameView;
 /// 仿真动画
 @property (nonatomic, strong) UIDynamicAnimator *animator;
 /// 自定义动画行为
 @property (nonatomic, strong) DropitBehavior *dropitBehivor;
+@property (nonatomic, strong) UIAttachmentBehavior *attachment;
+@property (nonatomic, strong) UIView *dropView;
+
 
 @end
 
@@ -39,6 +44,17 @@ static const CGSize DROP_SIZE = {50, 50};
     [self drop];
 }
 
+- (IBAction)pan:(UIPanGestureRecognizer *)sender {
+    CGPoint gesturePoint = [sender locationInView:self.gameView];
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        [self attachDropingViewToPoint:gesturePoint];
+    } else if (sender.state == UIGestureRecognizerStateChanged) {
+        self.attachment.anchorPoint = gesturePoint;
+    } else if (sender.state == UIGestureRecognizerStateEnded) {
+        [self.animator removeBehavior:self.attachment];
+        self.gameView.path = nil;
+    }
+}
 #pragma mark - UITextFieldDelegate
 
 #pragma mark - UITableViewDelegate
@@ -51,6 +67,24 @@ static const CGSize DROP_SIZE = {50, 50};
 }
 
 #pragma mark - Private Methods
+
+- (void)attachDropingViewToPoint:(CGPoint)point {
+    if (self.dropView) {
+        self.attachment = [[UIAttachmentBehavior alloc] initWithItem:self.dropView attachedToAnchor:point];
+        // 临时记录，因为block是在 self.dropView = nil 后执行;
+        UIView *dropView = self.dropView;
+        __weak __typeof(self)weakSelf = self;
+        self.attachment.action = ^{
+            UIBezierPath *path = [[UIBezierPath alloc] init];
+            [path moveToPoint:weakSelf.attachment.anchorPoint];
+            [path addLineToPoint:dropView.center];
+            weakSelf.gameView.path = path;
+        };
+        self.dropView = nil;
+        [self.animator addBehavior:self.attachment];
+    }
+}
+
 - (BOOL)removeCompletedRows {
     NSMutableArray *dropsToRemove = [NSMutableArray array];
     CGFloat y = self.gameView.bounds.size.height - DROP_SIZE.height / 2;
@@ -109,6 +143,8 @@ static const CGSize DROP_SIZE = {50, 50};
     dropView.backgroundColor = [self randomColor];
     
     [self.gameView addSubview:dropView];
+    
+    self.dropView = dropView;
     
     // 为视图添加行为
     [self.dropitBehivor addItem:dropView];
