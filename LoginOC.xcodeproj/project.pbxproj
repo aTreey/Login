@@ -23,7 +23,23 @@
 		7367F92C25B8871200A29AE2 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7367F92A25B8871200A29AE2 /* CardViewController.m */; };
 		7367F92D25B8871200A29AE2 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7367F92B25B8871200A29AE2 /* CardViewController.xib */; };
 		73956B1725760C2F003AA702 /* HttpConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73956B1625760C2F003AA702 /* HttpConnectionManager.m */; };
+		7397297025C846F200AC87A7 /* BaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7397296F25C846F200AC87A7 /* BaseFactory.m */; };
+		7397297625C8472000AC87A7 /* BasePhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7397297525C8472000AC87A7 /* BasePhone.m */; };
+		7397297C25C8479300AC87A7 /* BaseWatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7397297B25C8479300AC87A7 /* BaseWatch.m */; };
+		7397298225C847CC00AC87A7 /* iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7397298125C847CC00AC87A7 /* iPhone.m */; };
+		7397298825C847F000AC87A7 /* Android.m in Sources */ = {isa = PBXBuildFile; fileRef = 7397298725C847F000AC87A7 /* Android.m */; };
+		7397299125C8480500AC87A7 /* iWatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7397299025C8480500AC87A7 /* iWatch.m */; };
+		7397299A25C8487000AC87A7 /* AndroidWatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7397299925C8487000AC87A7 /* AndroidWatch.m */; };
+		739729A325C8492600AC87A7 /* FactoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 739729A225C8492600AC87A7 /* FactoryManager.m */; };
+		739729BD25C84D3900AC87A7 /* AppleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 739729BC25C84D3900AC87A7 /* AppleFactory.m */; };
+		739729C325C84D4900AC87A7 /* GoogleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 739729C225C84D4900AC87A7 /* GoogleFactory.m */; };
+		739729C925C84DFA00AC87A7 /* AbstractFactoryDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 739729C825C84DFA00AC87A7 /* AbstractFactoryDemo.m */; };
 		739DF01B25BD29E500E3A303 /* BezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739DF01A25BD29E500E3A303 /* BezierPathView.m */; };
+		739DF02325BDB49100E3A303 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739DF02125BDB49100E3A303 /* ImageViewController.m */; };
+		739DF02425BDB49100E3A303 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739DF02225BDB49100E3A303 /* ImageViewController.xib */; };
+		739DF02C25BF118C00E3A303 /* FlickTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739DF02A25BF118C00E3A303 /* FlickTableViewController.m */; };
+		739DF02D25BF118C00E3A303 /* FlickTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739DF02B25BF118C00E3A303 /* FlickTableViewController.xib */; };
+		739DF03325BF12D600E3A303 /* JsutPostedFlickrPhotosController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739DF03225BF12D600E3A303 /* JsutPostedFlickrPhotosController.m */; };
 		73B2826D25B5CB94007DE3F3 /* PlayingCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2826C25B5CB94007DE3F3 /* PlayingCardGameViewController.m */; };
 		73B2828C25B5D501007DE3F3 /* AttributeStringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73B2828B25B5D501007DE3F3 /* AttributeStringViewController.xib */; };
 		73B2829225B5D553007DE3F3 /* AttributeStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B2829125B5D553007DE3F3 /* AttributeStringViewController.m */; };
@@ -252,9 +268,39 @@
 		7377267824854E840053ACD6 /* VISITIOR.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = VISITIOR.md; sourceTree = "<group>"; };
 		73956B1525760C2F003AA702 /* HttpConnectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpConnectionManager.h; sourceTree = "<group>"; };
 		73956B1625760C2F003AA702 /* HttpConnectionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpConnectionManager.m; sourceTree = "<group>"; };
+		7397296E25C846F200AC87A7 /* BaseFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFactory.h; sourceTree = "<group>"; };
+		7397296F25C846F200AC87A7 /* BaseFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseFactory.m; sourceTree = "<group>"; };
+		7397297425C8472000AC87A7 /* BasePhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePhone.h; sourceTree = "<group>"; };
+		7397297525C8472000AC87A7 /* BasePhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePhone.m; sourceTree = "<group>"; };
+		7397297A25C8479300AC87A7 /* BaseWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWatch.h; sourceTree = "<group>"; };
+		7397297B25C8479300AC87A7 /* BaseWatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWatch.m; sourceTree = "<group>"; };
+		7397298025C847CC00AC87A7 /* iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPhone.h; sourceTree = "<group>"; };
+		7397298125C847CC00AC87A7 /* iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPhone.m; sourceTree = "<group>"; };
+		7397298625C847F000AC87A7 /* Android.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Android.h; sourceTree = "<group>"; };
+		7397298725C847F000AC87A7 /* Android.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Android.m; sourceTree = "<group>"; };
+		7397298F25C8480500AC87A7 /* iWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iWatch.h; sourceTree = "<group>"; };
+		7397299025C8480500AC87A7 /* iWatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iWatch.m; sourceTree = "<group>"; };
+		7397299825C8487000AC87A7 /* AndroidWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AndroidWatch.h; sourceTree = "<group>"; };
+		7397299925C8487000AC87A7 /* AndroidWatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AndroidWatch.m; sourceTree = "<group>"; };
+		739729A125C8492600AC87A7 /* FactoryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryManager.h; sourceTree = "<group>"; };
+		739729A225C8492600AC87A7 /* FactoryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryManager.m; sourceTree = "<group>"; };
+		739729BB25C84D3900AC87A7 /* AppleFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleFactory.h; sourceTree = "<group>"; };
+		739729BC25C84D3900AC87A7 /* AppleFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleFactory.m; sourceTree = "<group>"; };
+		739729C125C84D4900AC87A7 /* GoogleFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleFactory.h; sourceTree = "<group>"; };
+		739729C225C84D4900AC87A7 /* GoogleFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleFactory.m; sourceTree = "<group>"; };
+		739729C725C84DFA00AC87A7 /* AbstractFactoryDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractFactoryDemo.h; sourceTree = "<group>"; };
+		739729C825C84DFA00AC87A7 /* AbstractFactoryDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFactoryDemo.m; sourceTree = "<group>"; };
 		739748F82452BF94007831A3 /* Composite.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Composite.md; sourceTree = "<group>"; };
 		739DF01925BD29E500E3A303 /* BezierPathView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierPathView.h; sourceTree = "<group>"; };
 		739DF01A25BD29E500E3A303 /* BezierPathView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierPathView.m; sourceTree = "<group>"; };
+		739DF02025BDB49100E3A303 /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		739DF02125BDB49100E3A303 /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		739DF02225BDB49100E3A303 /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
+		739DF02925BF118C00E3A303 /* FlickTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickTableViewController.h; sourceTree = "<group>"; };
+		739DF02A25BF118C00E3A303 /* FlickTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickTableViewController.m; sourceTree = "<group>"; };
+		739DF02B25BF118C00E3A303 /* FlickTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlickTableViewController.xib; sourceTree = "<group>"; };
+		739DF03125BF12D600E3A303 /* JsutPostedFlickrPhotosController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsutPostedFlickrPhotosController.h; sourceTree = "<group>"; };
+		739DF03225BF12D600E3A303 /* JsutPostedFlickrPhotosController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsutPostedFlickrPhotosController.m; sourceTree = "<group>"; };
 		73B2826B25B5CB94007DE3F3 /* PlayingCardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayingCardGameViewController.h; sourceTree = "<group>"; };
 		73B2826C25B5CB94007DE3F3 /* PlayingCardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayingCardGameViewController.m; sourceTree = "<group>"; };
 		73B2828B25B5D501007DE3F3 /* AttributeStringViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributeStringViewController.xib; sourceTree = "<group>"; };
@@ -804,12 +850,95 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		7397296C25C833FB00AC87A7 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				7397296D25C8340D00AC87A7 /* 抽象工厂 */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		7397296D25C8340D00AC87A7 /* 抽象工厂 */ = {
+			isa = PBXGroup;
+			children = (
+				7397299725C8483A00AC87A7 /* Factory */,
+				7397299625C8481C00AC87A7 /* iPhone */,
+				7397299525C8481600AC87A7 /* watch */,
+				739729A125C8492600AC87A7 /* FactoryManager.h */,
+				739729A225C8492600AC87A7 /* FactoryManager.m */,
+				739729C725C84DFA00AC87A7 /* AbstractFactoryDemo.h */,
+				739729C825C84DFA00AC87A7 /* AbstractFactoryDemo.m */,
+			);
+			path = "抽象工厂";
+			sourceTree = "<group>";
+		};
+		7397299525C8481600AC87A7 /* watch */ = {
+			isa = PBXGroup;
+			children = (
+				7397297A25C8479300AC87A7 /* BaseWatch.h */,
+				7397297B25C8479300AC87A7 /* BaseWatch.m */,
+				7397298F25C8480500AC87A7 /* iWatch.h */,
+				7397299025C8480500AC87A7 /* iWatch.m */,
+				7397299825C8487000AC87A7 /* AndroidWatch.h */,
+				7397299925C8487000AC87A7 /* AndroidWatch.m */,
+			);
+			path = watch;
+			sourceTree = "<group>";
+		};
+		7397299625C8481C00AC87A7 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				7397297425C8472000AC87A7 /* BasePhone.h */,
+				7397297525C8472000AC87A7 /* BasePhone.m */,
+				7397298025C847CC00AC87A7 /* iPhone.h */,
+				7397298125C847CC00AC87A7 /* iPhone.m */,
+				7397298625C847F000AC87A7 /* Android.h */,
+				7397298725C847F000AC87A7 /* Android.m */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		7397299725C8483A00AC87A7 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				7397296E25C846F200AC87A7 /* BaseFactory.h */,
+				7397296F25C846F200AC87A7 /* BaseFactory.m */,
+				739729BB25C84D3900AC87A7 /* AppleFactory.h */,
+				739729BC25C84D3900AC87A7 /* AppleFactory.m */,
+				739729C125C84D4900AC87A7 /* GoogleFactory.h */,
+				739729C225C84D4900AC87A7 /* GoogleFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		739748F7245277C0007831A3 /* Compostie */ = {
 			isa = PBXGroup;
 			children = (
 				739748F82452BF94007831A3 /* Composite.md */,
 			);
 			path = Compostie;
+			sourceTree = "<group>";
+		};
+		739DF01F25BDB45600E3A303 /* ImageDown */ = {
+			isa = PBXGroup;
+			children = (
+				739DF02025BDB49100E3A303 /* ImageViewController.h */,
+				739DF02125BDB49100E3A303 /* ImageViewController.m */,
+				739DF02225BDB49100E3A303 /* ImageViewController.xib */,
+			);
+			path = ImageDown;
+			sourceTree = "<group>";
+		};
+		739DF02825BF10C700E3A303 /* FlickTableView */ = {
+			isa = PBXGroup;
+			children = (
+				739DF02925BF118C00E3A303 /* FlickTableViewController.h */,
+				739DF02A25BF118C00E3A303 /* FlickTableViewController.m */,
+				739DF02B25BF118C00E3A303 /* FlickTableViewController.xib */,
+				739DF03125BF12D600E3A303 /* JsutPostedFlickrPhotosController.h */,
+				739DF03225BF12D600E3A303 /* JsutPostedFlickrPhotosController.m */,
+			);
+			path = FlickTableView;
 			sourceTree = "<group>";
 		};
 		73B2827C25B5D0FA007DE3F3 /* AttributeString */ = {
@@ -860,6 +989,8 @@
 		73BA2E0925AB5ABA002B9FDC /* StanfordiOS7Demo */ = {
 			isa = PBXGroup;
 			children = (
+				739DF02825BF10C700E3A303 /* FlickTableView */,
+				739DF01F25BDB45600E3A303 /* ImageDown */,
 				73C79AF225BC74C5006D1AEE /* Dropit */,
 				7367F92825B886EE00A29AE2 /* CardView */,
 				73B2827C25B5D0FA007DE3F3 /* AttributeString */,
@@ -1227,6 +1358,7 @@
 		73E4FC192449FBA7007FDBDA /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				7397296C25C833FB00AC87A7 /* Demos */,
 				7377267724854E410053ACD6 /* Visitor */,
 				736D6AF024742DA9000C4CD3 /* ObserverPattern */,
 				73B3836924587ADB00C7AAD5 /* Custom Stack */,
@@ -1385,14 +1517,14 @@
 			isa = PBXGroup;
 			children = (
 				73E4FC552449FBA7007FDBDA /* BaseAnimationView.h */,
-				73E4FC562449FBA7007FDBDA /* FadeAnimationView.m */,
-				73E4FC572449FBA7007FDBDA /* DesignPatternRule.md */,
-				73E4FC582449FBA7007FDBDA /* ScaleAnimationView.m */,
-				73E4FC592449FBA7007FDBDA /* ExtensionAnimationView.h */,
 				73E4FC5A2449FBA7007FDBDA /* BaseAnimationView.m */,
+				73E4FC572449FBA7007FDBDA /* DesignPatternRule.md */,
+				73E4FC592449FBA7007FDBDA /* ExtensionAnimationView.h */,
 				73E4FC5B2449FBA7007FDBDA /* ExtensionAnimationView.m */,
-				73E4FC5C2449FBA7007FDBDA /* ScaleAnimationView.h */,
 				73E4FC5D2449FBA7007FDBDA /* FadeAnimationView.h */,
+				73E4FC562449FBA7007FDBDA /* FadeAnimationView.m */,
+				73E4FC5C2449FBA7007FDBDA /* ScaleAnimationView.h */,
+				73E4FC582449FBA7007FDBDA /* ScaleAnimationView.m */,
 			);
 			path = DesignPatternRule;
 			sourceTree = "<group>";
@@ -1565,16 +1697,16 @@
 		73E4FC982449FBA7007FDBDA /* PhoneFactory(简单工厂) */ = {
 			isa = PBXGroup;
 			children = (
-				73E4FC992449FBA7007FDBDA /* BaseDevice.m */,
 				73E4FC9A2449FBA7007FDBDA /* AndoridDevice.h */,
-				73E4FC9B2449FBA7007FDBDA /* PhoneDeviceFactory.h */,
-				73E4FC9C2449FBA7007FDBDA /* iPhoneDevice.h */,
-				73E4FC9D2449FBA7007FDBDA /* NokiaDevice.m */,
-				73E4FC9E2449FBA7007FDBDA /* PhoneDeviceFactory.m */,
-				73E4FC9F2449FBA7007FDBDA /* BaseDevice.h */,
 				73E4FCA02449FBA7007FDBDA /* AndoridDevice.m */,
+				73E4FC9F2449FBA7007FDBDA /* BaseDevice.h */,
+				73E4FC992449FBA7007FDBDA /* BaseDevice.m */,
+				73E4FC9C2449FBA7007FDBDA /* iPhoneDevice.h */,
 				73E4FCA12449FBA7007FDBDA /* iPhoneDevice.m */,
 				73E4FCA22449FBA7007FDBDA /* NokiaDevice.h */,
+				73E4FC9D2449FBA7007FDBDA /* NokiaDevice.m */,
+				73E4FC9B2449FBA7007FDBDA /* PhoneDeviceFactory.h */,
+				73E4FC9E2449FBA7007FDBDA /* PhoneDeviceFactory.m */,
 				73E4FCA32449FBA7007FDBDA /* PhoneProtocol.h */,
 			);
 			path = "PhoneFactory(简单工厂)";
@@ -1792,12 +1924,14 @@
 				73E4FD202449FBA8007FDBDA /* AbstractFactory.md in Resources */,
 				73C79AF725BC7514006D1AEE /* DropitViewController.xib in Resources */,
 				73E4FB742449FAA3007FDBDA /* LaunchScreen.storyboard in Resources */,
+				739DF02425BDB49100E3A303 /* ImageViewController.xib in Resources */,
 				73E4FCF52449FBA8007FDBDA /* sorts.plist in Resources */,
 				73B2828C25B5D501007DE3F3 /* AttributeStringViewController.xib in Resources */,
 				73F7653325AC9D7900429C7B /* CardGameViewController.xib in Resources */,
 				73E4FB712449FAA3007FDBDA /* Assets.xcassets in Resources */,
 				73E4FD232449FBA8007FDBDA /* Adapter.md in Resources */,
 				73E4FCF92449FBA8007FDBDA /* SCRecorderPlayerController.xib in Resources */,
+				739DF02D25BF118C00E3A303 /* FlickTableViewController.xib in Resources */,
 				73E4FD2F2449FBA8007FDBDA /* PaletteViewController.xib in Resources */,
 				73E4FB6F2449FAA1007FDBDA /* Main.storyboard in Resources */,
 				73E4FCF72449FBA8007FDBDA /* categories.plist in Resources */,
@@ -1921,10 +2055,13 @@
 				73E4FD3F2449FBA8007FDBDA /* BuilderViewController.m in Sources */,
 				73BA2DCB25A9924F002B9FDC /* BridgeBaseB.m in Sources */,
 				73E4FD382449FBA8007FDBDA /* Singleton.m in Sources */,
+				7397297025C846F200AC87A7 /* BaseFactory.m in Sources */,
+				7397298225C847CC00AC87A7 /* iPhone.m in Sources */,
 				73E4FD0B2449FBA8007FDBDA /* FormBaseCell.m in Sources */,
 				73C79AFD25BC82A7006D1AEE /* DropitBehavior.m in Sources */,
 				73BA2DD125A99272002B9FDC /* BridgeA1.m in Sources */,
 				73E4FCDF2449FBA8007FDBDA /* LoginLogoCellModel.m in Sources */,
+				739729C325C84D4900AC87A7 /* GoogleFactory.m in Sources */,
 				73E4FD512449FBA8007FDBDA /* GCDTest.m in Sources */,
 				73E4FD4A2449FBA8007FDBDA /* CabDriver.m in Sources */,
 				73E4FCE12449FBA8007FDBDA /* LoginButtonCell.m in Sources */,
@@ -1933,12 +2070,14 @@
 				73E4FCFE2449FBA8007FDBDA /* SoapService.m in Sources */,
 				73E4FD0E2449FBA8007FDBDA /* LiveController.m in Sources */,
 				73E4FCE62449FBA8007FDBDA /* LoginLogoCell.m in Sources */,
+				739DF02325BDB49100E3A303 /* ImageViewController.m in Sources */,
 				73BA2DE925A9B239002B9FDC /* AdapterTarget.m in Sources */,
 				73E4FD3E2449FBA8007FDBDA /* Character.m in Sources */,
 				73C4DC85244A02EF00E56B07 /* OC_Swift_EnumController.swift in Sources */,
 				73E4FCE52449FBA8007FDBDA /* AccountFieldCell.m in Sources */,
 				73E2493D2491328200BFB8C9 /* MarkRenderer.m in Sources */,
 				73E4FD1E2449FBA8007FDBDA /* SierraBrandingFactory.m in Sources */,
+				739729A325C8492600AC87A7 /* FactoryManager.m in Sources */,
 				73E4FCFF2449FBA8007FDBDA /* SoapUtility.m in Sources */,
 				73F7650325AB603600429C7B /* PlayingCard.m in Sources */,
 				73E4FD442449FBA8007FDBDA /* BaseDevice.m in Sources */,
@@ -1958,6 +2097,7 @@
 				73E4FD0D2449FBA8007FDBDA /* lBLivePlayerManager.m in Sources */,
 				73E4FD3B2449FBA8007FDBDA /* ChasingGame.m in Sources */,
 				73E4FD242449FBA8007FDBDA /* Dot.m in Sources */,
+				739DF03325BF12D600E3A303 /* JsutPostedFlickrPhotosController.m in Sources */,
 				73F7650925AB67DC00429C7B /* PlayingCardDeck.m in Sources */,
 				73E4FCF82449FBA8007FDBDA /* SCRecorderController.m in Sources */,
 				73E4FD402449FBA8007FDBDA /* CoordinatingController.m in Sources */,
@@ -1969,6 +2109,7 @@
 				73E4FD452449FBA8007FDBDA /* NokiaDevice.m in Sources */,
 				73E4FCED2449FBA8007FDBDA /* MasonryTestController.m in Sources */,
 				73E4FD1F2449FBA8007FDBDA /* BrandingFactory.m in Sources */,
+				7397297625C8472000AC87A7 /* BasePhone.m in Sources */,
 				73E4FD1A2449FBA8007FDBDA /* SierraMainButton.m in Sources */,
 				73E4FCDD2449FBA8007FDBDA /* LoginButtonCellModel.m in Sources */,
 				73E4FD462449FBA8007FDBDA /* PhoneDeviceFactory.m in Sources */,
@@ -2010,6 +2151,9 @@
 				73E4FD162449FBA8007FDBDA /* GameBoyEmulator.m in Sources */,
 				7331E73A244FF6460078FCEB /* Scribble.m in Sources */,
 				73E4FCE82449FBA8007FDBDA /* MasonryAutoLayoutController.m in Sources */,
+				739729C925C84DFA00AC87A7 /* AbstractFactoryDemo.m in Sources */,
+				7397298825C847F000AC87A7 /* Android.m in Sources */,
+				739729BD25C84D3900AC87A7 /* AppleFactory.m in Sources */,
 				73E4FCE92449FBA8007FDBDA /* MasonryTestView.m in Sources */,
 				73E4FD2E2449FBA8007FDBDA /* CommandSlider.m in Sources */,
 				73BA2DC525A99243002B9FDC /* BridgeBaseA.m in Sources */,
@@ -2022,6 +2166,7 @@
 				73E4FD3C2449FBA8007FDBDA /* StandardCharacterBuilder.m in Sources */,
 				73E4FD472449FBA8007FDBDA /* AndoridDevice.m in Sources */,
 				73F7653225AC9D7900429C7B /* CardGameViewController.m in Sources */,
+				7397299125C8480500AC87A7 /* iWatch.m in Sources */,
 				734269D725A4AC03004101B9 /* KVOObserver.m in Sources */,
 				7324B9CE247571DC00DD98FA /* ObserverPatternViewController.m in Sources */,
 				73E4FD5A2449FBA8007FDBDA /* StrongTest.m in Sources */,
@@ -2038,6 +2183,7 @@
 				73E4FD4B2449FBA8007FDBDA /* Car.m in Sources */,
 				73E4FD102449FBA8007FDBDA /* BridgeViewController.m in Sources */,
 				73B2829225B5D553007DE3F3 /* AttributeStringViewController.m in Sources */,
+				7397299A25C8487000AC87A7 /* AndroidWatch.m in Sources */,
 				73E4FD212449FBA8007FDBDA /* AbstractFactoryViewController.m in Sources */,
 				7367F91E25B87FF900A29AE2 /* CardView.m in Sources */,
 				73E4FCD72449FBA8007FDBDA /* ContainerView.m in Sources */,
@@ -2056,6 +2202,7 @@
 				73E4FCDA2449FBA8007FDBDA /* CHJConversationViewController.m in Sources */,
 				73E4FCD62449FBA8007FDBDA /* ContainerViewController.m in Sources */,
 				73BA2DE325A992B3002B9FDC /* BridgeB2.m in Sources */,
+				7397297C25C8479300AC87A7 /* BaseWatch.m in Sources */,
 				73E4FD492449FBA8007FDBDA /* Taximeter.m in Sources */,
 				73E4FD252449FBA8007FDBDA /* Person_Prototype.m in Sources */,
 				73E4FCFD2449FBA8007FDBDA /* DDXMLElement+WSDL.m in Sources */,
@@ -2064,6 +2211,7 @@
 				73E4FCF12449FBA8007FDBDA /* LBDropMenuCell.m in Sources */,
 				7367F92C25B8871200A29AE2 /* CardViewController.m in Sources */,
 				73E4FCEF2449FBA8007FDBDA /* LBDropMenuSingleCell.m in Sources */,
+				739DF02C25BF118C00E3A303 /* FlickTableViewController.m in Sources */,
 				73E4FCEE2449FBA8007FDBDA /* GrowupResponse.m in Sources */,
 				73E4FD222449FBA8007FDBDA /* SetStrokeColorCommand.m in Sources */,
 				73E4FD342449FBA8007FDBDA /* ClothCanvasView.m in Sources */,
