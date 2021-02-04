@@ -34,6 +34,11 @@
 		739729BD25C84D3900AC87A7 /* AppleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 739729BC25C84D3900AC87A7 /* AppleFactory.m */; };
 		739729C325C84D4900AC87A7 /* GoogleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 739729C225C84D4900AC87A7 /* GoogleFactory.m */; };
 		739729C925C84DFA00AC87A7 /* AbstractFactoryDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 739729C825C84DFA00AC87A7 /* AbstractFactoryDemo.m */; };
+		73972A0725C9994F00AC87A7 /* Prototype_Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 73972A0625C9994F00AC87A7 /* Prototype_Student.m */; };
+		73972A0D25C99ADD00AC87A7 /* Prototype_bussiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 73972A0C25C99ADD00AC87A7 /* Prototype_bussiness.m */; };
+		73972A1325C9A11800AC87A7 /* Prototype_BaseCopyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 73972A1225C9A11800AC87A7 /* Prototype_BaseCopyObject.m */; };
+		73972A3425C9A40A00AC87A7 /* Prototype_CopyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 73972A3325C9A40A00AC87A7 /* Prototype_CopyObject.m */; };
+		73972A3A25C9A4E300AC87A7 /* Prototype_CopyObject2.m in Sources */ = {isa = PBXBuildFile; fileRef = 73972A3925C9A4E300AC87A7 /* Prototype_CopyObject2.m */; };
 		739DF01B25BD29E500E3A303 /* BezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 739DF01A25BD29E500E3A303 /* BezierPathView.m */; };
 		739DF02325BDB49100E3A303 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739DF02125BDB49100E3A303 /* ImageViewController.m */; };
 		739DF02425BDB49100E3A303 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739DF02225BDB49100E3A303 /* ImageViewController.xib */; };
@@ -290,6 +295,17 @@
 		739729C225C84D4900AC87A7 /* GoogleFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleFactory.m; sourceTree = "<group>"; };
 		739729C725C84DFA00AC87A7 /* AbstractFactoryDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractFactoryDemo.h; sourceTree = "<group>"; };
 		739729C825C84DFA00AC87A7 /* AbstractFactoryDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFactoryDemo.m; sourceTree = "<group>"; };
+		73972A0425C9987F00AC87A7 /* PrototypeCopyProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrototypeCopyProtocol.h; sourceTree = "<group>"; };
+		73972A0525C9994F00AC87A7 /* Prototype_Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prototype_Student.h; sourceTree = "<group>"; };
+		73972A0625C9994F00AC87A7 /* Prototype_Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prototype_Student.m; sourceTree = "<group>"; };
+		73972A0B25C99ADD00AC87A7 /* Prototype_bussiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prototype_bussiness.h; sourceTree = "<group>"; };
+		73972A0C25C99ADD00AC87A7 /* Prototype_bussiness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prototype_bussiness.m; sourceTree = "<group>"; };
+		73972A1125C9A11800AC87A7 /* Prototype_BaseCopyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prototype_BaseCopyObject.h; sourceTree = "<group>"; };
+		73972A1225C9A11800AC87A7 /* Prototype_BaseCopyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prototype_BaseCopyObject.m; sourceTree = "<group>"; };
+		73972A3225C9A40A00AC87A7 /* Prototype_CopyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prototype_CopyObject.h; sourceTree = "<group>"; };
+		73972A3325C9A40A00AC87A7 /* Prototype_CopyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prototype_CopyObject.m; sourceTree = "<group>"; };
+		73972A3825C9A4E300AC87A7 /* Prototype_CopyObject2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prototype_CopyObject2.h; sourceTree = "<group>"; };
+		73972A3925C9A4E300AC87A7 /* Prototype_CopyObject2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prototype_CopyObject2.m; sourceTree = "<group>"; };
 		739748F82452BF94007831A3 /* Composite.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Composite.md; sourceTree = "<group>"; };
 		739DF01925BD29E500E3A303 /* BezierPathView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierPathView.h; sourceTree = "<group>"; };
 		739DF01A25BD29E500E3A303 /* BezierPathView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierPathView.m; sourceTree = "<group>"; };
@@ -850,18 +866,21 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		7397296C25C833FB00AC87A7 /* Demos */ = {
+		7397296C25C833FB00AC87A7 /* 对象创建 */ = {
 			isa = PBXGroup;
 			children = (
+				739729E625C9938400AC87A7 /* 原型模式 */,
+				7397299725C8483A00AC87A7 /* Factory工厂 */,
 				7397296D25C8340D00AC87A7 /* 抽象工厂 */,
+				739729EA25C9940500AC87A7 /* 生成器 */,
+				739729EB25C9940E00AC87A7 /* 单例 */,
 			);
-			path = Demos;
+			path = "对象创建";
 			sourceTree = "<group>";
 		};
 		7397296D25C8340D00AC87A7 /* 抽象工厂 */ = {
 			isa = PBXGroup;
 			children = (
-				7397299725C8483A00AC87A7 /* Factory */,
 				7397299625C8481C00AC87A7 /* iPhone */,
 				7397299525C8481600AC87A7 /* watch */,
 				739729A125C8492600AC87A7 /* FactoryManager.h */,
@@ -898,7 +917,7 @@
 			path = iPhone;
 			sourceTree = "<group>";
 		};
-		7397299725C8483A00AC87A7 /* Factory */ = {
+		7397299725C8483A00AC87A7 /* Factory工厂 */ = {
 			isa = PBXGroup;
 			children = (
 				7397296E25C846F200AC87A7 /* BaseFactory.h */,
@@ -908,7 +927,224 @@
 				739729C125C84D4900AC87A7 /* GoogleFactory.h */,
 				739729C225C84D4900AC87A7 /* GoogleFactory.m */,
 			);
-			path = Factory;
+			path = "Factory工厂";
+			sourceTree = "<group>";
+		};
+		739729E625C9938400AC87A7 /* 原型模式 */ = {
+			isa = PBXGroup;
+			children = (
+				73972A0425C9987F00AC87A7 /* PrototypeCopyProtocol.h */,
+				73972A0525C9994F00AC87A7 /* Prototype_Student.h */,
+				73972A0625C9994F00AC87A7 /* Prototype_Student.m */,
+				73972A0B25C99ADD00AC87A7 /* Prototype_bussiness.h */,
+				73972A0C25C99ADD00AC87A7 /* Prototype_bussiness.m */,
+				73972A2B25C9A31D00AC87A7 /* Copy */,
+			);
+			path = "原型模式";
+			sourceTree = "<group>";
+		};
+		739729EA25C9940500AC87A7 /* 生成器 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "生成器";
+			sourceTree = "<group>";
+		};
+		739729EB25C9940E00AC87A7 /* 单例 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "单例";
+			sourceTree = "<group>";
+		};
+		739729ED25C9944200AC87A7 /* 接口适配 */ = {
+			isa = PBXGroup;
+			children = (
+				739729EE25C9944D00AC87A7 /* 适配器 */,
+				739729EF25C9945800AC87A7 /* 桥接 */,
+				739729F025C9947400AC87A7 /* 外观 */,
+			);
+			path = "接口适配";
+			sourceTree = "<group>";
+		};
+		739729EE25C9944D00AC87A7 /* 适配器 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "适配器";
+			sourceTree = "<group>";
+		};
+		739729EF25C9945800AC87A7 /* 桥接 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "桥接";
+			sourceTree = "<group>";
+		};
+		739729F025C9947400AC87A7 /* 外观 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "外观";
+			sourceTree = "<group>";
+		};
+		739729F125C9948800AC87A7 /* 对象去耦 */ = {
+			isa = PBXGroup;
+			children = (
+				739729FA25C9953800AC87A7 /* 中介者 */,
+				739729F925C9953500AC87A7 /* 观察者 */,
+			);
+			path = "对象去耦";
+			sourceTree = "<group>";
+		};
+		739729F225C9949400AC87A7 /* 抽象集合 */ = {
+			isa = PBXGroup;
+			children = (
+				739729F825C9953200AC87A7 /* 组合 */,
+				739729F725C9953000AC87A7 /* 迭代器 */,
+			);
+			path = "抽象集合";
+			sourceTree = "<group>";
+		};
+		739729F325C994A500AC87A7 /* 行为扩展 */ = {
+			isa = PBXGroup;
+			children = (
+				739729FC25C9957C00AC87A7 /* 访问者 */,
+				739729FB25C9957900AC87A7 /* 装饰 */,
+				739729FD25C9958E00AC87A7 /* 责任链 */,
+			);
+			path = "行为扩展";
+			sourceTree = "<group>";
+		};
+		739729F425C994B000AC87A7 /* 算法封装 */ = {
+			isa = PBXGroup;
+			children = (
+				73972A0025C995AD00AC87A7 /* 模版方法 */,
+				739729FF25C995AB00AC87A7 /* 策略 */,
+				739729FE25C995A800AC87A7 /* 命令 */,
+			);
+			path = "算法封装";
+			sourceTree = "<group>";
+		};
+		739729F525C994EB00AC87A7 /* 性能与对象访问 */ = {
+			isa = PBXGroup;
+			children = (
+				73972A0225C995BA00AC87A7 /* 享元 */,
+				73972A0125C995B500AC87A7 /* 代理 */,
+			);
+			path = "性能与对象访问";
+			sourceTree = "<group>";
+		};
+		739729F625C9950B00AC87A7 /* 对象状态 */ = {
+			isa = PBXGroup;
+			children = (
+				73972A0325C995BD00AC87A7 /* 备忘录 */,
+			);
+			path = "对象状态";
+			sourceTree = "<group>";
+		};
+		739729F725C9953000AC87A7 /* 迭代器 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "迭代器";
+			sourceTree = "<group>";
+		};
+		739729F825C9953200AC87A7 /* 组合 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "组合";
+			sourceTree = "<group>";
+		};
+		739729F925C9953500AC87A7 /* 观察者 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "观察者";
+			sourceTree = "<group>";
+		};
+		739729FA25C9953800AC87A7 /* 中介者 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "中介者";
+			sourceTree = "<group>";
+		};
+		739729FB25C9957900AC87A7 /* 装饰 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "装饰";
+			sourceTree = "<group>";
+		};
+		739729FC25C9957C00AC87A7 /* 访问者 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "访问者";
+			sourceTree = "<group>";
+		};
+		739729FD25C9958E00AC87A7 /* 责任链 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "责任链";
+			sourceTree = "<group>";
+		};
+		739729FE25C995A800AC87A7 /* 命令 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "命令";
+			sourceTree = "<group>";
+		};
+		739729FF25C995AB00AC87A7 /* 策略 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "策略";
+			sourceTree = "<group>";
+		};
+		73972A0025C995AD00AC87A7 /* 模版方法 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "模版方法";
+			sourceTree = "<group>";
+		};
+		73972A0125C995B500AC87A7 /* 代理 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "代理";
+			sourceTree = "<group>";
+		};
+		73972A0225C995BA00AC87A7 /* 享元 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "享元";
+			sourceTree = "<group>";
+		};
+		73972A0325C995BD00AC87A7 /* 备忘录 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "备忘录";
+			sourceTree = "<group>";
+		};
+		73972A2B25C9A31D00AC87A7 /* Copy */ = {
+			isa = PBXGroup;
+			children = (
+				73972A1125C9A11800AC87A7 /* Prototype_BaseCopyObject.h */,
+				73972A1225C9A11800AC87A7 /* Prototype_BaseCopyObject.m */,
+				73972A3225C9A40A00AC87A7 /* Prototype_CopyObject.h */,
+				73972A3325C9A40A00AC87A7 /* Prototype_CopyObject.m */,
+				73972A3825C9A4E300AC87A7 /* Prototype_CopyObject2.h */,
+				73972A3925C9A4E300AC87A7 /* Prototype_CopyObject2.m */,
+			);
+			path = Copy;
 			sourceTree = "<group>";
 		};
 		739748F7245277C0007831A3 /* Compostie */ = {
@@ -1358,7 +1594,14 @@
 		73E4FC192449FBA7007FDBDA /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
-				7397296C25C833FB00AC87A7 /* Demos */,
+				7397296C25C833FB00AC87A7 /* 对象创建 */,
+				739729ED25C9944200AC87A7 /* 接口适配 */,
+				739729F125C9948800AC87A7 /* 对象去耦 */,
+				739729F225C9949400AC87A7 /* 抽象集合 */,
+				739729F325C994A500AC87A7 /* 行为扩展 */,
+				739729F425C994B000AC87A7 /* 算法封装 */,
+				739729F525C994EB00AC87A7 /* 性能与对象访问 */,
+				739729F625C9950B00AC87A7 /* 对象状态 */,
 				7377267724854E410053ACD6 /* Visitor */,
 				736D6AF024742DA9000C4CD3 /* ObserverPattern */,
 				73B3836924587ADB00C7AAD5 /* Custom Stack */,
@@ -2076,6 +2319,7 @@
 				73C4DC85244A02EF00E56B07 /* OC_Swift_EnumController.swift in Sources */,
 				73E4FCE52449FBA8007FDBDA /* AccountFieldCell.m in Sources */,
 				73E2493D2491328200BFB8C9 /* MarkRenderer.m in Sources */,
+				73972A3425C9A40A00AC87A7 /* Prototype_CopyObject.m in Sources */,
 				73E4FD1E2449FBA8007FDBDA /* SierraBrandingFactory.m in Sources */,
 				739729A325C8492600AC87A7 /* FactoryManager.m in Sources */,
 				73E4FCFF2449FBA8007FDBDA /* SoapUtility.m in Sources */,
@@ -2102,6 +2346,7 @@
 				73E4FCF82449FBA8007FDBDA /* SCRecorderController.m in Sources */,
 				73E4FD402449FBA8007FDBDA /* CoordinatingController.m in Sources */,
 				73BA2E1225AB5AE2002B9FDC /* Deck.m in Sources */,
+				73972A1325C9A11800AC87A7 /* Prototype_BaseCopyObject.m in Sources */,
 				73E4FCE22449FBA8007FDBDA /* TextFieldCell.m in Sources */,
 				73E4FCD82449FBA8007FDBDA /* CHJMessageContentView.m in Sources */,
 				73E4FD032449FBA8007FDBDA /* SCRecorderPlayerController.m in Sources */,
@@ -2152,6 +2397,7 @@
 				7331E73A244FF6460078FCEB /* Scribble.m in Sources */,
 				73E4FCE82449FBA8007FDBDA /* MasonryAutoLayoutController.m in Sources */,
 				739729C925C84DFA00AC87A7 /* AbstractFactoryDemo.m in Sources */,
+				73972A0D25C99ADD00AC87A7 /* Prototype_bussiness.m in Sources */,
 				7397298825C847F000AC87A7 /* Android.m in Sources */,
 				739729BD25C84D3900AC87A7 /* AppleFactory.m in Sources */,
 				73E4FCE92449FBA8007FDBDA /* MasonryTestView.m in Sources */,
@@ -2159,6 +2405,7 @@
 				73BA2DC525A99243002B9FDC /* BridgeBaseA.m in Sources */,
 				73E4FD002449FBA8007FDBDA /* SCRecordSessionManager.m in Sources */,
 				73E4FCD92449FBA8007FDBDA /* CHJBaseMessageCell.m in Sources */,
+				73972A0725C9994F00AC87A7 /* Prototype_Student.m in Sources */,
 				73E4FCEA2449FBA8007FDBDA /* MasonryController.m in Sources */,
 				73E4FD1B2449FBA8007FDBDA /* SierraToolbar.m in Sources */,
 				73E4FCF02449FBA8007FDBDA /* LBDropMenuSegmentView.m in Sources */,
@@ -2207,6 +2454,7 @@
 				73E4FD252449FBA8007FDBDA /* Person_Prototype.m in Sources */,
 				73E4FCFD2449FBA8007FDBDA /* DDXMLElement+WSDL.m in Sources */,
 				73E4FD392449FBA8007FDBDA /* Command.m in Sources */,
+				73972A3A25C9A4E300AC87A7 /* Prototype_CopyObject2.m in Sources */,
 				73E4FD5D2449FBA8007FDBDA /* CalendarManager.m in Sources */,
 				73E4FCF12449FBA8007FDBDA /* LBDropMenuCell.m in Sources */,
 				7367F92C25B8871200A29AE2 /* CardViewController.m in Sources */,
