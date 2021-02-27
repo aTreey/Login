@@ -34,7 +34,7 @@
                @"AttributeStringViewController",
                @"CardViewController",
                @"DropitViewController",
-                 
+               @"AdapterViewController"
                ]];
 }
 
