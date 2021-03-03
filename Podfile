@@ -32,6 +32,8 @@ pod 'HyphenateLite', :project_name => 'IM'
 
 pod 'SVProgressHUD', :project_name => 'HUD'
 
+pod 'Aspects', :project_name => 'APO'
+
   # Pods for LoginOC
 
   target 'LoginOCTests' do

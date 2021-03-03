@@ -76,6 +76,7 @@
 		73C79AF625BC7514006D1AEE /* DropitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C79AF425BC7514006D1AEE /* DropitViewController.m */; };
 		73C79AF725BC7514006D1AEE /* DropitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C79AF525BC7514006D1AEE /* DropitViewController.xib */; };
 		73C79AFD25BC82A7006D1AEE /* DropitBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C79AFC25BC82A7006D1AEE /* DropitBehavior.m */; };
+		73C98F5925EF6381008E2E25 /* ViewControllerIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C98F5825EF6381008E2E25 /* ViewControllerIntercepter.m */; };
 		73DE950025EA19DF0029F0CC /* NormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DE94FF25EA19DF0029F0CC /* NormalModel.m */; };
 		73DE950625EA28DF0029F0CC /* BusinessCardAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DE950525EA28DF0029F0CC /* BusinessCardAdapter.m */; };
 		73DE950C25EA2AAD0029F0CC /* NormalModelAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DE950B25EA2AAD0029F0CC /* NormalModelAdapter.m */; };
@@ -396,6 +397,8 @@
 		73C79AF525BC7514006D1AEE /* DropitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropitViewController.xib; sourceTree = "<group>"; };
 		73C79AFB25BC82A7006D1AEE /* DropitBehavior.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropitBehavior.h; sourceTree = "<group>"; };
 		73C79AFC25BC82A7006D1AEE /* DropitBehavior.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropitBehavior.m; sourceTree = "<group>"; };
+		73C98F5725EF6381008E2E25 /* ViewControllerIntercepter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerIntercepter.h; sourceTree = "<group>"; };
+		73C98F5825EF6381008E2E25 /* ViewControllerIntercepter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerIntercepter.m; sourceTree = "<group>"; };
 		73DE94FE25EA19DF0029F0CC /* NormalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalModel.h; sourceTree = "<group>"; };
 		73DE94FF25EA19DF0029F0CC /* NormalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalModel.m; sourceTree = "<group>"; };
 		73DE950425EA28DF0029F0CC /* BusinessCardAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessCardAdapter.h; sourceTree = "<group>"; };
@@ -1392,6 +1395,15 @@
 			path = Dropit;
 			sourceTree = "<group>";
 		};
+		73C98F3425EF61A9008E2E25 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				73C98F5725EF6381008E2E25 /* ViewControllerIntercepter.h */,
+				73C98F5825EF6381008E2E25 /* ViewControllerIntercepter.m */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
 		73E4FB582449FAA1007FDBDA = {
 			isa = PBXGroup;
 			children = (
@@ -1417,6 +1429,7 @@
 		73E4FB632449FAA1007FDBDA /* LoginOC */ = {
 			isa = PBXGroup;
 			children = (
+				73C98F3425EF61A9008E2E25 /* Interceptor */,
 				73E4FBE32449FBA7007FDBDA /* TableView */,
 				73E4FC192449FBA7007FDBDA /* DesignPattern */,
 				73E4FBA92449FBA6007FDBDA /* Login */,
@@ -2481,6 +2494,7 @@
 				73E4FD3D2449FBA8007FDBDA /* CharacterBuilder.m in Sources */,
 				73E4FCE02449FBA8007FDBDA /* LoginController.m in Sources */,
 				73E4FD132449FBA8007FDBDA /* ConsoleController.m in Sources */,
+				73C98F5925EF6381008E2E25 /* ViewControllerIntercepter.m in Sources */,
 				73DE950C25EA2AAD0029F0CC /* NormalModelAdapter.m in Sources */,
 				73C06B48257D138400D6F013 /* HttpRequestBuilder.m in Sources */,
 				73E4FD552449FBA8007FDBDA /* RunTimeObject.m in Sources */,
