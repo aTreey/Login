@@ -19,9 +19,13 @@ target 'LoginOC' do
    # 本地私有库
    # pod 'LGNetworking', :path => './LoginModule/LGNetworking'
    
-   pod 'CTMediator'
    pod "DesignPattern", :path => "../DesignPattern"
    pod "DesignPattern_Category", :path => "../DesignPattern_Category"
+   
+   # 组件化
+#   pod "DesignPattern", :project_name => 'Module'
+#   pod "DesignPattern_Category", :project_name => 'Module'
+   pod 'CTMediator', :project_name => 'Module'
   
 pod 'Masonry', :project_name => 'AutoLayout'
 

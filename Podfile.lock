@@ -16,8 +16,8 @@ PODS:
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
   - CTMediator (44)
-  - DesignPattern (1)
-  - DesignPattern_Category (1):
+  - DesignPattern (1.0.0)
+  - DesignPattern_Category (1.0.1):
     - CTMediator
   - HyphenateLite (3.6.1)
   - KissXML (5.2.3)
@@ -76,8 +76,8 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CTMediator: 933dba523da87bf875e4a7e8728945fbc512f1d2
-  DesignPattern: 3c779ad1130aa377435007dffc338af01ddfc240
-  DesignPattern_Category: 154aea5c6a2de193698756b31c0effeb36365969
+  DesignPattern: fb423305c13316fd1fb9af9365a649d29f622ccd
+  DesignPattern_Category: 8abe63425a4dbc163fca33e2160d966d832c190a
   HyphenateLite: 4f85c9c66ab6571e027671866afb76d3c8f52f12
   KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
   LGEffectiveObjectiveC: fa9f2705f8fe9aace3968a4e727aac57c9c5cbd6
@@ -89,6 +89,6 @@ SPEC CHECKSUMS:
   SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 753a59dd6b6f4fef2965391e64b4bcb75c4ccc57
+PODFILE CHECKSUM: bcd508d9120dc3ce41cf754f0cd2bd3272d0b2d7
 
 COCOAPODS: 1.10.1
