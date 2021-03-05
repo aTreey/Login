@@ -10,6 +10,9 @@
 #import "CanvasViewController.h"
 #import "PaperCanvasViewGenerator.h"
 #import "ClothCanvasViewGenerator.h"
+#import <CTMediator/CTMediator.h>
+#import <DesignPattern_Category/CTMediator+DesignPattern.h>
+
 
 @interface MyTableViewController ()
 @property (nonatomic, strong) NSArray *datas;
@@ -20,21 +23,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _datas = @[@[@"TableHeaderScaleController",
-               @"SOAPController",
-               @"SCRecorderController",
-               @"ContainerViewController",
-               @"FormViewController",
-               @"CanvasViewController",
-               @"PaletteViewController",
-               @"BridgeViewController",
-               @"ObserverPatternViewController"],
+    _datas = @[
+                @[
+                    @"TableHeaderScaleController",
+                    @"SOAPController",
+                    @"SCRecorderController",
+                    @"ContainerViewController",
+                   @"FormViewController",
+                   @"CanvasViewController",
+                   @"PaletteViewController",
+                   @"BridgeViewController",
+                   @"ObserverPatternViewController"
+                ],
                
-               @[@"PlayingCardGameViewController",
-               @"AttributeStringViewController",
-               @"CardViewController",
-               @"DropitViewController",
-               @"AdapterViewController"
+               @[
+                   @"PlayingCardGameViewController",
+                   @"AttributeStringViewController",
+                   @"CardViewController",
+                   @"DropitViewController",
+               ],
+                
+               @[
+                   @"AdapterViewController",
+                   @"BridgeViewController"
                ]];
 }
 
@@ -60,10 +71,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Class class = NSClassFromString(_datas[indexPath.section][indexPath.row]);
-    UIViewController *controller = [class new];
-    if ([controller isKindOfClass:[CanvasViewController class]]) {
-        [self handleCanvasViewController:controller];
+    UIViewController *controller = nil;
+    if (indexPath.section == 2) {
+        controller = [[CTMediator sharedInstance] DesignPattern_ViewController:@{@"className": self.datas[indexPath.section][indexPath.row]}];
+    } else {
+        Class class = NSClassFromString(_datas[indexPath.section][indexPath.row]);
+        controller = [class new];
+        if ([controller isKindOfClass:[CanvasViewController class]]) {
+            [self handleCanvasViewController:controller];
+        }
     }
     
     [self.navigationController pushViewController:controller animated:true];

@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '9.0'
+ platform :ios, '10.0'
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/aTreey/MyGitSpec.git'
 source 'https://cdn.cocoapods.org/'
@@ -18,6 +18,10 @@ target 'LoginOC' do
    
    # 本地私有库
    # pod 'LGNetworking', :path => './LoginModule/LGNetworking'
+   
+   pod 'CTMediator'
+   pod "DesignPattern", :path => "../DesignPattern"
+   pod "DesignPattern_Category", :path => "../DesignPattern_Category"
   
 pod 'Masonry', :project_name => 'AutoLayout'
 
@@ -32,7 +36,7 @@ pod 'HyphenateLite', :project_name => 'IM'
 
 pod 'SVProgressHUD', :project_name => 'HUD'
 
-pod 'Aspects', :project_name => 'APO'
+pod 'Aspects', :project_name => 'AOP'
 
   # Pods for LoginOC
 

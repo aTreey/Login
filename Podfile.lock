@@ -15,6 +15,10 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - CTMediator (44)
+  - DesignPattern (1)
+  - DesignPattern_Category (1):
+    - CTMediator
   - HyphenateLite (3.6.1)
   - KissXML (5.2.3)
   - LGEffectiveObjectiveC (0.1.0)
@@ -31,6 +35,9 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Aspects
+  - CTMediator
+  - DesignPattern (from `../DesignPattern`)
+  - DesignPattern_Category (from `../DesignPattern_Category`)
   - HyphenateLite
   - KissXML
   - LGEffectiveObjectiveC
@@ -50,6 +57,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - Aspects
+    - CTMediator
     - HyphenateLite
     - KissXML
     - Masonry
@@ -58,9 +66,18 @@ SPEC REPOS:
     - SDWebImage
     - SVProgressHUD
 
+EXTERNAL SOURCES:
+  DesignPattern:
+    :path: "../DesignPattern"
+  DesignPattern_Category:
+    :path: "../DesignPattern_Category"
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CTMediator: 933dba523da87bf875e4a7e8728945fbc512f1d2
+  DesignPattern: 3c779ad1130aa377435007dffc338af01ddfc240
+  DesignPattern_Category: 154aea5c6a2de193698756b31c0effeb36365969
   HyphenateLite: 4f85c9c66ab6571e027671866afb76d3c8f52f12
   KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
   LGEffectiveObjectiveC: fa9f2705f8fe9aace3968a4e727aac57c9c5cbd6
@@ -72,6 +89,6 @@ SPEC CHECKSUMS:
   SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 038f5679f6db34977059377363059ca36760b017
+PODFILE CHECKSUM: 753a59dd6b6f4fef2965391e64b4bcb75c4ccc57
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
